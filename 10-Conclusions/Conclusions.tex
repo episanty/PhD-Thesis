@@ -1,0 +1,142 @@
+
+
+
+
+
+
+\chapter{Conclusions}
+\label{chap:conclusions}
+We have taken, over the course of this work, a tour through a rather wide expanse of material, so by way of conclusion we present a short summary of the main paradigms we have explored and the principal results we have uncovered.
+
+
+
+\subsection*{Part I: Ionization}
+
+\subsubsection[Analytical R-matrix Theory]{Analytical $R$-Matrix theory}
+In chapter~\ref{chap:R-matrix} we lay down the groundwork for the ionization parts of this thesis, reviewing in detail the construction of the Analytical $R$-Matrix theory of photoionization. We showed how one can split space into an inner and an outer region, using the inner region as a source term for the Schrödinger equation on the outer region, and how to employ the ionic and Coulomb-corrected continuum wavefunctions to produce a simple trajectory-based description of the photoionization, both on the single-active-electron direct channels as well as for the multi-electron correlation-driven mechanism. In addition, we presented in section~\ref{sec:molecular-shape-factors} simple analytical formulas for a suitable model of a molecular orbital with nontrivial geometry.
+
+
+
+
+\subsubsection{Multi-channel geometrical effects}
+In chapter~\ref{chap:multi-channel} we built on the multi-electron Analytical $R$-Matrix expressions for the direct and correlation-driven yields for photoelectrons that leave behind an excited ion, probing the ionization of a suitable model of an aligned carbon dioxide molecule, with a nontrivial combination of orbital geometries. There we showed how to implement a suitable modification of the saddle-point approximation for the correlation-driven geometrical factors, giving clean and physically transparent expressions. 
+
+Finally, we showed how the nontrivial angular distributions obtained in this geometry admit a simple interpretation as double-slit diffraction fringes that originate in a pair of `slits' caused by the correlation-driven interaction with the ion inside the tunnelling~barrier.
+
+
+\subsubsection{Analytical continuation of electrostatic potentials}
+In chapter~\ref{chap:complex-space-potentials} we examined in detail one of the crucial ingredients of the multi-electron ARM yield for correlation-driven ionization, the correlation interaction electrostatic potentials
+\begin{equation}
+\Vnm{\vbr}=\matrixel**{n}{\sum_{j=1}^{N-1} \frac{1-\delta_{nm}}{\| \vbr - \hat{\vbr}_j\|} }{m}
+,
+\backtag{e4-correlation-interaction-potential-initial}
+\end{equation}
+and their analytical continuations into complex positions $\vbr$. We examined the naive analytical continuation for an elementary gaussian orbital via direct numerical integration, and we found it wanting, as it does not obey the Cauchy-Riemann equations.
+
+We then focussed on the behaviour of simpler models -- exponential and gaussian type orbitals --, for which we can find exact expressions for the potentials, and therefore examine their analytical continuations directly. Here we find that, for points that are `real enough', in the sense that
+\begin{equation}
+\Re(\vbr^2)>0,
+\backtag{e4-re-r2-less-than-0}
+\end{equation}
+the different models agree surprisingly well, but that immediately upon leaving that region the potential for the gaussian-type orbital catastrophically diverges.
+
+This means, then, that as long as we keep our evaluations of $\Vnm{\rl(t)}$ to trajectories that obey \eqref{e4-re-r2-less-than-0} throughout, we can be rather confident that the analytical continuation is accurate, even if using gaussian-based quantum chemical calculations. Moreover, as we showed in chapter~\ref{chap:quantum-orbits}, it is in fact possible to choose trajectories that adhere to this constraint.
+
+On the other hand, the other region -- the points that are so imaginary that $\Re(\vbr^2)<0$~-- is much more challenging. As we argued, it is difficult to obtain any information, even of a qualitative type, about the behaviour of the potential in this region, even though there are formal existence theorems that guarantee us the existence of analytical continuations of  our interaction potential.
+
+
+
+\subsubsection{Quantum orbits in complex time and complex space}
+In chapter~\ref{chap:quantum-orbits} we explored the origin and meaning of the imaginary part of the ARM trajectory, which is of the form
+\begin{equation}
+\rl(t) = \int_{\ts}^{t} \left[\vbp+\vba(\tau) \right] \: \d\tau
+,
+\backtag{e5-laser-driven-trajectory}
+\end{equation}
+and is generally complex-valued for real times $t$. This imaginary part emerges directly from the Schrödinger equation, and more particularly from the boundary matching of our eikonal Volkov states with the WKB asymptotic expressions for the states of the system in the inner ARM region, and it is a crucial ingredient in allowing ARM do describe the Coulomb enhancement of ionization.
+
+However, this imaginary part of the position also combines with the branch cut of the square root in the Coulomb potential,
+\begin{equation}
+U(\rl(t)) = -\frac{1}{\sqrt{\rl(t)^2}},
+\backtag{e5-coulomb-potential-at-the-trajectory}
+\end{equation}
+to imprint a series of branch cuts on the complex time plane, which we need to integrate over to obtain the ARM yield. Moreover, these branch cuts can and do intersect the standard contour along the real axis, which needs to be accordingly modified, ideally in an algorithmic way which can be performed by a computer to calculate photoelectron spectra.
+
+This modification is possible by hinging on the concept of a time of closest approach, that is, times $\tca$ that obey equations of the type
+\begin{equation}
+\rl(\tca)\cdot\vbv(\tca)=0,
+\backtag{e5-tca-equation}
+\end{equation}
+and which are always present as saddle points in the middle of any gate formed by two branch cuts. These have a fascinatingly rich geometry, with the complex-valued quantum versions forming multiple sheets of a surface encasing the corresponding classical version, and they show interesting topological transitions -- with strong effects on the requirements for the ARM integration path -- at soft recollisions, where the laser-driven trajectory has a turning point close to the ion.
+
+Moreover, we were able to successfully and algorithmically choose the appropriate $\tca$s to use as waypoints by requiring that they be `out of the tunnelling barrier', having positive real part of the kinetic energy $\vbv(t)^2$, after which it is possible to programmatically choose appropriate integration paths that avoid complex, and fast-changing, configurations of branch cuts. In addition, this navigation algorithm is also automatically able to steer us clear of the problematic regions of chapter~\ref{chap:complex-space-potentials}.
+
+
+
+
+
+\subsubsection{Low-Energy Structures and Near-Zero Energy Structures}
+In chapter~\ref{chap:LES-NZES}, after a review of the available experimental evidence on the Low-Energy and Near-Zero Energy Structures of mid-IR photoionization, we brought our branch-cut navigation algorithm from chapter~\ref{chap:quantum-orbits} to bear on experiment, by using it to analyse the LES regions, which emerge naturally from one of the unavoidable (but resolvable) difficulties of the algorithm: the soft recollisions, where multiple branch cuts come into close proximity, interact, and undergo topological transitions.
+
+Further, these LES peaks, which are well understood to be associated with these soft recollisions, are joined within the ARM formalism by a dynamically equivalent set at much lower energy, which approaches the ion on a forwards turning point, after an integral number of periods, instead of the more usual backwards turning points after a half-integral number of laser cycles.
+
+We study the peaks caused by this new series of trajectories, showing that it produces a peak at energies consistent with those observed for the NZES, and that it produces qualitatively similar transverse photoelectron to those observed in high-resolution experiments. Moreover, the identification of this series as a contributor to the NZES opens clear ways to test this mechanism experimentally: since the new series only needs to advance by the tunnel exit over a laser period, instead of by the laser oscillation quiver radius $\zquiv=F/\omega^2$, its momentum and energy scale as
+\begin{equation}
+\pzsr 
+\approx \frac{\zexit}{\Delta t}
+= \frac{I_p/F}{(n+1)\pi/\omega}
+\propto \frac{I_p\omega}{F}
+%
+\quad\text{and}\quad
+%
+\frac12\left(\pzsr\right)^2 
+\sim \frac{I_p^2}{U_p}
+\sim I_p\gamma^2,
+\backtagtwo{e6-pzsr-odd-n-summary}{e6-odd-n-energy-scaling}
+\end{equation}
+respectively. Thus, the new series scales inversely with the ponderomotive potential $U_p$ (as opposed to the known series, which scales as $\frac12\left(\pzsr\right)^2 \propto U_p$), which means that it should be possible to probe the role of the new series by using experiments in harder targets with higher ionization potentials.
+
+
+
+
+\section*{Part II: High-order harmonic generation}
+
+\subsubsection{Conservation of spin angular momentum in bicircular HHG}
+After reviewing the standard theory of high-order harmonic generation in chapter~\ref{chap:HHG-intro}, we turned in chapter~\ref{chap:spin-HHG} to the generation of high-order harmonics by bicircular fields -- counter-rotating circularly polarized fields, one at the fundamental at $\SI{800}{nm}$ and one detuned from its second harmonic, at $\SI{410}{nm}$. We reviewed the experimental evidence that establishes clear selection rules coming from the conservation of spin angular momentum, together with the breakdown of these selection rules when the polarization of one of the drivers is degraded from circular through linear.
+
+We then provided a suitable photon-picture model that is able to explain the observed harmonic emission while retaining a parametric picture of harmonic generation which conserves spin angular momentum on a per-channel basis~-- and, indeed, while maintaining consistency with known results when applied to the lowest-order channel, which reduces to perturbative four-wave mixing. 
+
+Our model, based essentially on arguments lowest-order perturbation theory by separating an elliptical driver into circular components and treating them separately, is surprisingly effective at predicting the dependence of the harmonic emission on the ellipticity of the driver. Moreover, it correctly matches the results of a numerical experiment, which in principle can also be experimentally realized, where the two circular components of an elliptical field are taken as separate and detuned independently
+
+
+
+\subsubsection{Nondipole effects in HHG through noncollinear bicircular beams}
+Finally, in chapter~\ref{chap:nondipole-HHG}, we turned to the generation of harmonics in fields that are particularly strong, or at a very long wavelength, or both, looking to extend the harmonic cutoff past the barrier posed by the magnetic field of the driving laser as the velocity of the continuum electron increases.
+
+Here we proposed a simple and flexible scheme for addressing the continuum electron's motion along the direction, by combining two counter-rotating circularly polarized fields of the same frequency in a non-collinear configuration to produce a field with a forwards ellipticity that acts in the same direction as the magnetic Lorentz force.
+
+We then extended the existing beyond-dipole Strong-Field Approximation HHG formalism to deal with arbitrary beam configurations, showing that to do so one needs to use slightly more complex nondipole Volkov states, and related this to a nontrivial average force acting on charged particles across the focus.
+
+Finally, with this extended beyond-dipole SFA in hand, we showed that the field configuration can indeed help recover the harmonic emission from its exponential quenching at the hands of the magnetic Lorentz force, and, moreover, that it can be used at much lower intensities and wavelengths to produce even harmonics that can be used to demonstrate the presence of the effect, for the first time in HHG, using currently available laser sources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

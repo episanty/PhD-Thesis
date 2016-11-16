@@ -1,0 +1,85 @@
+
+
+
+\documentclass[pdftex,11pt,a4paper]{report}
+
+\usepackage{subfigure}
+
+%%%% For reusing lengths as per http://tex.stackexchange.com/a/184992/13423
+\makeatletter
+\def\nnewlength#1{%
+  \edef\reserved@a{\expandafter\@gobble\string#1} %
+  \@ifundefined\reserved@a{%
+    \edef\reserved@b{\expandafter\@carcube\reserved@a xxx\@nil} %
+    \ifx\reserved@b\@qend %
+      \typeout{  -- Not definable (1, \reserved@a): #1} %\@notdefinable %
+    \else %
+      \ifx\reserved@a\@qrelax %
+        \typeout{  -- Not definable (2, \reserved@a): #1} %\@notdefinable %
+      \else %
+        \typeout{  -- Making newskip: #1}
+        \newskip#1%
+      \fi %
+    \fi %
+  }%
+  {\typeout{  -- Not definable (E, \reserved@a): #1}} %\@notdefinable%
+}
+\makeatother
+
+
+
+
+%%% For the perturbative optics diagram.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{MnSymbol} % for circular arrows
+\usepackage{rotating}
+\usepackage{relsize}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\leftpol}{\!\; \!\!\rcirclearrowright}
+\newcommand{\rightpol}{\!\; \!\!\lcirclearrowright}
+\newcommand{\epol}{\resizebox{0.8em}{1em}{$\lcirclearrowright$}}
+
+\newcommand{\linpol}{\updownarrow}
+
+
+\begin{document}
+
+
+\begin{figure}
+  \centering
+  \subfigure[]{
+    \input{8-Spin-HHG/Figures/figure8Fa-bare}
+    \label{f8-initial-photon-diagrams-a}
+  }
+  \hspace{5mm}
+  \subfigure[]{
+    \input{8-Spin-HHG/Figures/figure8Fb-bare}
+    \label{f8-initial-photon-diagrams-b}
+  }
+  \hspace{5mm}
+  \subfigure[]{
+    \input{8-Spin-HHG/Figures/figure8Fc-bare}
+    \label{f8-initial-photon-diagrams-c}
+  }
+  \hspace{5mm}
+  \subfigure[]{
+    \input{8-Spin-HHG/Figures/figure8Fd-bare}
+    \label{f8-initial-photon-diagrams-d}
+  }
+  \hspace{5mm}
+  \subfigure[]{
+    \input{8-Spin-HHG/Figures/figure8Fe-bare}
+    \label{f8-initial-photon-diagrams-e}
+  }
+  
+  \caption{
+  hello
+  }
+\label{f8-draft}
+\end{figure}
+
+
+\end{document}

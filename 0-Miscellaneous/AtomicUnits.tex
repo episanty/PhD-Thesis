@@ -1,0 +1,94 @@
+
+
+\chapter{Atomic Units}
+\label{chap:atomic-units}
+
+\singlespacing
+
+This thesis uses, throughout the text, the atomic system of units, unless otherwise specified (such as explicit indications of wavelengths, intensities, or photoelectron energies). The atomic system of units is specifically designed to make the electronic hamiltonian for an atom less cumbersome in terms of constants. More concretely, this is achieved by setting to unity the main (dimensionful) physical constants of the quantum dynamics of an electron,
+\begin{equation}
+m_e=1
+,\quad
+\hbar=1
+,\quad
+e^2=1
+,\quad\text{and}\quad
+k_\mathrm{c} = \frac{1}{4\pi\eps_0}=1
+.
+\end{equation}
+As a result, the dynamics becomes essentially dimensionless, though after identifying the physical dimension of a quantity, its SI units can be derived from the standard values. We denote explicit numeric values in atomic units using the symbol $\SI{}{\au}$ (such as e.g. $p=\SI{0.5}{\au}$). The conversion to SI or other values then follows using the following equivalences.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rccll}
+Quantity & Unit & Scaling & Significance & Value in SI units 
+\\ \hline
+mass     & $\displaystyle\vphantom{\sum} m_e$ & 1 & Electron mass&  $\SI{9.109e-31}{kg}\displaystyle\vphantom{\sum}$\\
+action   & $\displaystyle\vphantom{\sum_a} \hbar \displaystyle\vphantom{\sum_a^b} $ & 1 &\pbox{20cm}{Reduced Planck \\[0mm]constant} &  \SI{1.054e-34}{J s}\\
+charge   & $\displaystyle\vphantom{\sum} e\vphantom{\sum} $     & 1 & Electron charge & \SI{1.602e-19}{C}\\
+length   & $\displaystyle\vphantom{\sum_a^b} a_0=\displaystyle \vphantom{\sum_a} \frac{\hbar^2}{m_e k_\mathrm{c} e^2}$ & $\displaystyle 1/\kappa$ & Bohr radius & \SI{5.291e-11}{m} \\
+velocity & $\displaystyle\vphantom{\sum_a^b} \alpha c =  \frac{k_\mathrm{c}e^2}{\hbar}$ & $\displaystyle 1/\kappa$ &  Bohr velocity & $\SI{2.188e8}{m/s}$\\
+time     & $\displaystyle\vphantom{\sum_a^b}  \frac{\hbar}{E_\mathsf{H}} =\frac{\hbar^3}{m_e k_\mathrm{c}^2 e^4}$ & $\displaystyle 1/\kappa^2$ & Bohr period & $\SI{2.419e-17}{s}$\\
+momentum & $\displaystyle\vphantom{\sum_a^b}  \sqrt{m_eE_\mathsf{H}}=\frac{m_e k_\mathrm{c}e^2}{\hbar}$ & $\kappa$ &  \pbox{20cm}{Bohr\\[0mm]wavevector}  & $\SI{1.993e-24}{\kilo\gram\,\meter/s}$\\
+energy   & $E_\mathsf{H} = \displaystyle\vphantom{\sum_a^b} \frac{m_e k_\mathrm{c}^2 e^4}{\hbar^2}$ & $\displaystyle \kappa^2$ & Hartree energy & \pbox{20cm}{$\SI{4.360e-18}{J}$\\$=\SI{27.21}{eV}$}\\ 
+%\begin{tabular}{r|} electric\\field\end{tabular} 
+electric field
+        & $\displaystyle\vphantom{\sum_a^b} \frac{E_\mathsf{H}/e}{a_0}=\frac{m_e^2 k_\mathrm{c}^3 e^5}{\hbar^4}$ & $\kappa^3$ & \pbox{20cm}{Proton field\\[0mm]at $1a_0$} & $\SI{5.142e11}{V/m}$ \\
+intensity  & \hspace{4mm} $\displaystyle  \frac{\eps_0c}{2}\left(\frac{E_\mathsf{H}/e}{a_0}\right)^2  $ & $\kappa^6$  & \pbox{20cm}{Intensity at\\[0mm] $F=\SI{1}{\au}$} &  $\SI{3.509e16}{W/cm^2}$ \\
+\hline
+\end{tabular}
+\captionsetup{width=\textwidth}
+\caption{Conversion factors between atomic units and the SI system, with the latter arbitrarily truncated to four significant figures.}
+\end{table}
+
+Two specific conversion factors, in particular, are useful to point out:
+\begin{equation}
+\omega =\frac{\SI{45.6}{nm}}{\lambda} \, \SI{}{\au}
+\quad \text{and} \quad
+F = \sqrt{\frac{I}{\SI{e14}{W/cm^2}}} \, \SI{0.053}{\au}
+,
+\end{equation}
+giving the translation between the wavelength $\lambda$ of a light beam and its angular frequency $\omega$ in atomic units, and similarly between the intensity $I$ of a monochromatic, linearly polarized beam in $\SI{}{W/cm^2}$ and the peak electric field strength $F$ in atomic units. The numbers in this factors are easily obtained via 
+\begin{equation}
+\frac{2\pi a_0}{\alpha}\approx \SI{45.6}{nm}
+\quad \text{and} \quad
+\sqrt{\frac{\SI{e14}{W/cm^2}}{\SI{3.509e16}{W/cm^2}}} \approx 0.053
+,
+\end{equation}
+where in the former $\alpha$ is the speed of light in atomic units, so $a_0/\alpha$ is the frequency of light of wavelength $\SI{1}{\au}$.
+
+
+In addition to the explicit numbers, we retain a specific scaling column, which indicates how the quantities vary with the ionization potential of the system. This is useful because much of strong-field physics, from the SFA onwards, deals with essentially a single-electron problem (so $\hbar=m_e=e=k_c=1$) makes sense, which is nevertheless subjected to some given potential well with a fixed and unknown ionization potential $I_p$. In terms of equations, atomic units help simplify the hamiltonian of an $N$-electron atom,
+\begin{subequations}
+\begin{equation}
+\hat H
+=
+-\sum_{i=1}^N \frac{\hbar^2}{2m_e}\nabla_i^2 
+-\frac{Z e^2}{4\pi\eps_0} \sum_{i=1}^N \frac{1}{\|\vbr_i\|}
++\frac{e^2}{4\pi\eps_0} \sum_{i\neq j=1}^N \frac{1}{\|\vbr_i - \vbr_j\|}
+\end{equation}
+to an essentially dimensionless version,
+\begin{equation}
+\hat H
+=
+-\sum_{i=1}^N \frac{1}{2}\nabla_i^2 
+-\sum_{i=1}^N \frac{Z}{\|\vbr_i\|}
++\sum_{i\neq j=1}^N \frac{1}{\|\vbr_i - \vbr_j\|}
+,
+\end{equation}
+\end{subequations}
+but there is still an additional parameter, the nuclear charge, which determines the behaviour of the system, including its ionization potential.
+
+
+Since strong-field physics mostly cares about what happens far from the nucleus, though, we can essentially reduce the effect of the atomic hamiltonian to just the ground state energy, $I_p$, but this will also re-scale most of the relevant quantities: the characteristic momentum and wavevector will scale with $\kappa=\sqrt{2I_p}$, the characteristic length of the ground state will vary as $1/\kappa$, and electric fields will change with $\kappa^3$. Since all dimensional analysis is essentially a scaling argument in disguise, the scalings with respect to $\kappa$ afford a way to do a limited amount of dimensional analysis even when working in atomic units.
+
+
+
+
+
+
+
+
+
+
+

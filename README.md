@@ -24,6 +24,8 @@ There are several related resources:
  [8]: https://github.com/episanty/EPToolbox
  [9]: https://github.com/szhorvat/MaTeX
 
+This version is the original submission as sent to the examiners and as used in the viva voce examination. As such, the external figures do not contain copyright footnotes within the thesis - see the final 
+
 
 
 (c) Emilio Pisanty, 2016.

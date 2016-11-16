@@ -1,0 +1,56 @@
+
+
+
+\documentclass[pdftex,11pt,a4paper]{report}
+
+%%% For the perturbative optics diagram.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{rotating}
+\usepackage{relsize}
+
+
+\newcommand{\nnewlength}[1]{\newlength{#1}}
+
+
+\newcommand{\eps}{\varepsilon}
+
+
+%%% Circular arrows pulled from the MnSymbolA package as per
+%%% http://tex.stackexchange.com/q/36006/
+%%% Otherwise there's a "too many alphabets" TeX error
+\DeclareFontFamily{U} {MnSymbolA}{}
+\DeclareFontShape{U}{MnSymbolA}{m}{n}{
+  <-6> MnSymbolA5
+  <6-7> MnSymbolA6
+  <7-8> MnSymbolA7
+  <8-9> MnSymbolA8
+  <9-10> MnSymbolA9
+  <10-12> MnSymbolA10
+  <12-> MnSymbolA12}{}
+\DeclareSymbolFont{MnSyA} {U} {MnSymbolA}{m}{n}
+%
+\DeclareMathSymbol{\rcirclearrowright}{\mathrel}{MnSyA}{248}
+\DeclareMathSymbol{\lcirclearrowright}{\mathrel}{MnSyA}{252}
+%
+\newcommand{\leftpol}{\!\; \!\!\rcirclearrowright}
+\newcommand{\rightpol}{\!\; \!\!\lcirclearrowright}
+\newcommand{\epol}{\resizebox{0.8em}{1em}{$\lcirclearrowright$}}
+
+
+
+\begin{document}
+
+
+
+\begin{figure}[t]
+\centering
+
+\include{figure8E-bare}
+
+\caption{$\rcirclearrowright$, $\lcirclearrowright$ }
+\end{figure}
+
+
+
+\end{document}

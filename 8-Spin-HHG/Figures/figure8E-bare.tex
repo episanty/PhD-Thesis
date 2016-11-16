@@ -1,0 +1,62 @@
+
+\begingroup
+\fontsize{10pt}{12pt}\selectfont
+
+\begin{tikzpicture}[
+   scale=0.5,
+   level/.style={thick},
+   photon/.style={thick,->,shorten >=0.5pt,shorten <=0.5pt,>=stealth},
+ ]    
+ \nnewlength{\smap} \setlength{\smap}{2.3cm} % small photon
+ \nnewlength{\bigp} \setlength{\bigp}{3.6cm} % big photon
+ \nnewlength{\offset} \setlength{\offset}{6.3cm} % center of the right and left diagrams
+ \nnewlength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
+ \nnewlength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
+ \nnewlength{\cancelm} \setlength{\cancelm}{0.82cm} % horizontal offset of the center of the cancelling cross
+ \nnewlength{\canceld} \setlength{\canceld}{0.75cm} % (1/2) horizontal width of the cancelling cross
+ \nnewlength{\cancelv} \setlength{\cancelv}{1.7cm} % (1/2) height of the cancelling cross
+%
+ \draw[level] (-\offset-\lvlwidth,  0cm) -- (-\offset+\lvlwidth,  0cm);
+ \draw[level] (-\offset-\lvlwidth,\smap+2\bigp) -- (-\offset+\lvlwidth,\smap+2\bigp);
+ \draw[photon] (-\offset-\sep,    0cm) -- (-\offset-\sep, \smap) node[midway, left] {\begin{turn}{90}$\omega_1,\,\eps$\epol\end{turn}};
+ \draw[photon] (-\offset-\sep,  \smap) -- (-\offset-\sep,\smap+\bigp) node[midway, left] {\begin{turn}{90}$\omega_2,\leftpol$\end{turn}};
+ \draw[photon] (-\offset-\sep, \smap+\bigp) -- (-\offset-\sep,\smap+2\bigp) node[midway, left] {
+    \begin{turn}{90}$\omega_2,\leftpol$ \end{turn}
+    };
+ \draw[photon] (-\offset+\sep,\smap+2\bigp) -- (-\offset+\sep,  0cm) node[midway,right] {\begin{turn}{90}$\omega_1+ 2\omega_2,$ ?\end{turn}};
+%
+ \node at (-\offset/2-1.2cm,\smap/2+\bigp-0.08cm) {\scalebox{1.5}{$=$}};
+ \node at (-\offset/2+0.5cm,\smap/2+\bigp) {$\cos(\delta\alpha)$};
+%
+ \draw[level] (-\lvlwidth,  0cm) -- (\lvlwidth,  0cm);
+ \draw[level] (-\lvlwidth,\smap+2\bigp) -- (\lvlwidth,\smap+2\bigp);
+ \draw[photon] (-\sep,    0cm) -- (-\sep, \smap) node[midway, left] {\begin{turn}{90}$\omega_1,\rightpol$\end{turn}};
+ \draw[photon] (-\sep,  \smap) -- (-\sep,\smap+\bigp) node[midway, left] {\begin{turn}{90}$\omega_2,\leftpol$\end{turn}};
+ \draw[photon] (-\sep, \smap+\bigp) -- (-\sep,\smap+2\bigp) node[midway, left] {\begin{turn}{90}$\omega_2,\leftpol$ \end{turn}};
+ \draw[photon] (\sep,\smap+2\bigp) -- (\sep,  0cm) node[midway,right] {\begin{turn}{90}$\omega_1+ 2\omega_2,\leftpol$\end{turn}};
+%
+ \node at (\offset/2-1.0cm,\smap/2+\bigp-0.006cm) {\scalebox{1.5}{$+$}};
+ \node at (\offset/2+0.65cm,\smap/2+\bigp) {$\sin(\delta\alpha)$};
+%
+ \draw[level] (\offset-\lvlwidth,  0cm) -- (\offset+\lvlwidth,  0cm);
+ \draw[level] (\offset-\lvlwidth,\smap+2\bigp) -- (\offset+\lvlwidth,\smap+2\bigp);
+ \draw[photon] (\offset-\sep,    0cm) -- (\offset-\sep, \smap) node[midway, left] {\begin{turn}{90}$\omega_1,\leftpol$\end{turn}};
+ \draw[photon] (\offset-\sep,  \smap) -- (\offset-\sep,\smap+\bigp) node[midway, left] {\begin{turn}{90}$\omega_2,\leftpol$\end{turn}};
+ \draw[photon] (\offset-\sep, \smap+\bigp) -- (\offset-\sep,\smap+2\bigp) node[midway, left] {\begin{turn}{90}$\omega_2,\leftpol$\end{turn}};
+ \draw[photon] (\offset+\sep,\smap+2\bigp) -- (\offset+\sep,  0cm) node[midway,right] {\begin{turn}{90}$\omega_1+ 2\omega_2, \,3\!\leftpol$\end{turn}};
+%
+ \draw[thick] (\offset+\cancelm - \canceld, \smap/2+\bigp - \cancelv) -- (\offset+\cancelm + \canceld, \smap/2+\bigp + \cancelv);
+ \draw[thick] (\offset+\cancelm + \canceld, \smap/2+\bigp - \cancelv) -- (\offset+\cancelm - \canceld, \smap/2+\bigp + \cancelv);
+%
+\end{tikzpicture}
+
+\endgroup
+
+
+
+
+
+
+
+
+

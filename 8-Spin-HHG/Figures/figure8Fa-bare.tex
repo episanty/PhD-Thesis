@@ -1,0 +1,32 @@
+
+\begingroup
+\fontsize{10pt}{12pt}\selectfont
+
+\begin{tikzpicture}[
+   scale=0.5,
+   level/.style={thick},
+   photon/.style={thick,->,shorten >=0.5pt,shorten <=0.5pt,>=stealth},
+ ]    
+ \nnewlength{\smap} \setlength{\smap}{2cm} % small photon
+ \nnewlength{\bigp} \setlength{\bigp}{3cm} % big photon
+ \nnewlength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
+ \nnewlength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
+%
+ \draw[level] (-\lvlwidth,  0cm) -- (\lvlwidth,  0cm);
+ \draw[level] (-\lvlwidth,7\smap) -- (\lvlwidth,7\smap);
+ \draw[photon] (-\sep, 0\smap) -- (-\sep, 1\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 1\smap) -- (-\sep, 2\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 2\smap) -- (-\sep, 3\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 3\smap) -- (-\sep, 4\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 4\smap) -- (-\sep, 5\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 5\smap) -- (-\sep, 6\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (-\sep, 6\smap) -- (-\sep, 7\smap) node[midway, left] {\begin{turn}{90}$\omega,\linpol$\end{turn}};
+ \draw[photon] (\sep,7\smap) -- (\sep,  0cm) node[midway,right] {\begin{turn}{90}$7\omega,\linpol$\end{turn}};
+%
+\end{tikzpicture}
+
+\endgroup
+
+
+
+

@@ -1,0 +1,613 @@
+
+
+\documentclass[pdftex,11pt,twoside,
+%
+%draft,
+%
+a4paper]{report}
+
+\usepackage{setspace}    % to control spacing on various parts of the document
+\usepackage{titlesec}    % for custom title styles on chapters, sections etc
+\usepackage{amsmath}     % usual AMS math packages
+\usepackage{amssymb}     % usual AMS math packages
+\usepackage{amsfonts}    % usual AMS math packages
+\usepackage{graphicx}    % standard graphics handler
+\usepackage[dvipsnames]{xcolor}  % colours for the hyperlinks
+\usepackage{framed}      % for Mathematical Aside boxes
+\usepackage{siunitx}     % SI units
+\usepackage{empheq}      % general equation pimping up, left braces in particular
+%\usepackage{subfigure}   % for subfigures  -- turns out to be obsolete
+\usepackage{subfig}      % for subfigures
+
+
+%\usepackage{textcomp}    % copyright symbol -replaced by just the unicode version.
+
+\usepackage{mathrsfs}    % for \mathscr fonts
+\usepackage{colonequals} % for :=
+\usepackage{enumitem}    % For tCA choosing algorithm list.
+\usepackage{titlefoot}   % For unmarked footnotes for figure copyright.
+
+\usepackage{pbox}        % ??? for multi-line table cells in appendix
+\usepackage{multirow}    % for figure 9A
+\usepackage{physics}     % general stuff including Dirac notation
+
+
+
+%%%% Mainly useful for draft:
+\usepackage{lipsum}      % Lore ipsum for filler text
+\usepackage[normalem]{ulem}
+%%%%
+
+%\newcommand{\PrintMathFonts}{%
+%  \count255=0
+%  \loop\ifnum\count255<16
+%    (\the\count255:~\fontname\textfont\count255)
+%    \advance\count255 by 1
+% \repeat}
+
+
+
+
+%%% Page geometry
+\usepackage[a4paper, left=3cm, right=3cm, top=3cm, bottom=2cm]{geometry}
+\usepackage{afterpage}  % to change page width in fig. 5K
+
+%%% Allows unequal text heights across even-to-next-odd pages.
+%%% Otherwise there's a gazillion of bad boxes.
+\raggedbottom
+
+\usepackage[margin=17pt,font=small]{caption}
+
+
+
+
+%%% alternative font?
+%% http://anorien.csc.warwick.ac.uk/mirrors/CTAN/info/Free_Math_Font_Survey/survey.html
+%%%% mind the package placement, though.
+
+
+%%%% Font considerations
+
+%% Use accented characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % load a font with all the characters
+\usepackage{bm}
+
+
+
+%%% Headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{14pt}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{Electron dynamics in complex space and complex time}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\thepage}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+%
+%\titlespacing*{name=\chapter,numberless}{0pt}{-20pt}{20pt}
+
+
+
+
+
+%%%% Total number of written pages.
+%%%% Remove unless draft.
+%\newcommand{\writtenPageDifference}{-10}
+%
+%%\usepackage[dvipsnames]{xcolor}  %% moved to main packages list
+%\newcounter{writtenpage}
+%\fancyfoot[C]{
+%\setcounter{writtenpage}{\value{page}}%
+%\addtocounter{writtenpage}{\writtenPageDifference}%
+%{\color{gray}{\thewrittenpage}}
+%}
+
+
+%%% Footnote handling
+\usepackage[perpage,symbol*,marginal]{footmisc}
+\setlength{\footnotemargin}{0.6em}
+
+%%% Copyright footnotes
+%% disabled
+\newcommand{\copyrightfootnote}[1]{}
+%% enabled
+%\newcommand{\copyrightfootnote}[1]{\unmarkedfntext{#1}}
+
+
+
+%%% For the perturbative optics diagram.
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{rotating}
+\usepackage{relsize}
+%
+%%%% For reusing lengths as per http://tex.stackexchange.com/a/184992/13423
+\makeatletter
+\def\nnewlength#1{%
+  \edef\reserved@a{\expandafter\@gobble\string#1} %
+  \@ifundefined\reserved@a{%
+    \edef\reserved@b{\expandafter\@carcube\reserved@a xxx\@nil} %
+    \ifx\reserved@b\@qend %
+      \typeout{  -- Not definable (1, \reserved@a): #1} %\@notdefinable %
+    \else %
+      \ifx\reserved@a\@qrelax %
+        \typeout{  -- Not definable (2, \reserved@a): #1} %\@notdefinable %
+      \else %
+        \typeout{  -- Making newskip: #1}
+        \newskip#1%
+      \fi %
+    \fi %
+  }%
+  {\typeout{  -- Not definable (E, \reserved@a): #1}} %\@notdefinable%
+}
+\makeatother
+
+
+
+
+%%% Bibliography
+\usepackage[numbers,sort&compress]{0-Miscellaneous/natbib}
+%% reduce spacing inside [1, 2]:
+\makeatletter \def\NAT@def@citea{\def\@citea{\NAT@separator\,}} \makeatother
+
+%%% Specified referencers
+\newcommand{\citer}[1]{Ref.~\citealp{#1}}
+\newcommand{\citers}[1]{Refs.~\citealp{#1}}
+\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+
+%%% DLMF citations
+\newcommand{\citenisteq}[1]{\cite[Eq.\,(\href{http://dlmf.nist.gov/#1}{#1})]{NIST_handbook}}
+\newcommand{\citenistsec}[1]{\cite[\href{http://dlmf.nist.gov/#1}{\S{#1}}]{NIST_handbook}}
+\newcommand{\citenistchap}[1]{\cite[chap.~\href{http://dlmf.nist.gov/#1}{{#1}}]{NIST_handbook}}
+
+%%% add bibliography to TOC ???
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Hyperref setup
+\usepackage[%
+  bookmarks=true,
+  colorlinks,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  plainpages=false,
+  pdfpagelabels,
+  final,
+  breaklinks=true,
+  backref=page
+]{hyperref}
+\hypersetup{
+pdftitle={Electron dynamics in complex time and complex space}, 
+pdfauthor={Emilio Pisanty}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[hyperpageref]{backref}
+  \renewcommand*{\backref}[1]{}
+  \renewcommand*{\backrefalt}[4]{
+    \ifcase #1
+       \hspace{-0.8em}Not cited.
+    \or
+       \hspace{-0.8em}Cited~1 time on p.~#2.
+    \else
+       \hspace{-0.8em}Cited~#1 times on pp.~#2.
+    \fi}
+  \renewcommand{\backreftwosep}{,~}
+  \renewcommand{\backreflastsep}{,~}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Line-breaking on URLs:
+\def\UrlBreaks{\do\/\do-\do.\do{r}\do{p}\do{a}}
+%%% Breaking on r specifically for the Rhyno code citation.
+%%% Breaking on m, a specifically for the Supplementary Informaiton url.
+%%% Do NOT include spaces inside this command.
+
+%%%%%%%%%%%%
+
+%%% Backtag for electronic version
+\newcommand{\backtag}[1]{
+ \tag{\ref{#1}}
+ }
+\newcommand{\backtagtwo}[2]{
+ \tag{\ref{#1}, \ref{#2}}
+ }
+%%% Backtag for print version
+%\newcommand{\backtag}[1]{
+% \tag{{\hypersetup{linkcolor=gray}\ref{#1}}}
+% }
+%\newcommand{\backtagtwo}[2]{
+% \tag{{\hypersetup{linkcolor=gray}\ref{#1}, \ref{#2}}}
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%% Other settings %%%%%%%%%%%%%%%%%%%%%%%%%%
+\interfootnotelinepenalty=10000        % to prevent long footnotes from overflowing to next page
+\numberwithin{equation}{chapter}       % numbers equations as (ChapNum.EqnNum)
+
+\titleformat{\chapter}[display]        % chapter heading style change using titlesec
+	{\centering \normalfont \Large \bfseries}
+	{{\chaptertitlename} \thechapter}{20pt}{\Large}
+
+\renewcommand{\appendixname}{Appendix} % set proper appendix name
+
+% for sections in appendix that don't need to be included in TOC
+\newcommand{\apxsection}[1]{
+  \refstepcounter{section}             % increment the section number counter
+  \section*{\thesection \quad #1}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% Own commands %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Figure parameters
+%% these can actually be moved to their respective figure calls.
+\input{5-Quantum-orbits/Figures/Figure5DParameters.tex}
+\input{5-Quantum-orbits/Figures/Figure5KParameters.tex}
+\input{5-Quantum-orbits/Figures/Figure5LParameters.tex}
+%
+\input{6-LES/Figures/Figure6-2AParameters.tex}
+\input{6-LES/Figures/Figure6-2BParameters.tex}
+\input{6-LES/Figures/Figure6-2DParameters.tex}
+%
+\input{8-Spin-HHG/Figures/Figure8CParameters.tex}
+
+
+
+
+%%% Mathematics
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\id}{\mathbb{I}}
+\newcommand{\hil}{\mathscr H}
+
+\newcommand{\vbr}{\ensuremath{\vb{r}}}
+\newcommand{\vbp}{\ensuremath{\vb{p}}}
+\newcommand{\vbk}{\ensuremath{\vb{k}}}
+\newcommand{\vbf}{\ensuremath{\vb{F}}}
+\newcommand{\vba}{\ensuremath{\vb{A}}}
+\newcommand{\vbv}{\ensuremath{\vb{v}}}
+\newcommand{\vbq}{\ensuremath{\vb{q}}}
+\newcommand{\vbD}{\ensuremath{\vb{D}}}
+\newcommand{\vbd}{\ensuremath{\vb{d}}}
+\newcommand{\vbP}{\ensuremath{\vb{P}}}
+\newcommand{\vbb}{\ensuremath{\vb{B}}}
+
+\newcommand{\pp}{{p_{\parallel}}}
+\newcommand{\pt}{{p_{\perp}}}
+\newcommand{\po}{{p_\mathrm{o}}}
+\newcommand{\vbpo}{{\vbp_{\perp}}}
+\newcommand{\vp}{{v_{\parallel}}}
+\newcommand{\vt}{{v_{\perp}}}
+
+\newcommand{\ue}{\hat{\vb{e}}}
+\newcommand{\ux}{\hat{\vb{x}}}
+\newcommand{\uy}{\hat{\vb{y}}}
+\newcommand{\uz}{\hat{\vb{z}}}
+\newcommand{\un}{\hat{\vb{n}}}
+\newcommand{\um}{\widehat{\vb{m}}}
+\newcommand{\uu}{\hat{\vb{u}}}
+\newcommand{\ur}{\hat{\vb{r}}}
+
+\newcommand{\rl}{\vbr_\mathrm{L}}
+\newcommand{\zl}{{z_\mathrm{L}}}
+\newcommand{\cl}{{\mathrm{cl}}}
+\newcommand{\rcl}{\vbr_\cl}
+\newcommand{\zcl}{z_\cl}
+\newcommand{\zexit}{z_\mathrm{exit}}
+\newcommand{\zquiv}{z_\mathrm{quiv}}
+
+\newcommand{\ts}{{t_s}}
+\newcommand{\tn}{{t_0}}
+\newcommand{\tauT}{{\tau_\mathrm{T}}}
+\newcommand{\tvr}{{t_{\vbr}}}
+\renewcommand{\tr}{{t_r}}
+\newcommand{\tk}{{t_\kappa}}
+\newcommand{\tca}{{t_{\scriptscriptstyle\mathrm{CA}}}}
+\newcommand{\tcasup}[1]{{t_{\scriptscriptstyle\mathrm{CA}}^{{#1}}}}
+\newcommand{\tcacl}{{t_{\scriptscriptstyle\mathrm{CA}}^{\scriptscriptstyle \mathrm{clas}}}}
+\newcommand{\pzsr}{p_z^{\mathrm{sr}}}
+
+\newcommand{\cc}{\mathrm{c.c.}}
+
+\DeclareMathOperator{\arcsinh}{arcsinh}
+
+\newcommand{\sft}{\ensuremath{\mathrm{SFT}}}
+
+\newcommand{\Vnm}[1]{\left\langle V_{nm}\mathopen{}\left( #1 \right)\mathclose{} \right\rangle}
+%% \mathopen and \mathclose to have \left( and \right) with appropriate spacings to the left, as per tex.se/a/2610.
+
+
+%% CO2 state symbols
+\newcommand{\X}{\ensuremath{\mathrm{X}}}
+\newcommand{\A}{\ensuremath{\mathrm{A}}}
+\newcommand{\B}{\ensuremath{\mathrm{B}}}
+\newcommand{\C}{\ensuremath{\mathrm{C}}}
+
+\DeclareSIUnit{\au}{{a.u.}}
+
+\newcommand{\rhog}{\rho_\mathrm{g}}
+\newcommand{\normg}{N_\mathrm{g}}
+\newcommand{\Vg}{V_\mathrm{g}}
+\newcommand{\Vgnum}{V_\mathrm{g}^{\mathrm{num}}}
+\newcommand{\rhoe}{\rho_\mathrm{e}}
+\newcommand{\norme}{N_\mathrm{e}}
+\newcommand{\Ve}{V_\mathrm{e}}
+
+
+
+
+%%% for spin HHG chapter
+
+%%% Circular arrows pulled from the MnSymbolA package as per
+%%% http://tex.stackexchange.com/q/36006/
+%%% Otherwise there's a "too many alphabets" TeX error
+\DeclareFontFamily{U} {MnSymbolA}{}
+\DeclareFontShape{U}{MnSymbolA}{m}{n}{
+  <-6> MnSymbolA5
+  <6-7> MnSymbolA6
+  <7-8> MnSymbolA7
+  <8-9> MnSymbolA8
+  <9-10> MnSymbolA9
+  <10-12> MnSymbolA10
+  <12-> MnSymbolA12}{}
+\DeclareSymbolFont{MnSyA} {U} {MnSymbolA}{m}{n}
+%
+\DeclareMathSymbol{\rcirclearrowright}{\mathrel}{MnSyA}{248}
+\DeclareMathSymbol{\lcirclearrowright}{\mathrel}{MnSyA}{252}
+%
+\newcommand{\leftpol}{\!\; \!\!\rcirclearrowright}
+\newcommand{\rightpol}{\!\; \!\!\lcirclearrowright}
+\newcommand{\epol}{\resizebox{0.8em}{1em}{$\lcirclearrowright$}}
+
+
+\newcommand{\linpol}{\updownarrow}
+
+\newcommand{\chit}{\stackrel{\leftrightarrow}{\chi}\!\!{}^{(3)}}
+\newcommand{\chis}{\chi^{(3)}_\text{s}}
+\newcommand{\eps}{\varepsilon}
+\usepackage{stackengine} % stacked dots for nonlinear optics
+\newcommand{\tdots}{\setstackgap{S}{0.25ex}\!\!\mathrel{\Shortstack{{.} {.} {.}}}\!}
+
+
+%%% for nondipole HHG chapter
+\newcommand{\gradA}{\nabla\!\vba}
+\newcommand{\vbpi}{\boldsymbol{\pi}}
+\newcommand{\volkov}[2]{\ket{\Psi^\mathrm{(V)}_{#1}(#2)}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Theorem environments
+
+\usepackage{amsthm}
+
+\newtheorem*{theorem}{Theorem}
+
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3 }#1}
+\theoremstyle{named}
+\newtheorem*{namedtheorem}{Theorem}
+
+
+\renewcommand{\qed}{\nobreak 
+      \ifvmode \relax \else
+       \hfill \nobreak
+       \vrule height0.75em width0.5em depth0.25em
+      \fi}
+      
+\renewcommand{\qedsymbol}{\vrule height0.75em width0.5em depth0.25em}
+
+%%% original, at http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html
+%\renewcommand{\qed}{\nobreak \ifvmode \relax \else
+%      \ifdim\lastskip<1.5em \hskip-\lastskip
+%      \hskip1.5em plus0em minus0.5em \fi \nobreak
+%      \vrule height0.75em width0.5em depth0.25em\fi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%     Mathematical asides    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{shadecolor}{gray}{.90}
+\newlength{\boxwidth}
+\newsavebox{\boxcontainer}
+\setlength{\fboxrule}{1pt}
+\setlength{\fboxsep}{9pt}
+\setlength{\FrameRule}{\fboxrule}
+\setlength{\FrameSep}{\fboxsep}
+%
+%%%%% To get a list of the boxes:
+\usepackage[subfigure,titles]{tocloft}
+\newlistof[chapter]{mathaside}{loa}{List of Mathematical Asides}
+%%% (if not wanted, comment out above and uncomment the \newcounter below.)
+%\newcounter{mathaside}[chapter]
+%%%
+\newenvironment{mathaside}[1]{%
+  \refstepcounter{mathaside}
+  \addcontentsline{loa}{mathaside}
+  {\protect\numberline{\themathaside}#1}\par
+%  \addcontentsline{loa}{mathaside}
+%  {\protect\numberline{\themathaside}#1}\par
+  \vspace{5pt}\textbf{Mathematical Aside~\themathaside. #1}\vspace{-7pt}
+  \nopagebreak[4]
+    \def\FrameCommand{\fboxsep=\FrameSep \fboxrule=\FrameRule \fcolorbox{black}{shadecolor}}%
+    \MakeFramed {\setlength{\boxwidth}{0.95\textwidth}
+    \addtolength{\boxwidth}{-2\FrameSep}
+    \addtolength{\boxwidth}{-2\FrameRule}
+    \setlength{\hsize}{\boxwidth} \FrameRestore}
+    \parindent=0pt
+%    \parskip=11pt
+}%
+%
+{\endMakeFramed}
+%
+%%%  Some additional extras:
+%%%  Add chapter number to counter
+\renewcommand{\themathaside}{\thechapter.\arabic{mathaside}}
+%%%  Redefine \chapter command, as per http://tex.stackexchange.com/q/60505/,
+%%%  to get better spacings in the list of asides. 
+%%%  This can be commented out if the list is not in use.
+\makeatletter
+\let\stdchapter\chapter
+\renewcommand*\chapter{%
+  \@ifstar{\starchapter}{\@dblarg\nostarchapter}}
+\newcommand*\starchapter[1]{\stdchapter*{#1}}
+\def\nostarchapter[#1]#2{
+  \stdchapter[{#1}]{#2}
+  \addtocontents{loa}{\protect\addvspace{10\p@}}
+  }
+\makeatother
+%%%
+%%% parskips introduced manually because simplicity.
+\newlength{\maskip}
+\setlength{\maskip}{9pt}
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT HERE %%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\setcounter{page}{1}    % start page numbering
+\pagenumbering{arabic}
+
+\newpage 
+
+\newpage
+
+\input{0-Miscellaneous/Titlepage}
+
+
+
+%\onehalfspacing
+\input{0-Miscellaneous/Abstract}
+
+
+
+
+
+\input{0-Miscellaneous/Declaration}
+
+\singlespacing
+%\input{0-Miscellaneous/Quote}
+\input{0-Miscellaneous/Acknowledgements}
+
+\newpage
+\singlespacing
+\tableofcontents  
+
+\newpage
+\listoffigures
+
+\listofmathaside
+
+
+
+\singlespacing
+%\input{0-Miscellaneous/ThesisOutline}
+
+\input{0-Miscellaneous/ListOfPublications}
+
+
+
+%%% 1.5 spacing for the bulk of the document
+\onehalfspacing
+
+%%% Start openright (leave blank page if necessary to start chapters on odd pages.)
+\makeatletter
+\@openrighttrue
+\makeatother
+
+%%%%%%%%%%%%%%% CHAPTERS+APPENDICES GO HERE %%%%%%%%%%%%%%%%%
+
+
+\input{1-Introduction/Introduction}
+
+
+
+
+%\input{0-Miscellaneous/PreSkeleton}
+
+%
+\part{Ionization}
+\label{part:I}
+
+
+\input{2-ARM-theory/ARMtheory}
+\input{3-Multi-channel/Multichannel}
+\input{4-Potentials/Potentials}
+\input{5-Quantum-orbits/QuantumOrbits}
+\input{6-LES/LowEnergyStructures}
+
+\part{High-order harmonic generation}
+\label{part:II}
+
+\input{7-HHG-intro/HHGintro}
+\input{8-Spin-HHG/SpinHHG}
+\input{9-Nondipole-HHG/NondipoleHHG}
+
+\part{Conclusions}
+\label{part:III}
+
+\input{10-Conclusions/Conclusions}
+
+
+
+%\input{0-Miscellaneous/PostSkeleton}
+
+
+\appendix
+\input{0-Miscellaneous/AtomicUnits}
+
+
+
+%%%%%%%%% References %%%%%%%%%%%%%%
+\singlespacing % for bibliography.
+\setlength{\bibsep}{2.5mm}
+\renewcommand\bibname{References}
+
+%% Add bibliography to TOC
+\clearpage
+\addcontentsline{toc}{chapter}{References}    
+
+\bibliographystyle{arthur} 
+\bibliography{references}{}
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
