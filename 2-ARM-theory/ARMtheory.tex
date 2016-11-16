@@ -156,7 +156,7 @@ Here we will take the state $\ket{\Psi(t)}$ inside the integral to be the neutra
 
 
 \subsection{The hamiltonian}
-We wish to consider ionization of an atom or molecule by a strong, long-wavelength laser field, and we want to consider -- at least in the outer-region -- multi-electron effects. As such, the hamiltonian for the problem includes electrostatic forces for $N$ electrons, with nuclei of charge $Z_m$ at $\vb R_m$, and their length-gauge interaction with an external laser field~$\vb F(t)$:
+We wish to consider ionization of an atom or molecule by a strong, long-wavelength laser field, and we want to consider multi-electron effects. As such, the hamiltonian for the problem includes electrostatic forces for $N$ electrons, with nuclei of charge $Z_m$ at $\vb R_m$, and their length-gauge interaction with an external laser field~$\vb F(t)$:
 \begin{subequations}
 \label{e2-totalhamiltonian}
 \begin{align}
@@ -279,9 +279,6 @@ We can, however, neglect the contribution from the non-diagonal, exchange-like t
 where we include normalization factors of $\frac{1}{\sqrt{N}}$, due to the normalization of $\mathbb{A}$, and $N$, due to the different electrons the Bloch operator can act on. From here on we revert the Bloch symbol $\hat{L}^{(-)}(a)$ to a single-electron operator as originally introduced.
 
 The remaining single-electron wavefunction on the right of the Bloch operator can now be recognised to be the Dyson orbital corresponding to channel $n$, which we denote by
-%%%%%
-%%\pdfmargincomment{Reference for Dyson orbital missing.}
-%%%%%
 \begin{equation}
 \ket{n_{D}(t)}=\sqrt{N}\braket{n(t)}{\Psi_g}.
 \label{e2-dysonorbital}
@@ -307,9 +304,6 @@ in terms of which the total hamiltonian can be written as
 \begin{equation}
 H^{(-)}=H^{N-1}+H_e^n(t)+V_{ee}^n(t).
 \end{equation}
-%%%
-%%%  Should the first H be curly?
-%%%
 
 We deal with this combination in a perturbative fashion with respect to the entangling interaction, treating the correlation operator $V_{ee}^n$ as a small effect on top of the single-active electron dynamics of tunnel ionization. We use, specifically, the main tool of time-dependent perturbation theory, the Dyson expansion.
 
@@ -459,7 +453,7 @@ e^{i\int_T^{t'} U_n(\rl(\tau;\vb{r},\vbp,t'))\d\tau}
 The problem with this integral is that it is highly oscillatory, essentially through the influence of the terms $e^{i I_{p,n} t'} e^{\frac{i}{2} \int_T^{t'} \left(\vbp+ \vba(\tau) \right)^2\d\tau}$: the integrand changes sign with a frequency dictated by the ionization potential, via $e^{i I_{p,n} t'}$, but it is integrated over timescales of at least several laser cycles, with a laser frequency $\omega$ much smaller than $I_p$. The result is shown in \reffig{f2-oscillatory-factors}: a function which oscillates rapidly, with varying frequency. In general, the integral of such a function can indeed be calculated numerically -- most easily when\ an explicit oscillatory factor like $e^{i I_{p,n} t'}$ is present -- but calculating it accurately is challenging, because of the numerous cancellations: if $a$ and $b$ are very close to each other, one needs very high accuracy in both $a$ and $b$ to get even mediocre accuracy in $a-b$.
 
 
-\input{2-ARM-theory/Figures/figure2Aparameters.tex}%
+\input{2-ARM-theory/Figures/figure2Aparameters.tex}
 \begin{figure}[htb]
   \centering
   $\Re\left[
@@ -669,17 +663,6 @@ Putting these in place, then, we can now separate the main position-independent 
 \begin{align}
 a_n^{(0)}(\vb{p},\tn)
 & =
-%-i e^{-iE_n\tn} 
-%\int\frac{\d\vbr}{(2\pi)^{3/2}}
-%\matrixel{\vbr}{\hat{L}^{(-)}(a)}{n_D}
-%\sqrt{\frac{2\pi}{iS_V''(\ts)}}
-%\nonumber \\ & \qquad
-%e^{-i\left(\vbp+\vba(\ts)\right)\cdot\vb{r}}
-%e^{iI_{p,n} \ts + \frac{i}{2} \int_T^{\ts}\left(\vbp+\vba(\tau)\right)^2\d\tau }
-%e^{-i \Delta\tvr S_V'(\ts)}
-%%
-%e^{i\int_T^{\tvr} U_n(\rl(\tau;\vb{r},\vbp,\tvr))\d\tau}
-%\nonumber \\ & =
 \frac{-i e^{-iE_n\tn}}{\sqrt{iS_V''(\ts)}}
 e^{iI_{p,n} \ts + \frac{i}{2} \int_T^{\ts}\left(\vbp+\vba(\tau)\right)^2\d\tau }
 \nonumber \\ & \quad \times
@@ -762,15 +745,6 @@ This concludes the transformations of this factor, which when put back into our 
 \begin{align}
 a_n^{(0)}(\vb{p},\tn)
 & =
-%\frac{-i e^{-iE_n\tn}}{\sqrt{iS_V''(\ts)}}
-%e^{iI_{p,n} \ts + \frac{i}{2} \int_T^{\ts}\left(\vbp+\vba(\tau)\right)^2\d\tau }
-%\nonumber \\ & \quad \times
-%\int\frac{\d\vbr}{2\pi}
-%e^{-i \Delta\tvr S_V'(\ts)}
-%e^{i\int_T^{\tvr} U_n(\rl(\tau;\vb{r},\vbp,\tvr))\d\tau}
-%e^{-i\left(\vbp+\vba(\ts)\right)\cdot\vb{r}}
-%\matrixel{\vbr}{\hat{L}^{(-)}(a)}{n_D}
-%\nonumber \\ & =
 \frac{-i e^{-iE_n\tn}}{\sqrt{iS_V''(\ts)}}
 e^{iI_{p,n} \ts + \frac{i}{2} \int_T^{\ts}\left(\vbp+\vba(\tau)\right)^2\d\tau }
 e^{-i\int_\tk^T U_n\left(\int_{ \ts}^\tau \vb{v}(\tau')\d\tau'\right) \d\tau}
@@ -880,8 +854,6 @@ As such, its integral is given by
 \end{align}
 where we have defined $r(\tau)\colonequals \int_{ \ts}^\tau \hat{\vbr}\cdot\vb{v}(\tau')\d\tau'$, for which $\frac{\d r}{\d\tau}=\hat{\vbr}\cdot \vb{v}(\tau).$ To proceed, we now perform two approximations: we first assume that the velocity will not change significantly during the time interval being integrated, so we can replace $\vb{v}(\tau)$ by $\vb{v}(\ts)$, and we further suppose that the tunnelling velocity will be primarily directed towards negative $z$ (since the field points towards positive $z$ and the charge is negative). These two together imply that $\frac{\d r}{\d\tau}\approx-v_\parallel(\ts)\approx+i\kappa$ and therefore that
 \begin{align}
-%-i\int_{\tvr}^{\tk}U_n\left(\int_{ \ts}^\tau \vb{v}(\tau')\d\tau'\right) \d\tau 
-%= 
 \int_{\tvr}^{\tk} \frac{-iQ\d\tau}{\sqrt{r(\tau)^2}}
 =
 -\frac{Q}{\kappa}\int_{a}^{r_\kappa} \frac{\d r}{\sqrt{r^2}}
@@ -939,13 +911,6 @@ and therefore
 With this, then, the shape factor simplifies to
 \begin{equation}
 R_n(\vbp)
-%=
-%\frac{ iC_{\kappa l} \kappa^{3/2} }{\sqrt{iS_V''(\ts)}}
-%a
-%e^{-\kappa a}
-%\int\frac{\d\Omega}{2\pi}
-%f(\theta,\phi)
-%e^{-i\left( \vbpo -i \sqrt{\kappa^2 + \pt^2} \un \right)\cdot\ur a} 
 =
 \frac{ iC_{\kappa l} \kappa^{1/2} }{\sqrt{iS_V''(\ts)}}
 \kappa a \, e^{-\kappa a}
@@ -1247,12 +1212,6 @@ Here the squared $\vbq^2$ is, because of the saddle-point equation~\eqref{e2-ts-
 \begin{align}
 s_\pm
 & =
-%\sqrt{
-%-\kappa^2a^2
-%\pm 2i a b \uu\cdot\vbpo
-%\pm 2b \kappa a \sqrt{1+\pt^2/\kappa^2}\:\uu\cdot\un
-%- b^2}
-%\\ & =
 \sqrt{
  -\kappa^2a^2
  \vphantom{\sqrt{\frac{\pt}{\kappa}}}
@@ -1306,9 +1265,6 @@ Writing $s_\pm=i\sigma_\pm$, it is clear that $j_n(s_\pm)=j_n(i\sigma_\pm)$ is m
 \nonumber \\ & =
 \sqrt{\frac{\pi}{2}}
 \frac{ I_{n+\frac12}(\sigma_\pm)}{\sigma_\pm^{\smash[b]{n+\frac12}}}
-%\sim
-%\frac{1}{2}
-%\frac{ e^{\sigma_\pm}}{\sigma_\pm^{\smash[b]{n+1}}}
 \sim
 \frac{1}{2}
 \left(1-\frac{n^2+n}{2\sigma_\pm}+\cdots\right)
@@ -1407,28 +1363,31 @@ b \left(
 It is important to note, on the other hand, that the full analytical spherical Fourier transform $\sft(\vbq)$ as calculated in \eqref{e2-sft-final-analytical-result} does have some (unphysical) dependence on $a$, which is caused by the stack of approximations taken over the course of this chapter. This dependence disappears for large enough $\kappa a$, as shown in \reffig{f2-sft-asymptotics}, though in general this tends to happen for larger boundary radii than the equilibrium point between the laser and the Coulomb field. In practice, then, one needs to take the boundary radius $a$ at a point where the shape factor reproduces a shape consistent with the asymptotics, and is reasonably flat with respect to increases in this radius.
 
 
-\captionsetup[figure]{position=above}
 
 \input{2-ARM-theory/Figures/figure2Cparameters.tex}%
 \begin{figure}[htb]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$n_x=0$, $n_z=0$]{
+  (a) $n_x=0$, $n_z=0$ &
+  (b) $n_x=1$, $n_z=0$ \\[-2mm]
+  \subfigure{
     \label{f2-sft-asymptotics-a}
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Ca.pdf}
   }
   &
-  \subfloat[$n_x=1$, $n_z=0$]{
+  \subfigure{
     \label{f2-sft-asymptotics-b}
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Cb.pdf}
   }
   \\
-  \subfloat[$n_x=0$, $n_z=1$]{
+  (c) $n_x=0$, $n_z=1$ &
+  (d) $n_x=1$, $n_z=1$ \\[-2mm]
+  \subfigure{
     \label{f2-sft-asymptotics-c}
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Cc.pdf}
   }
   &
-  \subfloat[$n_x=1$, $n_z=1$]{
+  \subfigure{
     \label{f2-sft-asymptotics-d}
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Cd.pdf}
   }
@@ -1439,7 +1398,6 @@ It is important to note, on the other hand, that the full analytical spherical F
   \label{f2-sft-asymptotics}
 \end{figure}
 
-%\captionsetup[figure]{position=auto}
 
 
 
@@ -1456,24 +1414,27 @@ Specifically, it is important to note that the main dependence, through $\left.\
 
 
 
-\captionsetup[figure]{position=top}
 \input{2-ARM-theory/Figures/figure2Dparameters.tex}%
 \begin{figure}[htb]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$n_x=0$, $n_z=0$ ($-\ \Sigma_g$)]{
+  (a) $n_x=0$, $n_z=0$ ($-\ \Sigma_g$) &
+  (b) $n_x=1$, $n_z=0$ ($\B\ \Sigma_u$) \\[-2mm]
+  \subfigure{
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Da.pdf}  
   }
   &
-  \subfloat[$n_x=0$, $n_z=1$ ($\B\ \Sigma_u$)]{
+  \subfigure{
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Db.pdf}  
   }
   \\
-  \subfloat[$n_x=1$, $n_z=0$ ($\A\ \Pi_u$)]{
+  (c) $n_x=0$, $n_z=1$ ($\A\ \Pi_u$) &
+  (d) $n_x=1$, $n_z=1$ ($\X\ \Pi_g$) \\[-2mm]
+  \subfigure{
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Dc.pdf}  
   }
   &
-  \subfloat[$n_x=1$, $n_z=1$ ($\X\ \Pi_g$)]{
+  \subfigure{
     \includegraphics[scale=1]{2-ARM-theory/Figures/figure2Dd.pdf}  
   }
   \end{tabular}
@@ -1482,7 +1443,6 @@ Specifically, it is important to note that the main dependence, through $\left.\
   }
   \label{f2-sft-on-axis}
 \end{figure}
-%\captionsetup[figure]{position=auto}
 
 
 
@@ -1653,10 +1613,6 @@ R_m(\vbk)
 e^{i\left(\vbk-\vbp\right)\cdot\vb{r}} 
 e^{-\frac{i}{2} \int_{\ts}^{t''}\left(\vb{k}+\vba(\tau)\right)^2\d\tau} 
 e^{-iW_{nm}(\vbr,\vbk,t'')}
-%\nonumber \\ & \qquad \qquad \quad  \times
-%e^{+i\int_T^{t''} U_n(\rl(\tau;\vb{r},\vbp,t''))\d\tau}
-%e^{-i\int_T^{t''} U_m(\rl(\tau;\vb{r},\vb{k},t''))\d\tau}
-%e^{-i\int_\tk^{t''} U_m\left(\int_{ \ts}^\tau \vbk+\vba(\tau')\d\tau'\right) \d\tau}
 ,
 \label{e2-correlation-driven-yield-with-eva-states}
 \end{align}
@@ -1693,10 +1649,6 @@ R_m(\vbk)
 e^{i\left(\vbk-\vbp\right)\cdot\vb{r}} 
 e^{-\frac{i}{2} \int_{\ts}^{t''}\left(\vb{k}+\vba(\tau)\right)^2\d\tau} 
 e^{-iW_{nm}(\vbr,\vbk,t'')}
-%\nonumber \\ & \qquad \qquad \quad  \times
-%e^{+i\int_T^{t''} U_n(\rl(\tau;\vb{r},\vbp,t''))\d\tau}
-%e^{-i\int_T^{t''} U_m(\rl(\tau;\vb{r},\vb{k},t''))\d\tau}
-%e^{-i\int_\tk^{t''} U_n\left(\int_{ \ts}^\tau \vbk+\vba(\tau')\d\tau'\right) \d\tau}
 .
 \label{e2-correlation-driven-yield-semi-final}
 \end{align}

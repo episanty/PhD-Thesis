@@ -20,19 +20,14 @@ Having spent the previous six chapters on the physics of ionization in strong fi
 \label{f7-standard-harmonic-spectrum}
 \end{figure}
 
-%%% Misha's comments:
-
-% Complex space-time electron dynamics in the weak relativistic regime
-
-% In this part we move to longer lambda and higher I, and explore the use of tailored laser fields, in particular to compensate for the effects of the Lorentz force on the recollision dynamics. We focus on HHG as a physical process. Thus we start with a brief review of it.
 
 
-High-order harmonic generation is one of the most varied and dynamic parts of strong-field physics: it offers the technological promise of bright pulses of extremely high-fre\-quen\-cy radiation, which can be used to probe matter at its fundamental timescales~\cite{popmintchev_record_2012, calegari_phenylalanine_2014}; it can be employed `in situ' use the harmonic generation process as an incisive and fast probe of the structure and dynamics of the generationg medium~\cite{mairesse_high-harmonic-spectroscopy_2010}; and it offers a flexible platform where it is possible to produce finely-tailored driving pulses to control the electronic motion to a remarkable extent~\cite{ chipperfield_ideal_2009, brugnera_hhg-orthogonal_2011}, with a direct impact on the experimental signal.
+High-order harmonic generation is one of the most varied and dynamic parts of strong-field physics: it offers the technological promise of bright pulses of extremely high-fre\-quen\-cy radiation, which can be used to probe matter at its fundamental timescales~\cite{popmintchev_record_2012, calegari_phenylalanine_2014}; it can be employed `in situ' use the harmonic generation process as an incisive and fast probe of the structure and dynamics of the generation medium~\cite{mairesse_high-harmonic-spectroscopy_2010}; and it offers a flexible platform where it is possible to produce finely-tailored driving pulses to control the electronic motion to a remarkable extent~\cite{ chipperfield_ideal_2009, brugnera_hhg-orthogonal_2011}, with a direct impact on the experimental signal.
 
 
 Here we will be concerned with the latter possibility: the use of driving fields with nontrivial polarizations to extract information about the medium and the harmonic generation process, and to extend the regimes that the generated radiation can access. More concretely, in chapters~\ref{chap:spin-HHG} and~\ref{chap:nondipole-HHG} we will deal mostly with `bicircular' fields -- combinations of counter-rotating circularly polarized driving lasers, which combine to form flexible and varied field shapes, both at each individual point and as a coherent variation across the sample. In addition, bicircular fields have the appeal that each circular driver on its own would produce no harmonics, but when combined they are as efficient as linear drivers, with a much broader toolset.
 
-Before we begin, however, it is necessary to start with a brief review of the harmonic generation process and its theoretical description. There are several good HHG reviews in the literature~\cite{ JoachainHHGReview, corkum_hhg-review_2007, HHGTutorial, kohler_chapter_2012}, so we will refer the reader interested in further details to those works, but we will work through the fundamental material here. In this chapter, we will showcase the basic framework of our understanding of HHG, and we will lay the foundation for the calculations, within the so-called Lewenstein model~\cite{LewensteinHHG}, that underpin our work in the next two chapters. 
+Before we begin, however, it is necessary to start with a brief review of the harmonic generation process and its theoretical description. There are several good HHG reviews in the literature~\cite{ JoachainHHGReview, krausz-ivanov_attosecond-review_2009, HHGTutorial, kohler_chapter_2012}, so we will refer the reader interested in further details to those works, but we will work through the fundamental material here. In this chapter, we will showcase the basic framework of our understanding of HHG, and we will lay the foundation for the calculations, within the so-called Lewenstein model~\cite{LewensteinHHG}, that underpin our work in the next two chapters. 
 
 Then, in chapter~\ref{chap:spin-HHG}, we will use this theory to analyse the conservation properties of spin angular momentum in HHG using bicircular fields of different frequencies -- one infrared field and its second harmonic -- and later, in chapter~\ref{chap:nondipole-HHG}, we will use non-collinear bicircular beams at the same wavelength to probe the harmonic emission at the breakdown of the dipole approximation as the wavelength of the driver increases, extending the standard Lewenstein model to this beyond-dipole situation.
 
@@ -44,18 +39,13 @@ This chapter reviews standard material from the literature, roughly following \c
 \textsc{E.~Pisanty}.
 \newblock {RB-SFA}: {H}igh {H}armonic {G}eneration in the {S}trong {F}ield
   {A}pproximation via {M}athematica.
-\newblock \url{https://github.com/episanty/RB-SFA} (2016).
+\newblock \url{https://github.com/episanty/RB-SFA}, \href{http://dx.doi.org/10.5281/zenodo.164626}{v2.1.2} (2016).
 \end{enumerate}
 
-%\noindent
-%(Strangely enough, this is one of only a handful of open implementations of this twenty-year-old method~\cite{rhyno_thesis, rhyno_code, hhgmax_thesis, hhgmax_code, slimp_paper, ClassSTRONG_paper}.)
 
 
 
 
-%\section{Why harmonic generation?}
-%\label{sec:why-hhg}
-%Before we plunge in to the mechanisms behind the generation of high harmonics, it is worth looking at the motivations for studying HHG in the first place.
 
 
 \section{Theoretical approaches to HHG}
@@ -69,10 +59,10 @@ The main tool used to understand and explore the generation of high-order harmon
 
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f7-corkum-three-step-model-a}}
-  \subfloat{\label{f7-corkum-three-step-model-b}}
-  \subfloat{\label{f7-corkum-three-step-model-c}}
-  \subfloat{\label{f7-corkum-three-step-model-d}}
+  \subfigure{\label{f7-corkum-three-step-model-a}}
+  \subfigure{\label{f7-corkum-three-step-model-b}}
+  \subfigure{\label{f7-corkum-three-step-model-c}}
+  \subfigure{\label{f7-corkum-three-step-model-d}}
   \includegraphics[scale=1.2]{7-HHG-intro/Figures/figure7A.png}
   \caption[
   Essential components of the three-step model of HHG
@@ -355,15 +345,15 @@ This form is then again well approximated in the saddle-point regime, where the 
 \frac{\partial S}{\partial t'} = 0
 \quad \implies \quad
 \frac12(\vbp_s+\vba(t'))^2 +I_p &= 0
-\label{e7-temproal-saddle-point-equations-tt}
+\label{e7-temporal-saddle-point-equations-tt}
 \\
 \frac{\partial S}{\partial t} = 0
 \quad \implies \quad
 \frac12(\vbp_s+\vba(t))^2 + I_p & = \Omega,
-\label{e7-temproal-saddle-point-equations-t}
+\label{e7-temporal-saddle-point-equations-t}
 \end{empheq}
-which admits the clean semiclassical interpretation of conservation of energy during the tunnelling step, in \eqref{e7-temproal-saddle-point-equations-tt} and exactly analogous to the saddle-point equations for ionization from chapter~\ref{chap:R-matrix}, and in the recombination step, in \eqref{e7-temproal-saddle-point-equations-t}.
-\label{e7-temproal-saddle-point-equations}
+which admits the clean semiclassical interpretation of conservation of energy during the tunnelling step, in \eqref{e7-temporal-saddle-point-equations-tt} and exactly analogous to the saddle-point equations for ionization from chapter~\ref{chap:R-matrix}, and in the recombination step, in \eqref{e7-temporal-saddle-point-equations-t}.
+\label{e7-temporal-saddle-point-equations}
 \end{subequations}
 
 
@@ -388,7 +378,7 @@ As mentioned earlier, the author's implementation of this (standard) theory is a
   \caption[
   Sample screenshot of the RBSFA code used to calculate HHG spectra
   ]{
-  Screenshot of the code used to produce \reffig{f7-standard-harmonic-spectrum} with the RB-SFA Mathematica package available as \citer{RB-SFA}. The code implements the standard SFA theory developed in this chapter, along with the beyond-dipole corrections discussed in chaper~\ref{chap:nondipole-HHG}, and it is simple and easy to use.
+  Screenshot of the code used to produce \reffig{f7-standard-harmonic-spectrum} with the RB-SFA Mathematica package available as \citer{RB-SFA}. The code implements the standard SFA theory developed in this chapter, along with the beyond-dipole corrections discussed in chapter~\ref{chap:nondipole-HHG}, and it is simple and easy to use.
   }
 \label{f7-RBSFA-screenshot}
 \end{figure}

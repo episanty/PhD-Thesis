@@ -27,6 +27,7 @@ The material in this chapter has appeared previously in references
 
 
 
+
 \section{Low-Energy Structures in tunnel ionization}
 \label{sec:LES-review}
 As we saw in the Introduction, the basics of ionization in strong, long-wavelength fields were mostly worked out in the 1960s by Keldysh, Faisal and Reiss, and then further refined by Popov, Perelomov and Terent'ev. Collectively, these theories describe ionization in regimes of high intensity, with the Keldysh adiabaticity parameter $\gamma=\kappa \omega /F = \sqrt{I_p/2U_p}$ distinguishing what is known as the multiphoton regime at $\gamma \gg 1$ from the tunnelling regime at $\gamma \ll 1$.
@@ -67,19 +68,24 @@ In this chapter we will begin by exploring, in section \ref{sec:LES-experiment},
 \subsection{Experimental observations of low-energy structures}
 \label{sec:LES-experiment}
 
-On the experimental side, the discovery of the LES was rather quickly followed by the observation of more structures at even lower energy, which were rather quickly dubbed Very Low Enegy Structures (VLES)~\cite{VLES_initial, VLES_characterization}. These detections, shown in Figs.~\ref{f6-quan-original-figure} and \ref{f6-wu-original-figure}, unearthed a second set of peaks at even lower energy, showing that there was still more dynamics to be unearthed in the low-energy region of ionization by mid-IR pulses. 
+On the experimental side, the discovery of the LES was rather quickly followed by the observation of more structures at even lower energy, which were rather quickly dubbed Very Low Energy Structures (VLES)~\cite{VLES_initial, VLES_characterization}. These detections, shown in Figs.~\ref{f6-quan-original-figure} and \ref{f6-wu-original-figure}, unearthed a second set of peaks at even lower energy, showing that there was still more dynamics to be unearthed in the low-energy region of ionization by mid-IR pulses. 
+
+The initial observations were relatively noisy, but in addition to the spike found by Blaga et al., which corresponds to the gentle hump at ${\sim}\SI{3}{\electronvolt}$ for the black curve at $\SI{2}{\micro\meter}$ in \reffig{f6-quan-original-figure-a}, for example, there was clear evidence of a second structure at lower energy, perhaps even more marked than the original LES peak in some cases. Similarly, later measurements \cite{VLES_characterization} examining the structures found them to be universal features, appearing in multiple different noble gases and at a range of intensities and wavelengths, generally in the tunnelling regime of low $\gamma$ (${\sim}0.65$ for neon, ${\sim}0.8$ for krypton, and ${\sim}0.85$ for xenon).
+
+
+Unfortunately, however, the initial experiments had relatively little resolving power on these structures due to the relatively small volume of data they were able to accumulate. The regimes at $\gamma \sim 1$ and higher have been explored quite thoroughly, and the low-energy set of structures appears in the tunnelling regime where $\gamma = \omega \kappa / F$ is low. This in turn requires a high intensity (which is bounded above by saturation of the sample) or a long wavelength, which is the regime that's the LES/VLES experiments explored.
 
 
 \begin{figure}[t!]
   \centering
-  \subfloat{\label{f6-quan-original-figure-a}}
-  \subfloat{\label{f6-quan-original-figure-b}}
-  \subfloat{\label{f6-quan-original-figure-c}}
-  \subfloat{\label{f6-quan-original-figure-d}}
-  \subfloat{\label{f6-quan-original-figure-e}}
+  \subfigure{\label{f6-quan-original-figure-a}}
+  \subfigure{\label{f6-quan-original-figure-b}}
+  \subfigure{\label{f6-quan-original-figure-c}}
+  \subfigure{\label{f6-quan-original-figure-d}}
+  \subfigure{\label{f6-quan-original-figure-e}}
   \includegraphics[scale=0.8]{6-LES/Figures/figure6B.png}
   \caption[
-  Experimental observation of Very Low Enegy Structures by W. Quan et al.
+  Experimental observation of Very Low Energy Structures by W. Quan et al.
   ]{
   Experimental observation of Very Low Energy Structures~\cite{VLES_initial}, showing in \protect\subref{f6-quan-original-figure-a} the rise of a spike in low-energy electrons in the ionization of xenon at $\SI{8e13}{\watt/\centi\meter^2}$ and wavelengths between $\SI{800}{nm}$ and $\SI{2}{\micro\meter}$. For the longer wavelengths at $\SI{2}{\micro\meter}$ and $\SI{1.5}{\micro\meter}$, shown in \protect\subref{f6-quan-original-figure-c} and \protect\subref{f6-quan-original-figure-e} respectively for two different intensities, two distinct humps (the LES and the VLES) are visible, marked by the dashed lines.  
   Parts \protect\subref{f6-quan-original-figure-b} and \protect\subref{f6-quan-original-figure-d} show classical Monte Carlo simulations for the parameters of \protect\subref{f6-quan-original-figure-a} and \protect\subref{f6-quan-original-figure-c}.
@@ -87,30 +93,20 @@ On the experimental side, the discovery of the LES was rather quickly followed b
   }
 \label{f6-quan-original-figure}
 %\end{figure}
-%\copyrightfootnote{
-%\reffig{f6-quan-original-figure} reprinted with permission from W. Quan et al., {%
-%\hypersetup{urlcolor=black}%
-%\href{http://dx.doi.org/10.1103/PhysRevLett.103.093001}{%
-%\emph{Phys. Rev. Lett.} \textbf{103}, 093001 (2009)}. %
-%©~2009 by the American Physical Society.
-%}
-%}
-%%% As per APS T&Cs
 %
 %
 %
 %
 %\begin{figure}[htb]
-%
-%
+\vspace{2mm}
 %
   \centering
-  \subfloat{\label{f6-wu-original-figure-a}}
-  \subfloat{\label{f6-wu-original-figure-b}}
-  \subfloat{\label{f6-wu-original-figure-c}}
-  \subfloat{\label{f6-wu-original-figure-d}}
-  \subfloat{\label{f6-wu-original-figure-e}}
-  \subfloat{\label{f6-wu-original-figure-f}}
+  \subfigure{\label{f6-wu-original-figure-a}}
+  \subfigure{\label{f6-wu-original-figure-b}}
+  \subfigure{\label{f6-wu-original-figure-c}}
+  \subfigure{\label{f6-wu-original-figure-d}}
+  \subfigure{\label{f6-wu-original-figure-e}}
+  \subfigure{\label{f6-wu-original-figure-f}}
   \includegraphics[scale=0.6]{6-LES/Figures/figure6C.png}
   \caption[
   Characterization of Very Low Energy Structures by C.Y. Wu et al.
@@ -122,6 +118,15 @@ On the experimental side, the discovery of the LES was rather quickly followed b
 \label{f6-wu-original-figure}
 \end{figure}
 \copyrightfootnote{
+\reffig{f6-quan-original-figure} reprinted with permission from W. Quan et al., {%
+\hypersetup{urlcolor=black}%
+\href{http://dx.doi.org/10.1103/PhysRevLett.103.093001}{%
+\emph{Phys. Rev. Lett.} \textbf{103}, 093001 (2009)}. %
+©~2009 by the American Physical Society.
+}
+}
+%%% As per APS T&Cs
+\copyrightfootnote{
 \reffig{f6-wu-original-figure} reprinted with permission from C.Y. Wu et al., {%
 \hypersetup{urlcolor=black}%
 \href{http://dx.doi.org/10.1103/PhysRevLett.109.043001}{%
@@ -129,15 +134,8 @@ On the experimental side, the discovery of the LES was rather quickly followed b
 ©~2012 by the American Physical Society.
 }
 }
-%% As per APS T&Cs
+%%% As per APS T&Cs
 
-
-The initial observations were relatively noisy, but in addition to the spike found by Blaga et al., which corresponds to the gentle hump at ${\sim}\SI{3}{\electronvolt}$ for the black curve at $\SI{2}{\micro\meter}$ in \reffig{f6-quan-original-figure-a}, for example, there was clear evidence of a second structure at lower energy, perhaps even more marked than the original LES peak in some cases. Similarly, later measurements \cite{VLES_characterization} examining the structures found them to be universal features, appearing in multiple different noble gases and at a range of intensities and wavelengths, generally in the tunnelling regime of low $\gamma$ (${\sim}0.65$ for neon, ${\sim}0.8$ for krypton, and ${\sim}0.85$ for xenon).
-
-
-
-
-Unfortunately, however, the initial experiments had relatively little resolving power on these structures due to the relatively small volume of data they were able to accumulate. The regimes at $\gamma \sim 1$ and higher have been explored quite thoroughly, and the low-energy set of structures appears in the tunnelling regime where $\gamma = \omega \kappa / F$ is low. This in turn requires a high intensity (which is bounded above by saturation of the sample) or a long wavelength, which is the regime that's the LES/VLES experiments explored.
 
 
 
@@ -169,14 +167,14 @@ More specifically, the VLES energy range is associated with a V-shaped structure
 \copyrightfootnote{
 \reffig{f6-pullen-original-full-spectrum} © IOP Publishing. Reproduced with permission. All rights reserved.
 }
-%% Copyright note is temporary pending IOP reply.
+%% As per terms in IOP email
 
 
 
 
 
 
-Upon its discovery, this peak was dubbed a Zero-Energy Structure (ZES), since the center of the peak is consistent with zero to within the available experimental precision both at the time of its discovery~\cite{pullen_kinematically_2014} and to date. However, as we shall see below, there is reason to suspect that the center may not be at zero but only close to it, so a much better name for the structure is Near-Zero-Energy Structure (NZES), which we will use throughout and as a synonym for ZES, and which better reflects the fact that in physics it is rather rare to have values exactly at zero instead of merely consistent with it.
+Upon its discovery, this peak was dubbed a Zero-Energy Structure (ZES), since the centre of the peak is consistent with zero to within the available experimental precision both at the time of its discovery~\cite{pullen_kinematically_2014} and to date. However, as we shall see below, there is reason to suspect that the centre may not be at zero but only close to it, so a much better name for the structure is Near-Zero-Energy Structure (NZES), which we will use throughout and as a synonym for ZES, and which better reflects the fact that in physics it is rather rare to have values exactly at zero instead of merely consistent with it.
 
 
 The angle-resolved photoelectron spectra of Refs.~\cite{dura_ionization_2013} and \cite{pullen_kinematically_2014}, as well as later publications, have several interesting features worth emphasizing. The first is the relatively trivial observation that, because of the volume element of the cylindrical coordinates being employed, it is naturally harder for electrons to fall exactly on-axis (at $\pt=0$) and on the volume element around it, which explains the detection probability on the lower part of \reffig{f6-pullen-original-full-spectrum}. This effect is also responsible for making the NZES form as a distinct spot separate from the axis, even though the structure is consistent with having its centre at the origin of the momentum plane; it also makes the high detection counts at the NZES spot, and above it, all the more remarkably high, particularly when compared to similar~$\pt$ at~higher $\pp$.
@@ -187,13 +185,19 @@ The second important feature is that, in experiments performed in Reaction Micro
 Finally, it is important to remark that the upper limit of the electron spectrum at around $\pt\approx\SI{0.3}{\au}$ is an artefact of the detection apparatus, which is configured for low-energy electrons at high resolution, and therefore leaves out higher momenta.
 
 
+
+
+
 The first of these features also points out an important aspect of the photoelectron spectra in the low-energy region, which is the fact that the transverse momentum distribution will vary wildly for different longitudinal momenta. Indeed, the experimental transverse distributions, shown in \reffig{f6-pullen-original-transverse-spectrum}, show large differences in photoelectron spectra taken over broad $\pp$ ranges and the slice at $|\pp|<\SI{0.02}{\au}$, where the NZES congregates. In this view, the NZES is clearly visible as a spike of width $\Delta\pt\approx\SI{0.05}{\au}$ (though this also includes some electrons from the V-like structure of the VLES).
 
 
 
 
 
-\begin{figure}[hb]
+Since the original detection of the NZES, several improvements in the measurement stability and resolution have enabled better characterizations of the photoelectron distribution structures over momentum space~\cite{ZES_paper}. This includes a series of additional LES peaks, each with a distinct structure at relatively constant transverse momentum, and with progressively smaller longitudinal position, as shown in \reffig{f6-wolter-original-figure} and subsequently refined \cite{Wolter_PRX} as shown in \reffig{f6-wolter-prx-original-figure}. These features were indeed expected, as we shall show below, coming from different members of a family of trajectories.
+
+
+\begin{figure}[htb]
   \centering
   \includegraphics[scale=1.2]{6-LES/Figures/figure6E.jpg}
   \caption[
@@ -206,9 +210,27 @@ The first of these features also points out an important aspect of the photoelec
 \copyrightfootnote{
 \reffig{f6-pullen-original-transverse-spectrum} © IOP Publishing. Reproduced with permission. All rights reserved.
 }
-%% Copyright note is temporary pending IOP reply.
-%
-%
+
+
+
+
+
+\begin{figure}[h!t]
+  \vspace{2mm}
+  \centering
+  \subfigure{\label{f6-wolter-original-figure-a}}
+  \subfigure{\label{f6-wolter-original-figure-b}}
+  \subfigure{\label{f6-wolter-original-figure-c}}
+  \subfigure{\label{f6-wolter-original-figure-d}}
+  \includegraphics[scale=0.7]{6-LES/Figures/figure6F.png}
+  \caption[
+  Measured and CTMC high-resolution photoelectron momentum maps showing LES, VLES and ZES structures, observed by Wolter et al.
+  ]{
+  Measured momentum maps for the ionization of argon in a $\SI{3.1}{\micro\meter}$ 6.5-cycle pulse at $\SI{9e13}{\watt/\centi\meter^2}$ \cite{ZES_paper}, showing the V-shaped VLES and the NZES peak, as well as two distinct LES structures, in both linear (left) and logarithmic (right) transverse momentum scales. Most of the features are reasonably well reproduced by a classical trajectory Monte Carlo simulation (bottom row).
+  Figure excerpted from \citer{ZES_paper}.
+  }
+\label{f6-wolter-original-figure}
+\end{figure}
 \copyrightfootnote{
 \reffig{f6-wolter-original-figure} reprinted with permission from B. Wolter et al., {%
 \hypersetup{urlcolor=black}%
@@ -221,38 +243,19 @@ The first of these features also points out an important aspect of the photoelec
 
 
 
-\begin{figure}[h!t]
-  \vspace{2mm}
-  \centering
-  \subfloat{\label{f6-wolter-original-figure-a}}
-  \subfloat{\label{f6-wolter-original-figure-b}}
-  \subfloat{\label{f6-wolter-original-figure-c}}
-  \subfloat{\label{f6-wolter-original-figure-d}}
-  \includegraphics[scale=0.7]{6-LES/Figures/figure6F.png}
-  \caption[
-  Measured and CTMC high-resolution photoelectron momentum maps showing LES, VLES and ZES structures, observed by Wolter et al.
-  ]{
-  Measured momentum maps for the ionization of argon in a $\SI{3.1}{\micro\meter}$ 6.5-cycle pulse at $\SI{9e13}{\watt/\centi\meter^2}$ \cite{ZES_paper}, showing the V-shaped VLES and the NZES peak, as well as two distinct LES structures, in both linear (left) and logarithmic (right) transverse momentum scales. Most of the features are reasonably well reproduced by a classical trajectory Monte Carlo simulation (bottom row).
-  Figure excerpted from \citer{ZES_paper}.
-  }
-\label{f6-wolter-original-figure}
-\end{figure}
-
-
-\pagebreak
 
 
 
+As of this writing, the measurements in \citer{Wolter_PRX}, as showcased for example in \reffig{f6-wolter-prx-original-figure}, essentially represent the state of the art in the experimental observations of the low-energy region of above-threshold ionization in mid-IR fields. In particular, there is clear evidence of multiple LES features, well-resolved V-shape VLES structures, and strong NZES peaks, though the information on the latter is limited mostly to only its presence.
 
-Since the original detection of the NZES, several improvements in the measurement stability and resolution have enabled better characterizations of the photoelectron distribution structures over momentum space~\cite{ZES_paper}. This includes a series of additional LES peaks, each with a distinct structure at relatively constant transverse momentum, and with progressively smaller longitudinal position, as shown in \reffig{f6-wolter-original-figure} and subsequently refined \cite{Wolter_PRX} as shown in \reffig{f6-wolter-prx-original-figure}. These features were indeed expected, as we shall show below, coming from different members of a family of trajectories.
 
 
 
 
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f6-wolter-prx-original-figure-a}}
-  \subfloat{\label{f6-wolter-prx-original-figure-b}}
+  \subfigure{\label{f6-wolter-prx-original-figure-a}}
+  \subfigure{\label{f6-wolter-prx-original-figure-b}}
   \includegraphics[width=\textwidth]{6-LES/Figures/figure6G.png}
   \caption[
   Measured photoelectron momentum map showing multiple members of the LES series, observed by Wolter et al.
@@ -271,8 +274,6 @@ Since the original detection of the NZES, several improvements in the measuremen
 }
 }
 
-As of this writing, the measurements in \citer{Wolter_PRX}, as showcased for example in \reffig{f6-wolter-prx-original-figure}, essentially represent the state of the art in the experimental observations of the low-energy region of above-threshold ionization in mid-IR fields. In particular, there is clear evidence of multiple LES features, well-resolved V-shape VLES structures, and strong NZES peaks, though the information on the latter is limited mostly to only its presence.
-
 
 
 
@@ -288,7 +289,7 @@ As we saw earlier, from its initial detection the LES was reproducible from with
 
 %%% Overview
 
-These efforts largely fall along three lines of inquiry. On the classical side, one can study the global properties of the classical propagation map, and one can also use statistical Monte Carlo methods to predict photoelectron spectra. On a more explicitly quantum side, there is the Coulomb-Corrected SFA (CCFA), which we discussed in the Introduction and in chapter~\ref{chap:quantum-orbits}, and which embeds the classical trajectory dynamics directly within the quantum SFA framework. Finally, a class of methods known as Improved SFA (ISFA), include a single term of interaction with the core in a Born series and then perform an expanded SFA treatment. This varied set of methods generally agrees on the causes for the LES, in terms of the classes trajectories involved, but they provide multiple interpretations for how those trajectories translate into peaks in photoelectron spectra.	
+These efforts largely fall along three lines of inquiry. On the classical side, one can study the global properties of the classical propagation map, and one can also use statistical Monte Carlo methods to predict photoelectron spectra. On a more explicitly quantum side, there is the Coulomb-Corrected SFA (CCSFA), which we discussed in the Introduction and in chapter~\ref{chap:quantum-orbits}, and which embeds the classical trajectory dynamics directly within the quantum SFA framework. Finally, a class of methods known as Improved SFA (ISFA), include a single term of interaction with the core in a Born series and then perform an expanded SFA treatment. This varied set of methods generally agrees on the causes for the LES, in terms of the classes trajectories involved, but they provide multiple interpretations for how those trajectories translate into peaks in photoelectron spectra.	
 
 
 %%% CTMC
@@ -303,18 +304,18 @@ This approach is able to reproduce the LES and VLES peaks \cite{CTMC1, CTMC2, zh
 \setlength{\figuresixHheight}{5.5cm}
 \begin{figure}[hb]
   \centering
-  \subfloat{\label{f6-xia-original-figure-a}}
-  \subfloat{\label{f6-xia-original-figure-b}}
-  \subfloat{\label{f6-xia-original-figure-c}}
-  \subfloat{\label{f6-xia-original-figure-d}}
-  \subfloat{\label{f6-xia-original-figure-e}}
-  \subfloat{\label{f6-xia-original-figure-f}}
-  \subfloat{\label{f6-xia-original-figure-g}}
-  \subfloat{\label{f6-xia-original-figure-h}}
-  \subfloat{\label{f6-xia-original-figure-i}}
-  \subfloat{\label{f6-xia-original-figure-j}}
-  \subfloat{\label{f6-xia-original-figure-k}}
-  \subfloat{\label{f6-xia-original-figure-l}}
+  \subfigure{\label{f6-xia-original-figure-a}}
+  \subfigure{\label{f6-xia-original-figure-b}}
+  \subfigure{\label{f6-xia-original-figure-c}}
+  \subfigure{\label{f6-xia-original-figure-d}}
+  \subfigure{\label{f6-xia-original-figure-e}}
+  \subfigure{\label{f6-xia-original-figure-f}}
+  \subfigure{\label{f6-xia-original-figure-g}}
+  \subfigure{\label{f6-xia-original-figure-h}}
+  \subfigure{\label{f6-xia-original-figure-i}}
+  \subfigure{\label{f6-xia-original-figure-j}}
+  \subfigure{\label{f6-xia-original-figure-k}}
+  \subfigure{\label{f6-xia-original-figure-l}}
   \begin{tabular}{ccc}
   \includegraphics[height=\figuresixHheight]{6-LES/Figures/figure6Ha.png} 
   & \hspace{0mm} &
@@ -323,20 +324,20 @@ This approach is able to reproduce the LES and VLES peaks \cite{CTMC1, CTMC2, zh
   \caption[
   CTMC simulations of VLES V-shaped structure and NZES-like peak, performed by Q.Z. Xia et al.
   ]{
-  Photoelectron momenta for argon ionized by a $\SI{e14}{\watt/\centi\meter^2}$ laser at $\SI{3.1}{\micro\meter}$, as obtained via CTMC simulations using \protect\subref{f6-xia-original-figure-a} no Coulomb potential, \protect\subref{f6-xia-original-figure-b} the full Coulomb interaction, and \protect\subref{f6-xia-original-figure-c} Coulomb interactions with a trajectory interference term, as compared to the experimental data from \citer{dura_ionization_2013} shown in \protect\subref{f6-xia-original-figure-d}. The results can be divided into zones and explored with the Coulomb interaction turned on and off, as shown for the different zones of \protect\subref{f6-xia-original-figure-d} over longitudinal momentum \protect\subref{f6-xia-original-figure-e}-\protect\subref{f6-xia-original-figure-h} and kinetic energy \protect\subref{f6-xia-original-figure-i}-\protect\subref{f6-xia-original-figure-l}.
+  Photoelectron momenta for argon ionized by a $\SI{e14}{\watt/\centi\meter^2}$ laser at $\SI{3.1}{\micro\meter}$, as obtained via CTMC simulations using \protect\subref{f6-xia-original-figure-a} no Coulomb potential, \protect\subref{f6-xia-original-figure-b} the full Coulomb interaction, and \protect\subref{f6-xia-original-figure-c} Coulomb interactions with a trajectory interference term, as compared to the experimental data from \citer{dura_ionization_2013} shown in \protect\subref{f6-xia-original-figure-d}. The results can be divided into zones and explored with the Coulomb interaction turned on and off, as shown for the different zones of \protect\subref{f6-xia-original-figure-d} over longitudinal momentum (\hyperref[f6-xia-original-figure-e]{e}-\hyperref[f6-xia-original-figure-h]{h}) and kinetic energy (\hyperref[f6-xia-original-figure-i]{i}-\hyperref[f6-xia-original-figure-l]{l}).
   Figure excerpted from \citer{xia_near-zero-energy_2015}.
   }
 \label{f6-xia-original-figure}
 \end{figure}
 \copyrightfootnote{
-\reffig{f6-xia-original-figure} adapted (labels (e-l) shifted for clarity), under its {%
+\reffig{f6-xia-original-figure} adapted (labels (\hyperref[f6-xia-original-figure-e]{e}-\hyperref[f6-xia-original-figure-l]{l}) shifted for clarity), under its {%
 \hypersetup{urlcolor=black}%
 \href{https://creativecommons.org/licenses/by/3.0/}{CC BY licence}, from Q.Z. Xia et al., 
 \href{http://dx.doi.org/10.1038/srep11473}{%
-\emph{Sci.\ Rep.} \textbf{5}, 11473 (2015)}. %
+\emph{Sci.\ Rep.}~\textbf{5}, 11473 (2015)}. %
 }
 }
-%%% To do: change package from subfigure to subfig, add \subref* to the e-h and i-l references in the caption.
+
 
 
 
@@ -352,10 +353,10 @@ In addition to the statistical look provided by the CTMC method, the classical m
 
 \begin{figure}[htbp]
   \centering
-  \subfloat{\label{f6-kastner-original-figure-a}}
-  \subfloat{\label{f6-kastner-original-figure-b}}
-  \subfloat{\label{f6-kastner-original-figure-c}}
-  \subfloat{\label{f6-kastner-original-figure-d}}
+  \subfigure{\label{f6-kastner-original-figure-a}}
+  \subfigure{\label{f6-kastner-original-figure-b}}
+  \subfigure{\label{f6-kastner-original-figure-c}}
+  \subfigure{\label{f6-kastner-original-figure-d}}
   \includegraphics[width=\textwidth]{6-LES/Figures/figure6I.png}
   \caption[
   Dynamical maps for classical trajectories showing `finger'-like structures and the associated photoelectron bunching, as calculated by A. Kästner~et~al.
@@ -383,7 +384,10 @@ Moreover, once this cause is recognized, it is easy to see that the soft recolli
 
 
 
-\begin{figure}[b!]
+
+It is possible, however, for trajectories to have a soft recollision later on in the cycle, like the purple, dashed curve, which spends two periods oscillating at relatively large distances from the origin (and, again, passing the ion too quickly to get too deflected), and having a soft recollision on its second backwards turning point. This then generates a series of trajectories starting with the LES peak and going to lower and lower momentum (which we will explore in more depth in section~\ref{sec:classical-soft-recollisions}), causing the series of peaks seen in \reffig{f6-kastner-original-figure-d}; these predicted peaks do appear in experimental spectra~\cite{ZES_paper, Wolter_PRX}, as discussed above, and they are visible in the experimental results shown in Figs.~\ref{f6-wolter-original-figure} and \ref{f6-wolter-prx-original-figure}.
+
+\begin{figure}[t]
 \centering
 \includegraphics[scale=1]{6-LES/Figures/figure6J.png}
   \caption[
@@ -397,30 +401,11 @@ Moreover, once this cause is recognized, it is easy to see that the soft recolli
 \copyrightfootnote{
 \reffig{f6-rost-soft-recollisions} © IOP Publishing. Reproduced with permission. All rights reserved.
 }
-%% Copyright note is temporary pending IOP reply.
+%% As per terms in IOP email
 
 
 
 
-It is possible, however, for trajectories to have a soft recollision later on in the cycle, like the purple, dashed curve, which spends two periods oscillating at relatively large distances from the origin (and, again, passing the ion too quickly to get too deflected), and having a soft recollision on its second backwards turning point. This then generates a series of trajectories starting with the LES peak and going to lower and lower momentum (which we will explore in more depth in section~\ref{sec:classical-soft-recollisions}), causing the series of peaks seen in \reffig{f6-kastner-original-figure-d}; these predicted peaks do appear in experimental spectra~\cite{ZES_paper, Wolter_PRX}, as discussed above, and they are visible in the experimental results shown in Figs.~\ref{f6-wolter-original-figure} and \ref{f6-wolter-prx-original-figure}.
-
-%
-%
-%\begin{figure}[t]
-%\centering
-%\includegraphics[scale=1]{6-LES/Figures/figure6J.png}
-%  \caption[
-%  Soft recollisions as originally presented by A. Kästner et al.
-%  ]{
-%  Soft recollisions are trajectories where the electron returns to the vicinity of its parent ion with very small velocity, near a turning point. This can be after a single pass (green curve) or after two (purple curve) or more passes, forming a family of trajectories at different final momenta.
-%  Figure excerpted from \citer{Rost_JPhysB}.
-%  }
-%\label{f6-rost-soft-recollisions}
-%\end{figure}
-%\copyrightfootnote{
-%\reffig{f6-rost-soft-recollisions} © IOP Publishing. Reproduced with permission. All rights reserved.
-%}
-%%% Copyright note is temporary pending IOP reply.
 
 
 Going some way beyond this analysis, the dynamical map of the full Coulomb-plus-laser trajectories, i.e. the mapping from the momentum at ionization to the momentum after one laser period and beyond, is a rather complicated quantity~\cite[cf.][Fig.~7]{Becker_rescattering}, but if examined in detail it can show some very interesting regularities, shown in~\reffig{f6-kelvich-dynamical-map}.
@@ -428,8 +413,8 @@ Going some way beyond this analysis, the dynamical map of the full Coulomb-plus-
 
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f6-kelvich-original-figure-a}}
-  \subfloat{\label{f6-kelvich-original-figure-b}}
+  \subfigure{\label{f6-kelvich-original-figure-a}}
+  \subfigure{\label{f6-kelvich-original-figure-b}}
   \includegraphics[width=392pt]{6-LES/Figures/figure6K.png}
   \caption[
   High-resolution dynamical map of full classical photoelectron trajectories, showing LES bunching as the result of a caustic in the dynamical map, as calculated by S.A. Kelvich et al.
@@ -464,11 +449,11 @@ When applied to the LES, the CCSFA method produces angular distributions somewha
 
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f6-yan-original-figure-a}}
-  \subfloat{\label{f6-yan-original-figure-b}}
-  \subfloat{\label{f6-yan-original-figure-c}}
-  \subfloat{\label{f6-yan-original-figure-d}}
-  \subfloat{\label{f6-yan-original-figure-e}}
+  \subfigure{\label{f6-yan-original-figure-a}}
+  \subfigure{\label{f6-yan-original-figure-b}}
+  \subfigure{\label{f6-yan-original-figure-c}}
+  \subfigure{\label{f6-yan-original-figure-d}}
+  \subfigure{\label{f6-yan-original-figure-e}}
   \includegraphics[width=\textwidth]{6-LES/Figures/figure6L.png}
   \caption[
   CCSFA analysis of the Low-Energy Structures, as performed by T.-M. Yan~et~al.
@@ -504,8 +489,8 @@ Moreover, the forward scattering within ISFA can also be used to explain the V-s
 \setlength{\figuresixMheight}{6cm}
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f6-becker-circles-original-figure-a}}
-  \subfloat{\label{f6-becker-circles-original-figure-b}}
+  \subfigure{\label{f6-becker-circles-original-figure-a}}
+  \subfigure{\label{f6-becker-circles-original-figure-b}}
   \begin{tabular}{ccc}
   \includegraphics[height=\figuresixMheight]{6-LES/Figures/figure6Ma.jpg}
   & & 
@@ -521,7 +506,7 @@ Moreover, the forward scattering within ISFA can also be used to explain the V-s
 \copyrightfootnote{
 \reffig{f6-becker-circles-original-figure} © IOP Publishing. Reproduced with permission. All rights reserved.
 }
-%% Copyright note is temporary pending IOP reply.
+%% As per terms in IOP email
 
 
 %%% sundries
@@ -573,43 +558,7 @@ Generally speaking, the LES edge is quite reliably found to scale with the Keldy
 
 
 
-%\vspace{1cm}
-%\hrule
-%\vspace{0.5cm}
-%
-%
-%CTMC. \cite{CTMC1,CTMC2,CTMC3} \cite{lemell_lowenergy_2012} \cite{lemell_classicalquantum_2013}. $L{-}E$ analysis in \cite{lemell_lowenergy_2012, lemell_classicalquantum_2013}
-%
-%\cite{xia_near-zero-energy_2015} includes V shape \& NZES
-%
-%\cite{kelvich_coulomb-focusing_2015}
-%
-%
-%%%% Exact quantum trajectories
-%Full classical. Saalmann \cite{Rost_JPhysB, Rost_PRL}. %\cite{Rost_latest}.
-%Becker \cite{Becker_rescattering}.
-%
-%%%% ISFA
-%ISFA. \cite{Becker_Milosevic_quantum_orbits} \cite{Milosevic_scattering_large} \cite{Milosevic_reexamination} \cite{Becker_rescattering} 
-%
-%\cite{LES_Scaling} with scaling.
-%
-%%%% CCSFA
-%Initial papers \cite{CCSFA_initial_short, CCSFA_initial_full}. Under-barrier effects \cite{TCSFA_sub_barrier}. LES via quantum orbits \cite{yan_TCSFA_caustics}.
-%
-%%%% Other quantum methods
-%Titi \& Drake \cite{Titi_Drake_S_Matrix}. LFA \cite{Milosevic_LFA}. PSW \cite{murnane_TCSFA_tunnel_exit}. 
-%
-%%%% Other stuff
-%
-%Scaling in \cite{LES_Scaling} \cite{CTMC1} \cite{lemell_classicalquantum_2013}
-%
-%SMM. \cite{Becker_rescattering}. Möller's ``not Coulomb, already in SMM'' \cite{off_axis_LES}
-%
-%\cite{Becker_rescattering} for Coulomb bringing LES out of SMM.
-%
-%
-%Review, \cite{agostini_ionization-review_2012}
+
 
 
 
@@ -624,8 +573,12 @@ It has been known for some time that if an atom is ionized by a strong laser pul
 
 
 
+In principle, then, the electric extraction field, weak as it is on the atomic scale (i.e.~$\SI{1}{\volt/\centi\meter}\approx \SI{2e-10}{\au}$), can still liberate these electrons either by over-the-barrier ionization, for whatever population is left above the shallow barrier caused by the extraction field, or through tunnel ionization for states just below that. Indeed, there is some evidence that some electrons can be liberated in this way, from TDSE and CTMC simulations performed in the presence of such an extraction field~\cite{ZES_paper, Rost_latest}, though these are challenging due to the long length scales involved, and -- in the case of TDSE simulations~-- only a limited number of Rydberg states can be taken into account.
 
-\begin{figure}[t]
+
+Nevertheless, the structure does appear in CTMC simulations with the extraction field, as shown in \reffig{f6-wolter-nzes-original-figure}, and it shows some agreement with experiment. Moreover, CTMC calculations agree with experiment on the width of the VLES V shape as the length of the laser pulse changes, with the scaling shown in \reffig{f6-wolter-scaling-original-figure}.
+
+\begin{figure}[b!]
   \centering
   \includegraphics[width=\textwidth]{6-LES/Figures/figure6Q.png}
   \caption[
@@ -648,11 +601,11 @@ It has been known for some time that if an atom is ionized by a strong laser pul
 
 
 
-In principle, then, the electric extraction field, weak as it is on the atomic scale (i.e.~$\SI{1}{\volt/\centi\meter}\approx \SI{2e-10}{\au}$), can still liberate these electrons either by over-the-barrier ionization, for whatever population is left above the shallow barrier caused by the extraction field, or through tunnel ionization for states just below that. Indeed, there is some evidence that some electrons can be liberated in this way, from TDSE and CTMC simulations performed in the presence of such an extraction field~\cite{ZES_paper, Rost_latest}, though these are challenging due to the long length scales involved, and -- in the case of TDSE simulations~-- only a limited number of Rydberg states can be taken into account.
+
+In addition to this, the extraction-field mechanism requires that the characteristics of the NZES peak change as the strength of the extraction field changes. This is a hard prediction to explore experimentally, because the extraction field is also a crucial variable both in how many electrons are detected as well as in fixing the final resolution of the detector (i.e. the level of zoom into the photoelectron momentum distribution), so variations there have a strong effect on the rest of the experiment, but there are indeed some hints of variation in the width of the structure in experiment, as shown in \reffig{f6-diesen-scaling-original-figure}. 
 
 
-
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
   \includegraphics[scale=1]{6-LES/Figures/figure6P.png}
   \caption[
@@ -674,18 +627,12 @@ In principle, then, the electric extraction field, weak as it is on the atomic s
 %% As per APS T&Cs
 
 
-Nevertheless, the structure does appear in CTMC simulations with the extraction field, as shown in \reffig{f6-wolter-nzes-original-figure}, and it shows some agreement with experiment. Moreover, CTMC calculations agree with experiment on the width of the VLES V shape as the length of the laser pulse changes, with the scaling shown in \reffig{f6-wolter-scaling-original-figure}.
 
-
-
-In addition to this, the extraction-field mechanism requires that the characteristics of the NZES peak change as the strength of the extraction field changes. This is a hard prediction to explore experimentally, because the extraction field is also a crucial variable both in how many electrons are detected as well as in fixing the final resolution of the detector (i.e. the level of zoom into the photoelectron momentum distribution), so variations there have a strong effect on the rest of the experiment, but there are indeed some hints of variation in the width of the structure in experiment, as shown in \reffig{f6-diesen-scaling-original-figure}. 
 
 Moreover, there is also some agreement between the observed experimental variations and a simplified semiclassical theory which considers classical electrons, uniformly distributed in Rydberg states just below the ionization threshold, in a single rescaled Coulomb potential plus the extraction field~\cite{Rost_latest}.
 
-On the other hand, the extraction-field mechanism would also require the yield of the structure -- the number of electrons in the NZES -- to change with the extraction field, since if the pulse parameters don't vary then the Rydberg population will not change appreciably, and a stronger extraction field will lower the shallow barrier and thereby liberate a larger population of electrons. (Even further, the Rydberg population is expected to be roughly uniformly distributed over energy just below threshold, so the NZES yield should scale roughly linearly with the extraction field over its $\sim$tenfold variation in \citer{Rost_latest}.) However, this is rather difficult to test experimentally, since changing the extraction field has a strong effect on the entire detection, and there is at present no evidence for this dependence, which represents the clearest way forward in validating this mechanism as a contributor to the NZES.
 
-
-\begin{figure}[t]
+\begin{figure}[b]
   \centering
   \includegraphics[scale=1.15]{6-LES/Figures/figure6O.png}
   \caption[
@@ -706,6 +653,9 @@ On the other hand, the extraction-field mechanism would also require the yield o
 }
 %% As per APS T&Cs
 
+On the other hand, the extraction-field mechanism would also require the yield of the structure -- the number of electrons in the NZES -- to change with the extraction field, since if the pulse parameters don't vary then the Rydberg population will not change appreciably, and a stronger extraction field will lower the shallow barrier and thereby liberate a larger population of electrons. (Even further, the Rydberg population is expected to be roughly uniformly distributed over energy just below threshold, so the NZES yield should scale roughly linearly with the extraction field over its $\sim$tenfold variation in \citer{Rost_latest}.) However, this is rather difficult to test experimentally, since changing the extraction field has a strong effect on the entire detection, and there is at present no evidence for this dependence, which represents the clearest way forward in validating this mechanism as a contributor to the NZES.
+
+
 
 
 
@@ -722,31 +672,32 @@ The ARM trajectories, on the other hand, are different, because the trajectory p
 Moreover, although we showed in \reffig{f5-branch-cut-topology-change} a single example at a return time of $\omega t\approx 2\pi$, this behaviour reoccurs every half period thereafter, as is clear from the quantum $\tca$ surface we saw in \reffig{f5-quantum-tca-surface}. Here, for clarity, we revisit \reffig{f5-branch-cut-topology-change}, showing in \reffig{f6-branch-topology-revisited} the change in the branch cut topology of $\sqrt{\rl(t)^2}$ for the first soft recollision, at $\omega t\approx 2\pi$ and a very low momentum, and the second one at $\omega t\approx 3\pi$ and a slightly higher momentum.
 
 
-\captionsetup[figure]{position=top}
+
+\input{6-LES/Figures/Figure6-2AParameters.tex}
 
 \begin{figure}[htb]
 \centering
   \begin{tabular}{cc}
-  $\qquad p_z=\figurefiveKppl{}F/\omega$   &    $p_z=\figurefiveKpph{}F/\omega$  
+  $\qquad p_z=\figurefiveKppl{}F/\omega$   &    $p_z=\figurefiveKpph{}F/\omega$ \hspace{15mm}
   \\  \hline  \vspace{-2mm} \\
-  \subfloat[$\sqrt{\rl(t)^2}$\hspace{-6pt}$\,$]{
+   \subfigure{
     \includegraphics[scale=\figurefiveKscale]{6-LES/Figures/figure6-2Aa.pdf}
     \label{f6-branch-cut-topology-open-one}
   }
   & \hspace{-6mm}
-  \subfloat[$\sqrt{\rl(t)^2}$ \hspace{25pt}$\,$]{
+   \subfigure{
     \includegraphics[scale=\figurefiveKscale]{6-LES/Figures/figure6-2Ab.pdf}
     \label{f6-branch-cut-topology-closed-one}
   }
   \\[10mm]
-  $\qquad p_z=\figuresixtwoAppltwo{}F/\omega$   &    $p_z=\figuresixtwoApphtwo{}F/\omega$   
+  $\qquad p_z=\figuresixtwoAppltwo{}F/\omega$   &    $p_z=\figuresixtwoApphtwo{}F/\omega$ \hspace{15mm}
   \\  \hline  \vspace{-2mm} \\
-  \subfloat[$\sqrt{\rl(t)^2}$\hspace{-6pt}$\,$]{
+   \subfigure{
     \includegraphics[scale=\figurefiveKscale]{6-LES/Figures/figure6-2Ac.pdf}
     \label{f6-branch-cut-topology-open-two}
   }
   & \hspace{-6mm}
-  \subfloat[$\sqrt{\rl(t)^2}$ \hspace{25pt}$\,$]{
+   \subfigure{
     \includegraphics[scale=\figurefiveKscale]{6-LES/Figures/figure6-2Ad.pdf}
     \label{f6-branch-cut-topology-closed-two}
   }
@@ -759,7 +710,6 @@ Moreover, although we showed in \reffig{f5-branch-cut-topology-change} a single 
 \label{f6-branch-topology-revisited}
 \end{figure}
 
-\captionsetup[figure]{position=auto}
 
 
 
@@ -794,6 +744,7 @@ is mostly real and much smaller than $r_\ast$. The corresponding potential $U_\a
 
 This effect is then visible in the photoelectron spectrum as a large peak just below the soft recollision, followed by a deep, narrow dip, which we show in \reffig{f6-po-pp-spectrum}. In an experimental setting, the dip will almost certainly get washed out by nearby contributions unless specific steps are taken to prevent this, but the peak will remain. (In addition, this effect mirrors the redistribution of population seen in classical-trajectory-based approaches, where the peaks caused by dynamical focusing represent trajectories taken from other asymptotic momenta, whose amplitude is therefore reduced.)
 
+\input{6-LES/Figures/Figure6-2BParameters.tex}
 
 \begin{figure}[htb]
   \centering
@@ -804,7 +755,7 @@ This effect is then visible in the photoelectron spectrum as a large peak just b
   ARM photoelectron spectra showing Near-Zero Energy Structures
   ]{
   Emergence of the Near-Zero Energy Structures within the Analytical $R$-Matrix theory: incoherent addition of the sub-cycle ionization yields for two adjacent half-cycles, $\tfrac12\big(\left|a(p_x,0,p_z)\right|^2+\left|a(p_x,0,-p_z)\right|^2\big)$, as predicted by the ARM amplitude.
-  We ignore the shape factor $R(\vbp)$, and consider for the ionization of unaligned molecular nitrogen by a $\SI{\figuresixtwoBwavelength}{\micro\meter}$ field at $\SI{e14}{\watt/\centi\meter^2}$, with $\gamma=\figuresixtwoBgamma$, as per the parameters of \citer{ pullen_kinematically_2014} whose experimental data is shown in Figs.~\ref{f6-pullen-original-full-spectrum} and \ref{f6-pullen-original-transverse-spectrum}. The Coulomb-correction has been integrated over 2.75 laser periods. 
+  We ignore the shape factor $R(\vbp)$, and consider for the ionization of unaligned molecular nitrogen by a $\SI{\figuresixtwoBwavelength}{\micro\meter}$ field at $\SI{e14}{\watt/\centi\meter^2}$, with $\gamma=\figuresixtwoBgamma$, as per the parameters of \citer{pullen_kinematically_2014} whose experimental data is shown in Figs.~\ref{f6-pullen-original-full-spectrum} and \ref{f6-pullen-original-transverse-spectrum}. The Coulomb-correction has been integrated over 2.75 laser periods. 
   }
   \label{f6-po-pp-spectrum}
 \end{figure}
@@ -835,6 +786,8 @@ Finally, it is worth noting that a more recent CCSFA analysis of ATI~\cite{ keil
 We have seen, then, that our ARM theory of photoionization predicts a sharp peak at very low electron energies, and we know the class of trajectories -- soft recollisions -- that underpin it. Moreover, we have been forced by our integration-path selection algorithm to grapple with soft recollisions every half cycle, with the complex topological changes depicted in \reffig{f6-branch-topology-revisited} occurring at $\omega t\approx 2\pi,3\pi,4\pi,\ldots$, giving a distinct series of trajectories and therefore a distinct series of LES structures, some of which we have already covered.
 
 However, these trajectories come in two distinct flavours, as depicted in \reffig{f6-trajectories-at-transitions}: one class (shown in dashed red) with the soft recollision on a `backwards' turning point, at $\omega t\approx 3\pi, 5\pi, 7\pi, \ldots$, and a second class with the soft recollision on the `forwards' turning points, at $\omega t\approx 2\pi, 4\pi, 6\pi, \ldots$, shown in solid blue.
+
+\input{6-LES/Figures/Figure6-2DParameters.tex}
 
 \begin{figure}[ht]
   \centering
@@ -989,38 +942,12 @@ In addition to this, the energy scaling in \eqref{e6-odd-n-energy-scaling} is al
 
 
 
-
-
-%
-%\begin{figure}[ht]
-%  \centering
-%  \includegraphics[scale=1.2]{6-LES/Figures/figure6R.png}
-%  \caption[
-%  Experimental scaling of the LES width, as observed by D.D. Hickstein et al., showing departures from the naive theory caused by the tunnel width
-%  ]{
-%  Scaling of the LES width for ionization of argon and xenon in $\SI{1.3}{\micro\meter}$ and $\SI{2}{\micro\meter}$ fields at varying intensity, with respect to the ponderomotive energy of the field. The naive scaling as per~\eqref{e6-even-n-scaling} is shown dashed, while the solid lines denote a semiclassical tunnelling theory with the tunnel exit included, as in~\eqref{e6-even-n-scaling-with-zexit}.
-%  Figure excerpted from \citer{murnane_TCSFA_tunnel_exit}.
-%  }
-%\label{f6-hickstein-scaling-original-figure}
-%\end{figure}
-%\copyrightfootnote{
-%\reffig{f6-hickstein-scaling-original-figure} reprinted with permission from D.D. Hickstein et al., {%
-%\hypersetup{urlcolor=black}%
-%\href{http://dx.doi.org/10.1103/PhysRevLett.109.073004}{%
-%\emph{Phys.\ Rev.\ Lett.} \textbf{109}, 073004 (2012)}. %
-%©~2012 by the American Physical Society.
-%}
-%}
-%%% As per APS T&Cs
-
-
 In particular, for the tunnelling mechanism to hold well we require that the Keldysh parameter $\gamma$ be small, which therefore means that if we want the energy in \eqref{e6-odd-n-energy-scaling} to be large this can only be done by going to harder targets with a higher ionization potential; this would ideally be helium, or if possible the helium ion $\mathrm{He^+}$, either as an ionic beam or prepared locally via sequential ionization or a separate pre-ionizing pulse. (In any case, the requirement of a high $I_p$ is consistent with the weak NZES structure observed in xenon~\cite{Wolter_PRX}, which we reproduced in \reffig{f6-wolter-prx-original-figure}.) The scaling in \eqref{e6-odd-n-energy-scaling} is certainly unfavourable, but it points the way to experiments which should be able to resolve whether this mechanism contributes or not. 
 
 
 
 
 As a separate observation, it is interesting to note that the $\gamma^2$ term that is crucial to the scaling of the odd-$n$ trajectories is in fact also present for the even-$n$ scaling, which can be refined to the form
-
 \begin{equation}
 \pzsr 
 \approx \frac F\omega \frac{2+\frac12 \gamma^2}{(n+1)\pi}
@@ -1031,10 +958,15 @@ As a separate observation, it is interesting to note that the $\gamma^2$ term th
 which cleanly expresses the fact, shown in \reffig{f6-trajectories-at-transitions}, that the odd-$n$ trajectories also need to traverse the tunnel exit to make their soft-recollision date with the ion; here the $\zexit$ contribution is small but it is still present. In fact, this difference in the scaling properties of the LES energy has already been observed~\cite{murnane_TCSFA_tunnel_exit}, and we reproduce the result in \reffig{f6-hickstein-scaling-original-figure}.
 
 
+For the odd-$n$ series, adding in the tunnel exit represents a small correction to the main result driven by the quiver radius, and this correction is mirrored by similar corrections for the cutoff position in high-harmonic generation \cite{LewensteinHHG} and in high-order above-threshold ionization \cite{ HATI_quantum_correction, HATI_quantum_correction_2, HATI_quantum_correction_3}, so this comes about as yet another example of fairly standard tunnelling theory. For our even-$n$ series of trajectories, on the other hand, this correction is applied on top of a zero result, so it becomes the driving term for the scaling dynamics of this series of trajectories.
+
+
+In addition to the scaling dynamics, if the odd-$n$ do get lifted from consistent-with-zero by experiments with enough resolution, there is also a specific signature in the ratio of the momenta of the different structures within each series, which is relatively universal, coming from the fact that each series scales with $n$ as $1/(n+1)$, but with even $n$ for one and odd $n$ for the other. Thus, the momentum ratios between successive peaks of the LES series are expected to go down with $n$ as $3/5,5/7,7/9,\ldots$~\cite{Rost_PRL, Rost_JPhysB}, whereas the odd-$n$ series should scale down as $1/2,2/3,3/4,\ldots$. The way things stand, however, it will be hard enough to lift even the first peak out of the experimental zero of energy.
 
 
 
-\begin{figure}[ht]
+
+\begin{figure}[t!]
   \centering
   \includegraphics[scale=1.2]{6-LES/Figures/figure6R.png}
   \caption[
@@ -1058,9 +990,6 @@ which cleanly expresses the fact, shown in \reffig{f6-trajectories-at-transition
 
 
 
-For the odd-$n$ series, adding in the tunnel exit represents a small correction to the main result driven by the quiver radius, and this correction is mirrored by similar corrections for the cutoff position in high-harmonic generation \cite{LewensteinHHG} and in high-order above-threshold ionization \cite{ HATI_quantum_correction, HATI_quantum_correction_2, HATI_quantum_correction_3}, so this comes about as yet another example of fairly standard tunnelling theory. For our even-$n$ series of trajectories, on the other hand, this correction is applied on top of a zero result, so it becomes the driving term for the scaling dynamics of this series of trajectories.
-
-
 
 
 \input{6-LES/Figures/Figure6-2CParameters.tex}
@@ -1068,15 +997,13 @@ For the odd-$n$ series, adding in the tunnel exit represents a small correction 
   \centering
   \includegraphics[scale=1]{6-LES/Figures/figure6-2C.pdf}
   \caption[
-  Scaling of the ARM spectrum for 
+  Scaling of the ARM spectrum, including LES and NZES peaks, as a function of $\gamma$ and the wavelength
   ]{
   Variation of the on-axis ionization amplitude $|a(\vbp)|^2$, in an arbitrary logarithmic scale, as a function of the wavelength and the corresponding Keldysh parameter~$\gamma$. The sudden drops in amplitude of \reffig{f6-po-pp-spectrum} shift along the momentum axis with a scaling that closely matches the classical soft-recollision trajectories, shown as red dots. Here the transverse momentum $\pp$ has been chosen so that the transverse coordinate of the classical trajectory has a small but positive value, $x = 1.07\tfrac{1}{\kappa}$, at the first soft recollision at $\omega t\approx 2\pi$, to avoid the hard singularity of the Coulomb kernel. 
   Here we take $F=\SI{\figuresixtwoCfield}{\au}$ $\kappa=\SI{\figuresixtwoCkappa}{\au}$, scaling $\gamma$ as a function of $\omega$ only.
   }
 \label{f6-spectrum-scaling}
 \end{figure}
-
-In addition to the scaling dynamics, if the odd-$n$ do get lifted from consistent-with-zero by experiments with enough resolution, there is also a specific signature in the ratio of the momenta of the different structures within each series, which is relatively universal, coming from the fact that each series scales with $n$ as $1/(n+1)$, but with even $n$ for one and odd $n$ for the other. Thus, the momentum ratios between successive peaks of the LES series are expected to go down with $n$ as $3/5,5/7,7/9,\ldots$~\cite{Rost_PRL, Rost_JPhysB}, whereas the odd-$n$ series should scale down as $1/2,2/3,3/4,\ldots$. The way things stand, however, it will be hard enough to lift even the first peak out of the experimental zero of energy.
 
 
 
@@ -1106,12 +1033,7 @@ Finally, it is also important to point out that, irrespective of the precise mec
 
 
 
-%\subsection{Outlook}
-%
-%
-%
-%
-%\cite{streaking_soft_recollisions}
+
 
 
 

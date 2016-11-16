@@ -74,12 +74,11 @@ In essence, this means that all of the effects we will consider can in principle
 However, this is far from the case, and the numerical integration of the Schrödinger equation faces formidable challenges. Some of these are shared with the rest of atomic and molecular physics, and come from the unfavourable exponential scaling introduced by the presence of multiple electrons, for which even a moderate basis for the state space of each electron exponentiates to an unmanageable basis size for the full state space. Other challenges are more specific to strong-field physics, which involves electron motion over very large excursions (necessitating a large spatial grid) with very high momenta (calling for a small grid spacing), and with large energies (which require small timesteps).
 
 
-These challenges are mostly surmountable, at least for specific situations and where the dynamics reduces to that of a single electron, and indeed there is a wide array of different methods to numerically solve the TDSE, which are well reviewed by A. Scrinzi in \citer{scrinzi_TDSE_chapter}, and which work for various different situations. These numerical solutions, however, tend to be computationally intensive, often to a prohibitive extent, and they are often overpowered for the insights we want to draw from them. In fact, we are often hindered in our understanding because even a full solution of the TDSE can be hard to analyze; as an example, it is often impossible to separate the contributions to ionization from different peaks of the field, even in situations where these contributions are clearly distinct and fulfill different roles in the dynamics. Thus, to retake Dirac's text,
-
+These challenges are mostly surmountable, at least for specific situations and where the dynamics reduces to that of a single electron, and indeed there is a wide array of different methods to numerically solve the TDSE, which are well reviewed by A. Scrinzi in \citer{scrinzi_TDSE_chapter}, and which work for various different situations. These numerical solutions, however, tend to be computationally intensive, often to a prohibitive extent, and they are often overpowered for the insights we want to draw from them. In fact, we are often hindered in our understanding because even a full solution of the TDSE can be hard to analyze; as an example, it is often impossible to separate the contributions to ionization from different peaks of the field, even in situations where these contributions are clearly distinct and fulfil different roles in the dynamics. Thus, to retake Dirac's text,
+%
 \begin{quote}
 It therefore becomes desirable that approximate practical methods of applying quantum mechanics should be developed, which can lead to an explanation of the main features of complex atomic systems without too much computation.
 \end{quote}
-%
 %
 In general, these approximate methods revolve around Keldysh's ideas about optical tunnelling, and in particular the Strong-Field Approximation, to which we now turn.
 
@@ -91,12 +90,12 @@ In general, there are two basic mental pictures of strong-field ionization, the 
 
 \begin{figure}[h]
   \centering
-  \subfloat[Multiphoton picture]{
+  \subfigure[Multiphoton picture]{
     \label{f1-multiphoton-picture}
     \includegraphics[scale=1]{1-Introduction/Figures/figure1Aa.pdf}
   }
   \hspace{3mm}
-  \subfloat[Tunnelling picture]{
+  \subfigure[Tunnelling picture]{
     \label{f1-tunnelling-picture}
     \includegraphics[scale=1]{1-Introduction/Figures/figure1Ab.pdf}
   }
@@ -241,7 +240,7 @@ e^{-iE_g t}\ket{\psi_g}
 + \int \d\vbp \,a(\vbp,t) \volkov{\vbp}{t}, 
 \label{e1-keldysh-full-ansatz}
 \end{equation}
-where $b(\vbp,t)$ is the time-dependent amplitude of each Volkov state, which we need to solve for. This Ansatz comes with the assumption that $\braket{\psi_g}{\Psi^\mathrm{(V)}_{\vbp}(t)} \approx 0$ for all canonical momenta $\vbp$, which is clearly wrong, but it does a good job at specifying the separation of the active Hilbert space into a bound-state component and a field-driven continuum. 
+where $a(\vbp,t)$ is the time-dependent amplitude of each Volkov state, which we need to solve for. This Ansatz comes with the assumption that $\braket{\psi_g}{\Psi^\mathrm{(V)}_{\vbp}(t)} \approx 0$ for all canonical momenta $\vbp$, which is clearly wrong, but it does a good job at specifying the separation of the active Hilbert space into a bound-state component and a field-driven continuum. 
 
 We have, then, a full Ansatz for the wavefunction, \eqref{e1-keldysh-full-ansatz}, which now allows us to put it into the Schrödinger equation to get the dynamics. Since we have included most of the dynamics already into our bound and continuum components, the Schrödinger equation simplifies a good deal, to give
 \begin{align}
@@ -265,7 +264,7 @@ i\frac{\partial a}{\partial t}(\vbp,t)
 & =
 e^{-iE_g t}\matrixel{\Psi_{\vbp}^\mathrm{(V)}(t)}{\vbr\cdot\vbf(t)}{\psi_g}
 %\nonumber \\ & \qquad
--\int \d\vbp' \,
++\int \d\vbp' \,
 a(\vbp',t)
 \matrixel{\Psi_{\vbp}^\mathrm{(V)}(t)}{V(\vbr)}{\Psi_{\vbp'}^\mathrm{(V)}(t)}
 .
@@ -291,7 +290,7 @@ e^{iI_p t+\frac i2 \int_{\tn}^{t} \left(\vbp+\vba(\tau)\right)^2 \d\tau}\matrixe
 \subsection{Imaginary time and trajectory language}
 The result in \eqref{e1-keldysh-integral-result} closes an impressive gap, by taking the full TDSE and reducing it to a single integral per final momentum $\vbp$, so it can be queried directly and easily. However, it can still be simplified considerably by suitably modifying the integration path into the complex plane. 
 
-We will analyse  this in more detail in chapter~\ref{chap:R-matrix}, but it is easy to see that the integral is highly oscillatory, since it includes a factor of $e^{iI_pt}$ being integrated on the scale of several laser cycles, and we are working in the multiphoton regime where $\omega \ll I_p$. (There is an additional average factor of $e^{iU_pt}$ coming from the kinetic term of the phase, which is even larger for $\gamma<0$, but this only increases the severity of the problem.) This makes the numerical integration of \eqref{e1-keldysh-integral-result} challenging, since one the final value comes through heavy cancellations, so one needs to compute each lobe to very high accuracy to get only moderate precision on the final result, or use sophisticated integration algorithms that attempt to accout for this.
+We will analyse  this in more detail in chapter~\ref{chap:R-matrix}, but it is easy to see that the integral is highly oscillatory, since it includes a factor of $e^{iI_pt}$ being integrated on the scale of several laser cycles, and we are working in the regime where $\omega \ll I_p$. (There is an additional average factor of $e^{iU_pt}$ coming from the kinetic term of the phase, which is even larger for $\gamma<0$, but this only increases the severity of the problem.) This makes the numerical integration of \eqref{e1-keldysh-integral-result} challenging, since one the final value comes through heavy cancellations, so one needs to compute each lobe to very high accuracy to get only moderate precision on the final result, or use sophisticated integration algorithms that attempt to account for this.
 
 The most efficient approach, however, is to recur to the tools of complex analysis in the form of the \textit{saddle-point approximation}. We will explain this in depth in chapter~\ref{chap:R-matrix} (and there are good reviews in Refs.~\citealp{popruzhenko_Keldysh_theory} and \citealp{Popov_imaginary_time}), but the essence is that one can modify the integration path of \eqref{e1-keldysh-integral-result} away from the real axis in a way that turns the oscillatory exponential 
 \begin{equation}
@@ -531,20 +530,7 @@ The first nontrivial application of the ARM theory was the precise calculation o
 In addition to this, the calculations for circular polarizations also show that nonadiabatic tunnelling effects also influence the ionization from different $p$ orbitals in noble gases, with the counter-rotating $p_-$ ionizing faster than the co-rotating $p_+$~\cite{ARM_circular}, and that this can be used in atoms with a strong spin-orbit coupling to implement a so-called `Larmor clock'~\cite{ARM_spin-orbit, ARM_ring-currents}, which can be used to probe the temporal features of the ionization process in a pump-probe configuration. More recently, the ARM method has also been used to analyse a similar time delays within high-order harmonic generation~\cite{ ARM_Coulomb_HHG}.
 
 
-%Finally, we mention here the contributions present in this thesis to the trajectory language entailed by ARM theory, which we will explore in chapters~\ref{chap:quantum-orbits} and~\ref{chap:LES-NZES}, and which have been published in Refs.~\citealp{ Pisanty_slalom_2016} and~\citealp{Pisanty_kinematic_2016}.
 
-
-
-%\cite{torlina_thesis}
-%\cite{kaushal_thesis}
-%\cite{ARM_initial}
-%\cite{ARM_initial_multielectron}
-%\cite{ARM_trajectories}
-%\cite{ARM_abinitio_verification}
-%\cite{ARM_attoclock}
-%\cite{ARM_circular}
-%\cite{ARM_Coulomb_HHG}
-%\cite{ARM_spin-orbit}
 
 
 
@@ -576,8 +562,6 @@ Using these ideas it is then possible, among other things, to provide a much bet
 More generally, however, the spatial dependence of the relative importance of the atomic and external fields is an important idea in strong-field physics, but it is typically left as a general aspect of the mindset, while more specific approximations (like the Born scattering of the Improved SFA~\cite{milosevic_ISFA-standard_2007} or the projector-based separation of the so-called SFA+ theory~\cite{perez-hernandez_sfa-plus_2009}) bear the brunt of the work.
 
 
-
-%; this also allows the theory to have a quasi-time-independent treatment of the ionization process by using the Floquet quasi-eigenstates of the free-particle problem. More interestingly, it is possible to match 
 
 
 
@@ -623,6 +607,10 @@ Chapter~\ref{chap:nondipole-HHG} addresses a fundamental limitation in extending
 
 
 
+
+\vspace{6mm}
+\noindent
+This thesis was submitted for examination on \submittedversiondate. This version, including examiner corrections, was completed and published on \finalversiondate.
 
 
 

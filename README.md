@@ -11,7 +11,7 @@ This repository contains the author's PhD thesis,
 It contains the main pdf file of the thesis, the TeX and image files used to produce it, and the code and data used to produce the figures.
 
 There are several related resources: 
- - the [Supplementary Information][2], which is also available as a repository [here][3]
+ - the [Supplementary Information][2], with shiny 3D figures you can view on your browser, and which is also available as a repository [here][3]
  - a self-contained collection of the code and data used, at [Zenodo:61844][4]
  - the software packages [RB-SFA][5], [ARMSupport][6], [QuODD][7] and [EPToolbox][8] used to produce the figures (along with [MaTeX][9], by Szabolcs Horvát)
 
@@ -24,10 +24,16 @@ There are several related resources:
  [8]: https://github.com/episanty/EPToolbox
  [9]: https://github.com/szhorvat/MaTeX
 
-This version is the original submission as sent to the examiners and as used in the viva voce examination. As such, the external figures do not contain copyright footnotes within the thesis - see the final 
+The main thesis pdf file is [here][10].
+
+ [10]: https://github.com/episanty/PhD-Thesis/blob/master/Emilio%20Pisanty%20PhD%20Thesis%20-%20Electron%20dynamics%20in%20complex%20time%20and%20complex%20space.pdf
+
+This is the final version, as uploaded to the Imperial College London thesis repository [Spiral][11]. It is currently being processed there; this page will be updated when it is publicly available there.
+
+ [11]: https://spiral.imperial.ac.uk/
 
 
 
-(c) Emilio Pisanty, 2016.
+© Emilio Pisanty, 2016.
+
 Licensed under CC BY, except for external images. See License.txt for details.
-

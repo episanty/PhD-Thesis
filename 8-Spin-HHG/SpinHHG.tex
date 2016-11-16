@@ -98,20 +98,17 @@ Experimentally, the available information about the process has grown considerab
 (On the other hand, the available XMCD experiments using this XUV source do not quite agree with the corresponding measurements performed on synchrotron light sources, which are more established. This does not invalidate the observation of the \textit{presence} of helicity, since mirror versions of the same observe different results, regardless of their orientation, but it does call for much more careful polarimetry measurements on that radiation to confirm the amount of helicity of the radiation. Unfortunately, reliable XUV polarimetry in this regime, particularly with respect to the helicity of the radiation, is a very challenging task.)
 
 
-Further experimental developments have expanded the mechanism to other combinations of driver wavelengths~\cite{fan_bright-circularly_2015}, explored the role of chirality in the phase-matching conditions for generation inside a hollow waveguide~\cite{kfir_chiral-phase-matching_2016}, and simplified the non-collinear Mach-Zehnder-type interferometer used in \citer{fleischer_spin_2014} to obtain the bicircular fields, as shown in \reffig{f8-fleischer-bicircular-spectrum-a}, for a simpler in-line configuration~\cite{kfir_in-line-bicircular_2016}. In addition, and of special interest for our following chapter, the bicircular configuration has also been extended to non-collinear beam configurations~\cite{hickstein_non-collinear_2015}, allowing for the spatial selection of beams with different helicities. 
-
-$\quad$
 
 
-\begin{figure}[b!h]
+\begin{figure}[b!]
   \centering
-  \subfloat{\label{f8-fleischer-bicircular-spectrum-a}}
+  \subfigure{\label{f8-fleischer-bicircular-spectrum-a}}
   \includegraphics[scale=0.85]{8-Spin-HHG/Figures/figure8Ba.png}
   \\[4mm]
-  \subfloat{\label{f8-fleischer-bicircular-spectrum-b}}
+  \subfigure{\label{f8-fleischer-bicircular-spectrum-b}}
   \includegraphics[height=4cm]{8-Spin-HHG/Figures/figure8Bb.png}
   \hspace{5mm}
-  \subfloat{\label{f8-fleischer-bicircular-spectrum-c}}
+  \subfigure{\label{f8-fleischer-bicircular-spectrum-c}}
   \includegraphics[height=4cm]{8-Spin-HHG/Figures/figure8Bc.png}
   \caption[
   Initial observation of bicircular high-order harmonics by A. Fleischer~et~al.
@@ -119,17 +116,20 @@ $\quad$
   Initial observation of bicircular high-order harmonics~\cite{fleischer_spin_2014}, showing a schematic of the experiment~\protect\subref{f8-fleischer-bicircular-spectrum-a}, and a sample harmonic spectrum~\protect\subref{f8-fleischer-bicircular-spectrum-b}. The second harmonic is generated in a nonlinear BBO crystal, and the two fields are split and recombined using dichroic mirrors (DM), with their circular polarizations set using independent waveplates. 
   The harmonics are emitted in pairs of lines, at intensities comparable to those with linearly polarized drivers, shown dashed in \protect\subref{f8-fleischer-bicircular-spectrum-b}.
   After the harmonic generation in a gas jet, a rotating linear polarizer tests the polarization of the harmonics, with the corresponding traces (shown in \protect\subref{f8-fleischer-bicircular-spectrum-c}) displaying little variation in the intensity with respect to the polarizer angle.
-%  \\ \ \\
   Figure excerpted from \citer{fleischer_spin_2014}.
   }
   \label{f8-fleischer-bicircular-spectrum}
 \end{figure}
-
 \copyrightfootnote{
-\reffig{f8-fleischer-bicircular-spectrum} copyright tagline.
-}
+\reffig{f8-fleischer-bicircular-spectrum} reprinted by permission from Macmillan Publishers Ltd: %
+{\hypersetup{urlcolor=black}%
+\href{http://www.nature.com/nphys}{%
+\emph{Nature Photon.} \textbf{8}, p. 543 © 2014}.
+}}
+%% As per NPG T&Cs
 
-$\quad$
+Further experimental developments have expanded the mechanism to other combinations of driver wavelengths~\cite{fan_bright-circularly_2015}, explored the role of chirality in the phase-matching conditions for generation inside a hollow waveguide~\cite{kfir_chiral-phase-matching_2016}, and simplified the non-collinear Mach-Zehnder-type interferometer used in \citer{fleischer_spin_2014} to obtain the bicircular fields, as shown in \reffig{f8-fleischer-bicircular-spectrum-a}, for a simpler in-line configuration~\cite{kfir_in-line-bicircular_2016}. In addition, and of special interest for our following chapter, the bicircular configuration has also been extended to non-collinear beam configurations~\cite{hickstein_non-collinear_2015}, allowing for the spatial selection of beams with different helicities. 
+
 
 Finally, it is also important to note that recent experiments performing detailed polarimetry on the resultant HHG radiation~\cite{veyrinhas_polarimetry-original_2013, veyrinhas_depolarized-hhg-atto_2015, chen_tomographic-hhg-polarimetry_2016}, with the crucial finding that the harmonics can be produced in a partially depolarized state~\cite{veyrinhas_depolarized-hhg-atto_2015}. The origin of this depolarization is completely unclear, though it may to originate from spatial variations of the harmonic polarization across the laser focus. Regardless of its origin, the finding underscores the need for helicity-dependent XMCD observations, above and beyond the rotational invariance with respect to a linear polarizer, as the hallmark confirmation that circular harmonics are being emitted.
 
@@ -157,14 +157,14 @@ In addition to this, because they allow tunnel-ionized electrons to return to th
 There are multiple ways to understand the harmonic emission induced by bicircular fields, and much of our analysis will focus on a frequency-domain analysis of the radiation in terms of photon transfers within a parametric optical process. However, it is important to ground this first in a time-dependent view of the induced harmonic dipole.
 
 
-HHG is, at its core, a recollision phenomenon, and bicircular fields are only able to produce high-order harmonics efficiently because electrons that are tunnel-ionized near the peak of each lobe have a large probability of recolliding with the ion. The trajectories in question are mostly of the  character showin in \reffig{f8-fleischer-trajectories}, with the ionization just before one field maximum and the recollision at the close of the following lobe. 
+HHG is, at its core, a recollision phenomenon, and bicircular fields are only able to produce high-order harmonics efficiently because electrons that are tunnel-ionized near the peak of each lobe have a large probability of recolliding with the ion. The trajectories in question are mostly of the  character shown in \reffig{f8-fleischer-trajectories}, with the ionization just before one field maximum and the recollision at the close of the following lobe. 
 
 This has two important consequences. The first is that each burst of XUV emission comes from a single recollision event with a well-defined direction, so each burst of radiation will mostly be linearly polarized. However, because of the three-fold symmetry of the field, each of these recollisions, with their attendant bursts of XUV radiation, is necessarily mirrored by two other identical sets of trajectories and radiation bursts, trailing each other by a third of a period of the fundamental and rotated with respect to each other by~\SI{120}{\degree}. The HHG radiation, then, consists of a train of attosecond pulses, linearly polarized along directions that rotate steadily during the pulse, as shown in \reffig{f8-typical-bicircular-apt}.
 
 
 
 
-%\pagebreak
+
 
 \begin{figure}[h!]
   
@@ -181,6 +181,8 @@ This has two important consequences. The first is that each burst of XUV emissio
   \label{f8-fleischer-trajectories}
   
   \vspace{15mm}
+  
+  \input{8-Spin-HHG/Figures/Figure8CParameters.tex}
   
   \centering
   \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8C.pdf}
@@ -201,8 +203,12 @@ This has two important consequences. The first is that each burst of XUV emissio
 $\quad$
 
 \copyrightfootnote{
-\reffig{f8-fleischer-trajectories} copyright tagline.
-}
+\reffig{f8-fleischer-trajectories} reprinted by permission from Macmillan Publishers Ltd: %
+{\hypersetup{urlcolor=black}%
+\href{http://www.nature.com/nphys}{%
+\emph{Nature Photon.} \textbf{8}, p. 543 © 2014}.
+}}
+%% As per NPG T&Cs
 
 
 
@@ -216,27 +222,27 @@ The harmonic emission, however, is much easier to understand from a frequency do
 
 \begin{figure}[b!]
   \centering
-  \subfloat[]{
+  \subfigure[]{
     \input{8-Spin-HHG/Figures/figure8Fa-bare}
     \label{f8-initial-photon-diagrams-a}
   }
   \hspace{5mm}
-  \subfloat[]{
+  \subfigure[]{
     \input{8-Spin-HHG/Figures/figure8Fb-bare}
     \label{f8-initial-photon-diagrams-b}
   }
   \hspace{5mm}
-  \subfloat[]{
+  \subfigure[]{
     \input{8-Spin-HHG/Figures/figure8Fc-bare}
     \label{f8-initial-photon-diagrams-c}
   }
   \hspace{5mm}
-  \subfloat[]{
+  \subfigure[]{
     \input{8-Spin-HHG/Figures/figure8Fd-bare}
     \label{f8-initial-photon-diagrams-d}
   }
   \hspace{5mm}
-  \subfloat[]{
+  \subfigure[]{
     \input{8-Spin-HHG/Figures/figure8Fe-bare}
     \label{f8-initial-photon-diagrams-e}
   }
@@ -277,7 +283,7 @@ Similarly, this spectral restriction also follows from a dynamical-symmetries pe
 
 
 \section{Experimental confirmation of the selection rules}
-There are, then, solid theoretical reasons for the selection rules governing the spectrum displayed in \reffig{f8-fleischer-bicircular-spectrum-b}, as seen by Fleischer et al.~\cite{fleischer_spin_2014} and earlier by Eichman et al.~\cite{EichmannExperiment}, and this theory combines with the polarization measurements to give assurances that the harmonics are indeed circularly polarized.
+There are, then, solid theoretical reasons for the selection rules governing the spectrum displayed in \reffig{f8-fleischer-bicircular-spectrum-b}, as seen by Fleischer et al.~\cite{fleischer_spin_2014} and earlier by Eichmann et al.~\cite{EichmannExperiment}, and this theory combines with the polarization measurements to give assurances that the harmonics are indeed circularly polarized.
 
 However, in analogy with previous experiments that explored the conservation by HHG of energy \cite{EnergyConservationExperiment} and linear~\cite{ MomentumConservationExperiment} and angular momentum~\cite{ OAMConservationExperiment}, Fleischer et al. went further in exploring the connection to photon spin angular momentum by modifying the experiment in two ways.
 
@@ -287,30 +293,7 @@ The effect of these changes on the harmonic order $n\omega_1+(n\pm 1)\omega_2$ i
 
 
 
-More interestingly, Fleischer and co-workers also investigated the conservation of spin angular momentum in this experiment, by degrading the circular polarization of the two drivers to different ellipticities, by adjusting the angles $\alpha$ and $\beta$ of the quarter-wave plates that set this ellipticity in the experiment as shown in \reffig{f8-fleischer-bicircular-spectrum-a}; we display the Fleischer et al. experimental results in~Fig.~\ref{f8-fleischer-ellipticity-scan}.% and \ref{f8-fleischer-ellipticity-results}.
-
-
-
-\begin{figure}[ht]
-  \centering
-  \subfloat{\label{f8-fleischer-ellipticity-scan-a}}
-  \subfloat{\label{f8-fleischer-ellipticity-scan-b}}
-  \subfloat{\label{f8-fleischer-ellipticity-scan-c}}
-  \subfloat{\label{f8-fleischer-ellipticity-scan-d}}
-  \subfloat{\label{f8-fleischer-ellipticity-scan-e}}
-  \subfloat{\label{f8-fleischer-ellipticity-scan-f}}
-  \includegraphics[width=\textwidth]{8-Spin-HHG/Figures/figure8G.png}
-  \caption[
-  Experimental ellipticity scans on the drivers for bicircular HHG, as observed by A. Fleischer~et~al.
-  ]{
-  Experimental ellipticity scans for bicircular harmonic generation~\cite{fleischer_spin_2014}, as a function of the waveplate angles $\alpha$ and $\beta$, where $\alpha=\SI{0}{\degree}$ and \SI{90}{\degree} produce a linear fundamental and $\alpha=\SI{45}{\degree}$ makes it circular, and analogously for $\beta$. The spectra are shown in linear~\protect\subref{f8-fleischer-ellipticity-scan-a} and log scale~\protect\subref{f8-fleischer-ellipticity-scan-b}, and in comparison with a linear-scale equivalent TDSE simulation~\protect\subref{f8-fleischer-ellipticity-scan-c} for ellipticity scans of the fundamental, and analogously in \protect\subref{f8-fleischer-ellipticity-scan-d},\,\protect\subref{f8-fleischer-ellipticity-scan-e} and \protect\subref{f8-fleischer-ellipticity-scan-f} for ellipticity scans of the second harmonic.
-  Figure excerpted from \citer{fleischer_spin_2014}.
-  }
-  \label{f8-fleischer-ellipticity-scan}
-\end{figure}
-\copyrightfootnote{
-\reffig{f8-fleischer-ellipticity-scan} copyright tagline.
-}
+More interestingly, Fleischer and co-workers also investigated the conservation of spin angular momentum in this experiment, by degrading the circular polarization of the two drivers to different ellipticities, by adjusting the angles $\alpha$ and $\beta$ of the quarter-wave plates that set this ellipticity in the experiment as shown in \reffig{f8-fleischer-bicircular-spectrum-a}; we display the Fleischer et al. experimental results in~Fig.~\ref{f8-fleischer-ellipticity-scan}.
 
 
 
@@ -320,6 +303,35 @@ The most interesting feature in the experimental spectra is the appearance, out 
 
 
 These channels are forbidden in the fully circular case -- there is too much angular momentum for the harmonic photon to take away -- but with the decrease in the angular momentum of the fundamental, they become allowed. However, this viewpoint mostly avoids the real question here: these channels have very evident start and end points over the waveplate angle $\alpha$, and it falls on theory to explain these features. This is unlikely to be possible in a detailed, quantitative way (which can be done via SFA calculations, or even TDSE simulations if necessary, at the cost of an intuitive understanding of the process), but it should be possible to use the quantum theory of spin angular momentum for the light field, at least in an approximate way, to explain the major features of these ellipticity scans.
+
+
+\begin{figure}[t!]
+  \centering
+  \subfigure{\label{f8-fleischer-ellipticity-scan-a}}
+  \subfigure{\label{f8-fleischer-ellipticity-scan-b}}
+  \subfigure{\label{f8-fleischer-ellipticity-scan-c}}
+  \subfigure{\label{f8-fleischer-ellipticity-scan-d}}
+  \subfigure{\label{f8-fleischer-ellipticity-scan-e}}
+  \subfigure{\label{f8-fleischer-ellipticity-scan-f}}
+  \includegraphics[width=\textwidth]{8-Spin-HHG/Figures/figure8G.jpg}
+  \caption[
+  Experimental ellipticity scans on the drivers for bicircular HHG, as observed by A. Fleischer~et~al.
+  ]{
+  Experimental ellipticity scans for bicircular harmonic generation~\cite{fleischer_spin_2014}, as a function of the waveplate angles $\alpha$ and $\beta$, where $\alpha=\SI{0}{\degree}$ and \SI{90}{\degree} produce a linear fundamental and $\alpha=\SI{45}{\degree}$ makes it circular, and analogously for $\beta$. The spectra are shown in linear~\protect\subref{f8-fleischer-ellipticity-scan-a} and log scale~\protect\subref{f8-fleischer-ellipticity-scan-b}, and in comparison with a linear-scale equivalent TDSE simulation~\protect\subref{f8-fleischer-ellipticity-scan-c} for ellipticity scans of the fundamental, and analogously in \protect\subref{f8-fleischer-ellipticity-scan-d},\,\protect\subref{f8-fleischer-ellipticity-scan-e} and \protect\subref{f8-fleischer-ellipticity-scan-f} for ellipticity scans of the second harmonic.
+  Figure excerpted from \citer{fleischer_spin_2014}.
+  }
+  \label{f8-fleischer-ellipticity-scan}
+\end{figure}
+\copyrightfootnote{
+\reffig{f8-fleischer-ellipticity-scan} reprinted by permission from Macmillan Publishers Ltd: %
+{\hypersetup{urlcolor=black}%
+\href{http://www.nature.com/nphys}{%
+\emph{Nature Photon.} \textbf{8}, p. 543 © 2014}.
+}}
+
+
+
+
 
 
 
@@ -481,11 +493,11 @@ Within this model there are no hard boundaries to the existence regions, and the
 
 \begin{figure}[h]
   \centering
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Ia.png}
   }
   \hspace{0mm}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Ib.png}
   }
   
@@ -515,7 +527,7 @@ As is seen in \reffig{f8-existence-region-ellipses}, the existence regions for t
 
 
 
-One important feature of this model is its behaviour for channels of the form $(n_1,0;n_1+1)$, like $(6,0;7)$. As remarked in point \ref{e8-disallowed-channels-discontinuity} above, conservation of angular momentum closes this channel within the expectation-value model for $\alpha\neq\SI{45}{\degree}$: the second-harmonic driver contributes $-7$ units of angular momentum, and the six spins of $\sin(2\alpha)$ are only sufficient to allow a physical harmonic spin of $\sigma \geq -1$ when $\sin(2\alpha)=1$. Within the decomposition-based model, on the other hand, a slightly off-circular field can still produce harmonics: it is seen as a circular field of slightly reduced intensity, with the added presence of a left-circular driver which cannot participate in the process at that order, so the harmonic signal is only reduced slightly, as observed in experiment and in numerics.
+One important feature of this model is its behaviour for channels, like $(6,0;7)$, of the form $(n_1,0;{n_1+1})$. As remarked in point \ref{e8-disallowed-channels-discontinuity} above, conservation of angular momentum closes this channel within the expectation-value model for $\alpha\neq\SI{45}{\degree}$: the second-harmonic driver contributes $-7$ units of angular momentum, and the six spins of $\sin(2\alpha)$ are only sufficient to allow a physical harmonic spin of $\sigma \geq -1$ when $\sin(2\alpha)=1$. Within the decomposition-based model, on the other hand, a slightly off-circular field can still produce harmonics: it is seen as a circular field of slightly reduced intensity, with the added presence of a left-circular driver which cannot participate in the process at that order, so the harmonic signal is only reduced slightly, as observed in experiment and in numerics.
 
 The other predictions of the expectation-value model can also be replicated. The symmetric case is identical for both models, so the restriction that $|n_1+n_2|=1$ there also holds; the V-shaped pattern is explained well together with the existence regions of the harmonics; and the restriction that $n_1\geq n_2-1$ is a consequence of the identity $n_+=n_- + n_2 + \sigma$.
 
@@ -559,34 +571,15 @@ and the old channels $(n_1,n_2)$ should split into the two subchannels of \eqref
 
 
 
+
+
+
+
+
+
 In the time domain, the field in \eqref{e8-detuned-elliptical-field} has an elliptical polarization which slowly rotates over time, since the two circular components, at close to the same frequency, accumulate a relative phase throughout the pulse. Here the axes of this ellipse need to perform at least one full rotation: for a splitting of $\delta$ to be detected in the spectrum, the harmonic linewidth must be of that order, which means the pulse must be longer than $2\pi/\delta$, and therefore the two circular components accumulate a relative phase of at least $2\pi$ over the whole pulse.
 
 This variation on the experiment can, in principle, be tested experimentally, though this adds a further layer of complexity. On the other hand, it is straightforward to implement numerically and it does not add new complications to the numerical methods, which must already be general enough to deal with arbitrary polarizations in two dimensions. (It does, however, add to the required duration of the simulation, which can be a problem for TDSE-based approaches.)
-
-
-
-
-
-
-\begin{figure}[b!]
-  \centering
-  \subfloat{
-    \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Ja.png}
-  }
-  \hspace{0mm}
-  \subfloat{
-    \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Jb.png}
-  }
-  
-  \captionsetup{width=\textwidth}
-  \caption[
-  Harmonic spectra for detuned bicircular drivers as a function of the relative detuning $\delta=\omega'/\omega-1$ between the right- and left-circular components of the elliptically polarized fundamental driver
-  ]{
-  Dependence of the harmonic energies as a function of the relative detuning $\delta/\omega = \omega'/ \omega-1$ between the right- and left-circular components of the elliptically polarized fundamental driver, as in Eq.~\eqref{e8-modified-energy-conservation}, with the different channels marked and changing linearly at different slopes..
-  The simulation uses the software from \citer{RB-SFA}, with a 25-cycle flat-top pulse with 2$\tfrac 12$ cycles of sinusoidal on- and off-ramp; we use equal-intensity drivers at $\SI{2e14}{W/cm^2}$, driving argon with an $S$-type orbital, and we set $\alpha=\SI{35}{\degree}$.
-  }
-  \label{f8-SFA-splittings-spectrum}
-\end{figure}
 
 
 As a test of this variation, then, we calculate the resulting spectra within the SFA, by direct numerical integration as we developed it in \ref{sec:lewenstein-hhg} and as implemented in \citer{RB-SFA}. These results are shown in Fig.~\ref{f8-SFA-splittings-spectrum}, and they show the correct linear dependence of the harmonic energy $\Omega_{(n_+,n_-;n_2)}$ as a function of the relative detuning $\delta/\omega$ between the two circular components of the fundamental. Subchannels with as many as seven photons absorbed from the left-circular component can be identified, even though, at $\alpha=\SI{35}{\degree}$, the counter-rotating component of the fundamental carries only $\sin^2(\delta\alpha)\approx 3\%$ of the total~intensity.
@@ -599,6 +592,26 @@ While it is clear that there are additional mechanisms and higher-order channels
 
 
 
+
+\begin{figure}[t]
+  \centering
+  \subfigure{
+    \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Ja.png}
+  }
+  \hspace{0mm}
+  \subfigure{
+    \includegraphics[scale=1]{8-Spin-HHG/Figures/figure8Jb.png}
+  }
+  
+  \captionsetup{width=\textwidth}
+  \caption[
+  Harmonic spectra for detuned bicircular drivers as a function of the relative detuning $\delta=\omega'/\omega-1$ between the right- and left-circular components of the elliptically polarized fundamental driver
+  ]{
+  Dependence of the harmonic energies as a function of the relative detuning $\delta/\omega = \omega'/ \omega-1$ between the right- and left-circular components of the elliptically polarized fundamental driver, as in Eq.~\eqref{e8-modified-energy-conservation}, with the different channels marked and changing linearly at different slopes..
+  The simulation uses the software from \citer{RB-SFA}, with a 25-cycle flat-top pulse with 2$\tfrac 12$ cycles of sinusoidal on- and off-ramp; we use equal-intensity drivers at $\SI{2e14}{W/cm^2}$, driving argon with an $S$-type orbital, and we set $\alpha=\SI{35}{\degree}$.
+  }
+  \label{f8-SFA-splittings-spectrum}
+\end{figure}
 
 
 
@@ -694,7 +707,6 @@ That is, the tensor contracts its second and third inputs, and produces a vector
 
 
 Under these conditions, the sum-frequency polarization becomes
-%\vspace{-1mm} %% to prevent some horrible spacings between text and equations. HACK!
 \begin{equation}
 \vbP_3=\epsilon_0\chis e^{i\varphi} \left(\vphantom{\sum_i}
 2\vbf_2(\vbf_1\cdot\vbf_2)+\vbf_1(\vbf_2\cdot\vbf_2)
@@ -738,131 +750,6 @@ This is slightly counter-intuitive, as one does expect a conservation equation t
 Nevertheless, it is indeed possible to understand the generation of harmonics by elliptical drivers, in both the perturbative and extreme-nonlinear cases, in terms of a simple photon picture, even when that photon picture is manifestly inadequate for many essential aspects of the emitted radiation. Our model provides a simple framework for this understanding, which is in agreement with the available experimental observations and whose predictions are borne out by numerical calculations. 
 
 This allows us to conclude, then, that high-order harmonic generation generally conserves spin angular momentum, in the detailed sense of parametric photon-to-photon processes -- or, at least, it does so in this specific situation, which stretches that behaviour to its limits. HHG, as shown in our model and later minor extensions by others~\cite{milosevic_bicircular-angular-momentum_2015}, is so far consistent with a picture as a parametric process where multiple driver photons get up-converted into harmonic photons and the atom returns to its ground state after the recombination step, at least as far as angular momentum is conserved.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%\begin{figure}[t!]
-%  \centering
-%  \subfloat{\label{f8-fleischer-ellipticity-results-a}}
-%  \subfloat{\label{f8-fleischer-ellipticity-results-b}}
-%  \subfloat{\label{f8-fleischer-ellipticity-results-c}}
-%  \subfloat{\label{f8-fleischer-ellipticity-results-d}}
-%  \subfloat{\label{f8-fleischer-ellipticity-results-e}}
-%  \subfloat{\label{f8-fleischer-ellipticity-results-f}}
-%  \includegraphics[width=\textwidth]{8-Spin-HHG/Figures/figure8H.png}
-%  \caption{
-%  Ellipticity measurements for bicircular harmonic 
-%  Figure excerpted from \citer{fleischer_spin_2014}.
-%  }
-%  \label{f8-fleischer-ellipticity-results}
-%\end{figure}
-%\unmarkedfntext{
-%\reffig{f8-fleischer-ellipticity-results} copyright tagline.
-%}
-
-
-
-
-
-
-
-
-%\vspace{1.5cm}
-%
-%
-%Experiment. Fleischer original \cite{fleischer_spin_2014}. Then brighter and with XMCD in \cite{kfir_generation_2015, fan_bright-circularly_2015}, mix of 800+1300 in \cite{fan_bright-circularly_2015}, chiral phase matching \cite{kfir_chiral-phase-matching_2016}, in-line generation \cite{kfir_in-line-bicircular_2016}. Noncollinear \cite{hickstein_non-collinear_2015}.
-%
-%
-%Initial theory \cite{EichmannExperiment, SFALong, SFAMilosevic, milosevic_bicircular-hhg_2000, SFAMilosevicBecker, milosevic_unusual-nonlinear-polarization_2000, milosevic_hhg-laser-phys_2001, averbukh_stability_2002, SFACeccherini, MilosevicIsolatedPulses},
-%
-%First full quantum-orbit \cite{SFAMilosevicBecker}. First time-dependent view of APT \cite{milosevic_unusual-nonlinear-polarization_2000}.
-%
-%
-%Elliptical fields kill HHG, \cite{moller_hhg-elliptical-fields_2012}, but it's actually just down to selection rules \cite{SelectionRulesInHHG}.
-%
-%
-%Theory after the Fleischer expt: 
-%\cite{milosevic_bicircular-angular-momentum_2015} \cite{milosevic_circularly_2015}  \cite{medisauskas_generating_2016} \cite{hernandez_isolated-circular-pulses_2016} 
-%\cite{reich-madsen_rotating-frame-bicircular_2016, reich-madsen_molecular-symmetries_2016} %the latter with detuning plots similar to mine
-%\cite{baykusheva_bicircular-hhg-spectroscopy}, \cite{liu_selection-rules-hhg_2016}, \cite{mauger_bicircular-molecular-hhg}, \cite{odzak_polyatomic-bicircular_2016} \cite{yuan-bandrauk_circular-hhg-extended-asymmetric-molecules_2011}
-%
-%Detuning plots in \cite{reich-madsen_molecular-symmetries_2016}
-%
-%
-%
-%Circular attosecond pulses in \cite{medisauskas_generating_2016, hernandez_isolated-circular-pulses_2016}
-%
-%
-%
-%Ionization in bicircular fields \cite{mancuso_bicircular-ionization_2015,mancuso_bicircular-rescattering_2016,ngoko-starace_multistart-spiral-ionization_2016, milosevic_bicircular-ionization-sfa_2016, eckart_bicircular-nsdi_2016, chaloupka_bicircular-double-ionization_2016, kramo_bicircular-atd_2007}
-%
-%Laser-assisted recombination \cite{odzak_bicircular-laser-assisted-recombination_2015}
-%
-%Electron rescattering \cite{hasovic_rescattering-bicircular_2016}
-%
-%Elliptical APTs from $p$ states \cite{milosevic_elliptical-apt_2015}		
-%
-%Using it for spin polarization \cite{milosevic_bicircular-spin-polarization_2016, hartung_spin-polarization-ionization_2016}
-%
-%
-%Polarimetry \cite{veyrinhas_polarimetry-original_2013, veyrinhas_depolarized-hhg-atto_2015}, \cite{chen_tomographic-hhg-polarimetry_2016}
-%
-%\def\bibAnnoteFile#1{\texttt{\detokenize{#1}}}
-%\setlist{noitemsep}
-%
-%Circular harmonics experiments:
-%\begin{itemize}
-%  \item Ferré, elliptical driver, resonant harmonics \cite{ferre_circular-harmonics_2015}
-%  \item Vodungbo XUV waveplate \cite{vodungbo_hhg-waveplate_2011}, single application in \cite{willems_hhg-waveplate_2015}.
-%  \item linear driver with aligned molecules  \cite{zhou_aligned-molecules-elliptical-hhg_2009}
-%  \item Circular XUV from FELs \cite{bahrdt_fel-circular-initial_1992} \cite{allaria_FEL-circular_2014} \cite{lutman_FEL-polarization_2016}
-%  \item plasma-based soft-X-ray laser \cite{depresseux_hhg-then-plasma-laser_2015},  built on top of Vodungbo waveplate
-%\end{itemize}
-%
-%Circular harmonics proposals:
-%\begin{itemize}
-%  \item via quasi phase matching \cite{liu_circular-hhg-quasi-phase-matching_2012}
-%  \item crossed beams, linear plus elliptical in the orthogonal plane \cite{fleischer_linear-plus-elliptical-driver_2013}
-%  \item cross-polarized two colour \cite{lambert_circular-hhg-cross-polarized_2015}, \cite{ruiz_elliptical-pulses-two-color_2009}
-%\end{itemize}
-
-
-
-
-
-
 
 
 

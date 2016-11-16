@@ -16,18 +16,15 @@ a4paper]{report}
 \usepackage{framed}      % for Mathematical Aside boxes
 \usepackage{siunitx}     % SI units
 \usepackage{empheq}      % general equation pimping up, left braces in particular
-%\usepackage{subfigure}   % for subfigures  -- turns out to be obsolete
-\usepackage{subfig}      % for subfigures
+\usepackage{subfigure}   % for subfigures (deprecated, but see tex.se/q/327601)
 
 
-%\usepackage{textcomp}    % copyright symbol -replaced by just the unicode version.
 
 \usepackage{mathrsfs}    % for \mathscr fonts
 \usepackage{colonequals} % for :=
 \usepackage{enumitem}    % For tCA choosing algorithm list.
-\usepackage{titlefoot}   % For unmarked footnotes for figure copyright.
 
-\usepackage{pbox}        % ??? for multi-line table cells in appendix
+\usepackage{pbox}        % for multi-line table cells in appendix
 \usepackage{multirow}    % for figure 9A
 \usepackage{physics}     % general stuff including Dirac notation
 
@@ -38,12 +35,6 @@ a4paper]{report}
 \usepackage[normalem]{ulem}
 %%%%
 
-%\newcommand{\PrintMathFonts}{%
-%  \count255=0
-%  \loop\ifnum\count255<16
-%    (\the\count255:~\fontname\textfont\count255)
-%    \advance\count255 by 1
-% \repeat}
 
 
 
@@ -61,10 +52,6 @@ a4paper]{report}
 
 
 
-%%% alternative font?
-%% http://anorien.csc.warwick.ac.uk/mirrors/CTAN/info/Free_Math_Font_Survey/survey.html
-%%%% mind the package placement, though.
-
 
 %%%% Font considerations
 
@@ -76,46 +63,51 @@ a4paper]{report}
 
 
 
+
+%%% Footnote handling
+\usepackage[perpage,symbol*,marginal,bottom]{footmisc}
+%% footmisc before fancyhdr to avoid a warning as per tex.se/q/129829
+\setlength{\footnotemargin}{0.6em}
+\usepackage{titlefoot}   % For unmarked footnotes for figure copyright.
+
+%%% Copyright footnotes
+%% disabled
+%\newcommand{\copyrightfootnote}[1]{}
+%% enabled
+\newcommand{\copyrightfootnote}[1]{\unmarkedfntext{#1}}
+
+
+
 %%% Headers
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+\fancypagestyle{standard}{
 \fancyhf{}
+\setlength{\headwidth}{\textwidth}
 \setlength{\headheight}{14pt}
 \fancyhead[LE]{\thepage}
 \fancyhead[RE]{Electron dynamics in complex space and complex time}
 \fancyhead[LO]{\nouppercase{\leftmark}}
 \fancyhead[RO]{\thepage}
+}
+\pagestyle{standard}
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
-%
-%\titlespacing*{name=\chapter,numberless}{0pt}{-20pt}{20pt}
 
 
 
 
 
-%%%% Total number of written pages.
-%%%% Remove unless draft.
-%\newcommand{\writtenPageDifference}{-10}
-%
-%%\usepackage[dvipsnames]{xcolor}  %% moved to main packages list
-%\newcounter{writtenpage}
-%\fancyfoot[C]{
-%\setcounter{writtenpage}{\value{page}}%
-%\addtocounter{writtenpage}{\writtenPageDifference}%
-%{\color{gray}{\thewrittenpage}}
-%}
+%% Custom header style for wider page at figure 5K.
+\fancypagestyle{figure5Kstyle}{
+\fancyhf{}
+\setlength{\headwidth}{\paperwidth-18mm-18mm}
+\setlength{\headheight}{14pt}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{Electron dynamics in complex space and complex time}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\thepage}
+}
 
-
-%%% Footnote handling
-\usepackage[perpage,symbol*,marginal]{footmisc}
-\setlength{\footnotemargin}{0.6em}
-
-%%% Copyright footnotes
-%% disabled
-\newcommand{\copyrightfootnote}[1]{}
-%% enabled
-%\newcommand{\copyrightfootnote}[1]{\unmarkedfntext{#1}}
 
 
 
@@ -164,8 +156,7 @@ a4paper]{report}
 \newcommand{\citenistsec}[1]{\cite[\href{http://dlmf.nist.gov/#1}{\S{#1}}]{NIST_handbook}}
 \newcommand{\citenistchap}[1]{\cite[chap.~\href{http://dlmf.nist.gov/#1}{{#1}}]{NIST_handbook}}
 
-%%% add bibliography to TOC ???
-%\usepackage[nottoc,notlot,notlof]{tocbibind}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,6 +217,7 @@ pdfauthor={Emilio Pisanty}
 % }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage[open,openlevel=0]{bookmark}
 
 
 
@@ -250,20 +242,6 @@ pdfauthor={Emilio Pisanty}
 
 
 %%%%%%%%%%%%%%%%%%%%%% Own commands %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%% Figure parameters
-%% these can actually be moved to their respective figure calls.
-\input{5-Quantum-orbits/Figures/Figure5DParameters.tex}
-\input{5-Quantum-orbits/Figures/Figure5KParameters.tex}
-\input{5-Quantum-orbits/Figures/Figure5LParameters.tex}
-%
-\input{6-LES/Figures/Figure6-2AParameters.tex}
-\input{6-LES/Figures/Figure6-2BParameters.tex}
-\input{6-LES/Figures/Figure6-2DParameters.tex}
-%
-\input{8-Spin-HHG/Figures/Figure8CParameters.tex}
-
 
 
 
@@ -350,8 +328,7 @@ pdfauthor={Emilio Pisanty}
 
 %%% for spin HHG chapter
 
-%%% Circular arrows pulled from the MnSymbolA package as per
-%%% http://tex.stackexchange.com/q/36006/
+%%% Circular arrows pulled from the MnSymbolA package as per tex.se/q/36006/
 %%% Otherwise there's a "too many alphabets" TeX error
 \DeclareFontFamily{U} {MnSymbolA}{}
 \DeclareFontShape{U}{MnSymbolA}{m}{n}{
@@ -370,8 +347,6 @@ pdfauthor={Emilio Pisanty}
 \newcommand{\leftpol}{\!\; \!\!\rcirclearrowright}
 \newcommand{\rightpol}{\!\; \!\!\lcirclearrowright}
 \newcommand{\epol}{\resizebox{0.8em}{1em}{$\lcirclearrowright$}}
-
-
 \newcommand{\linpol}{\updownarrow}
 
 \newcommand{\chit}{\stackrel{\leftrightarrow}{\chi}\!\!{}^{(3)}}
@@ -441,9 +416,7 @@ pdfauthor={Emilio Pisanty}
   \refstepcounter{mathaside}
   \addcontentsline{loa}{mathaside}
   {\protect\numberline{\themathaside}#1}\par
-%  \addcontentsline{loa}{mathaside}
-%  {\protect\numberline{\themathaside}#1}\par
-  \vspace{5pt}\textbf{Mathematical Aside~\themathaside. #1}\vspace{-7pt}
+  \vspace{5pt}\parbox{\textwidth-1cm}{\textbf{Mathematical Aside~\themathaside. #1}}\vspace{-7pt}
   \nopagebreak[4]
     \def\FrameCommand{\fboxsep=\FrameSep \fboxrule=\FrameRule \fcolorbox{black}{shadecolor}}%
     \MakeFramed {\setlength{\boxwidth}{0.95\textwidth}
@@ -484,6 +457,13 @@ pdfauthor={Emilio Pisanty}
 
 
 
+%%%%%% Dates %%%%%%
+\newcommand{\submittedversiondate}{September 9, 2016}
+\newcommand{\finalversiondate}{November 16, 2016}
+\newcommand{\declarationdate}{November 16, 2016}
+\newcommand{\titlepagedate}{\finalversiondate}
+
+
 
 
 
@@ -512,14 +492,16 @@ pdfauthor={Emilio Pisanty}
 \input{0-Miscellaneous/Declaration}
 
 \singlespacing
-%\input{0-Miscellaneous/Quote}
+
 \input{0-Miscellaneous/Acknowledgements}
 
 \newpage
 \singlespacing
+\pdfbookmark{\contentsname}{Contents}
 \tableofcontents  
 
 \newpage
+\pdfbookmark{List of Figures}{List of Figures}
 \listoffigures
 
 \listofmathaside
@@ -541,7 +523,7 @@ pdfauthor={Emilio Pisanty}
 \@openrighttrue
 \makeatother
 
-%%%%%%%%%%%%%%% CHAPTERS+APPENDICES GO HERE %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Main content %%%%%%%%%%%%%%%%%
 
 
 \input{1-Introduction/Introduction}
@@ -551,7 +533,7 @@ pdfauthor={Emilio Pisanty}
 
 %\input{0-Miscellaneous/PreSkeleton}
 
-%
+
 \part{Ionization}
 \label{part:I}
 
@@ -596,7 +578,7 @@ pdfauthor={Emilio Pisanty}
 \bibliographystyle{arthur} 
 \bibliography{references}{}
 
-
+%%% To get the bibliography right, run BibliographyPrettifier.sh after any BibTeX run and before re-LaTeXing.
 
 
 

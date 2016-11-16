@@ -113,7 +113,6 @@ Similarly, the full-form potential \eqref{e4-correlation-interaction-potential-i
 \d\vbr_2 \cdots \d\vbr_{N-1} 
 &   
 \braket{n}{\vbr',\vbr_2,\ldots,\vbr_{N-1}} \!
-%\nonumber \\ & \qquad \times
 \braket{\vbr',\vbr_2,\ldots,\vbr_{N-1}}{m}
 ,
 \label{e4-full-transition-charge-as-integral}
@@ -219,15 +218,15 @@ Here the added dimension does make the singularity less noble -- there's ``more 
 (i.e. with the $z$ dimension regularized out, but still a line singularity at $x'=x_0$, $y'=y_0$), and this is still regular when the area element in the $x',y'$ plane $\d x'\d y'=r'\d r'\d\theta'$ is taken into account. Of course, if the integration is done numerically the ring singularity must still be specifically handled to obtain correct results, but it does not represent a significant impediment to the calculation.
 
 
-\captionsetup[figure]{position=top}
 \begin{figure}[htb]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$\Re(\Vg(\vbr))$]{
+  (a) $\Re(\Vg(\vbr))$ & (b) $\Im(\Vg(\vbr))$ \\[-2mm]
+  \subfigure{
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Aa.pdf}
   }
   &
-  \subfloat[$\Im(\Vg(\vbr))$]{
+  \subfigure{
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ab.pdf}
   }
   \end{tabular}
@@ -235,7 +234,6 @@ Here the added dimension does make the singularity less noble -- there's ``more 
   Electrostatic potential $\Vg(\vbr)$ of a gaussian charge distribution as a function of complex $z$ for fixed $x=3$ and $y=0$, with $\sigma=1$, calculated using direct numerical integration as in \eqref{e4-correlation-interaction-potential-numerically-gaussian}.}
   \label{f4-numerical-potential-from-gaussian}
 \end{figure}
-\captionsetup[figure]{position=auto}
 
 
 With all this in hand, then, we can now simply plug in a complex position into \eqref{e4-correlation-interaction-potential-with-complex-position}, do the integral numerically, and see what comes out. As a starting example, to keep things simple, we can use a single gaussian charge distribution at the origin, $\rhog(\vbr)$ as in \eqref{e4-gaussian-charge-density}, so we look to calculate
@@ -341,7 +339,7 @@ Here $M$ was given and fixed, but $r$ can be chosen to be arbitrarily large, and
 \hfill\qedsymbol
 
 \vspace{\maskip}
-A bit away from the formal side, both of these principles express the fact that the theory of analytical functions is very, very rigid, and even more so when compared to the theory of smooth real functions in $C^\infty$. This rigidity boils down to the fact that to be complex differentiable a function $f$ must not only be locally well approximated by a straight line, as in the real case; instead, it must also obay the the full-fledged pair of Cauchy-Riemann differential equations in~\eqref{e4-cauchy-riemann}. The rigidity of the theory is, at least partly, inherited from the theory of differential equations, which is rigid enough that functions tend to inherit their values in the interior of a region from their behaviour at its boundary.
+A bit away from the formal side, both of these principles express the fact that the theory of analytical functions is very, very rigid, and even more so when compared to the theory of smooth real functions in $C^\infty$. This rigidity boils down to the fact that to be complex differentiable a function $f$ must not only be locally well approximated by a straight line, as in the real case; instead, it must also obey the the full-fledged pair of Cauchy-Riemann differential equations in~\eqref{e4-cauchy-riemann}. The rigidity of the theory is, at least partly, inherited from the theory of differential equations, which is rigid enough that functions tend to inherit their values in the interior of a region from their behaviour at its boundary.
 
 \vspace{\maskip}
 On a more positive note, Liouville's theorem is best seen as the statement that for a function to be analytic, it needs to be interesting: it needs to have poles, branch cuts, natural boundaries, or divergences at infinity. Our numerically integrated $\Vg(\vbr)$ from \eqref{e4-correlation-interaction-potential-numerically-gaussian} and \reffig{f4-numerical-potential-from-gaussian}, with its gentle bumps and bounded, continuous behaviour, does not qualify.
@@ -356,37 +354,38 @@ Returning to our numerically-integrated potential, we see that its features indi
 
 
 
-\captionsetup[figure]{position=top}
 \begin{figure}[htb]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$\Im \left( \frac{\partial \Vg(\vbr)}{\partial \Re(z)} \right)$]{
+  (a) $\Im \left( \frac{\partial \Vg(\vbr)}{\partial \Re(z)} \right)$ & (b) $\Im \left( \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right)$ \\[-2mm]
+  \subfigure{
     \label{f4-cauchy-riemann-for-numerical-gaussian-a}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ba.pdf}
   }
   &
-  \subfloat[$\Im \left( \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right)$]{
+  \subfigure{
     \label{f4-cauchy-riemann-for-numerical-gaussian-b}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Bb.pdf}
   }
   \\
-  \subfloat[$\Re \left( \frac{\partial \Vg(\vbr)}{\partial \Re(z)} \right) \approx \Re\left( \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right)$]{
+  (c) $\Re \left( \frac{\partial \Vg(\vbr)}{\partial \Re(z)} \right) \approx \Re\left( \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right)$ &
+  (d) $\left| \frac{\partial \Vg(\vbr)}{\partial \Re(z)} - \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right|$ \\[-2mm]
+  \subfigure{
     \label{f4-cauchy-riemann-for-numerical-gaussian-c}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Bc.pdf}
   }
   &
-  \subfloat[$\left| \frac{\partial \Vg(\vbr)}{\partial \Re(z)} - \frac{\partial \Vg(\vbr)}{i \, \partial \Im(z)} \right|$]{
+  \subfigure{
     \label{f4-cauchy-riemann-for-numerical-gaussian-d}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Bd.pdf}
   }
   \end{tabular}
-  \caption[Cauchy-Riemann equations for the numerically-integrated dlectrostatic potential $\Vg(\vbr)$ over complex coordinates]{
+  \caption[Cauchy-Riemann equations for the numerically-integrated electrostatic potential $\Vg(\vbr)$ over complex coordinates]{
   Cauchy-Riemann equations for the numerically-integrated electrostatic potential $\Vg(\vbr)$ of \eqref{e4-correlation-interaction-potential-numerically-gaussian}, shown over the same slice of complex coordinate space as \reffig{f4-numerical-potential-from-gaussian} ($x=3$, $y=0$, and complex $z$).
   Panels~\protect\subref{f4-cauchy-riemann-for-numerical-gaussian-a} and~\protect\subref{f4-cauchy-riemann-for-numerical-gaussian-b} show the imaginary parts of the derivative of $\Vg(\vbr)$ with respect to the real and imaginary parts of $z$, respectively; for an analytical function they should match but instead they have immediately appreciable differences. The real parts, shown in~\protect\subref{f4-cauchy-riemann-for-numerical-gaussian-c}, do match, but the two derivatives are left with a strong difference, shown in~\protect\subref{f4-cauchy-riemann-for-numerical-gaussian-d}.
   }
   \label{f4-cauchy-riemann-for-numerical-gaussian}
 \end{figure}
-\captionsetup[figure]{position=auto}
 
 
 
@@ -513,12 +512,12 @@ Now that we have suitable analytical continuations of at least some reasonable c
 \begin{figure}[htb]
   \centering
   \begin{tabular}{c}
-  \subfloat{  
+  \subfigure{  
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ca.pdf}
     \label{f4-potential-comparison} 
   }
   \\[-5mm]
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Cb.pdf}
     \label{f4-charge-density-comparison} 
   }
@@ -537,30 +536,30 @@ In general, gaussian distributions are rather different to Slater-type exponenti
 
 
 Unfortunately, the similarities between the two potentials end there, and when we look at their behaviour for complex coordinates we get completely different structure, shown in \reffig{f4-exact-gaussian-vs-exponential-complex-coordinates}.
-% for the same cut through complex $\vbr$ space as in Figs.~\ref{f4-numerical-potential-from-gaussian} and \ref{f4-cauchy-riemann-for-numerical-gaussian} (i.e. taking a fixed $x=3$ and $y=0$ and varying $z\in\mathbb{C}$). 
 
 
 
-\captionsetup[figure]{position=top}
 \begin{figure}[htb]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$\Re(\Vg(\vbr))$]{
+  (a) $\Re(\Vg(\vbr))$ & (b) $\Im(\Vg(\vbr))$ \\[-2mm]
+  \subfigure{
     \label{f4-re-vg-over-complex-coords}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Da.pdf}
   }
   &
-  \subfloat[$\Im(\Vg(\vbr))$]{
+  \subfigure{
     \label{f4-im-vg-over-complex-coords}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Db.pdf}
   }
-  \\[6mm]
-  \subfloat[$\Re(\Ve(\vbr))$]{
+  \\
+  (c) $\Re(\Ve(\vbr))$ & (d) $\Im(\Ve(\vbr))$ \\[-2mm]
+  \subfigure{
     \label{f4-re-ve-over-complex-coords}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Dc.pdf}
   }
   &
-  \subfloat[$\Im(\Ve(\vbr))$]{
+  \subfigure{
     \label{f4-im-ve-over-complex-coords}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Dd.pdf}
   }
@@ -570,7 +569,6 @@ Unfortunately, the similarities between the two potentials end there, and when w
   }
   \label{f4-exact-gaussian-vs-exponential-complex-coordinates}
 \end{figure}
-\captionsetup[figure]{position=auto}
 
 
 Perhaps the most salient feature of both of these potentials is the stark divergence of the exact gaussian potential $\Vg(\vbr)$ as the imaginary part of $z$ increases, which immediately becomes unmanageable regardless of the scale on the vertical axis. This can be seen quite clearly from the asymptotic expansion for the error function \citenisteq{7.12.1}, which at large and real argument describes a gaussian approach from below to 1, but inherits this $e^{-z^2}$ behaviour for the entire complex plane:
@@ -582,14 +580,12 @@ whenever $|\arg(z)| < \frac{3\pi}{4}$. In the potential $\Vg(\vbr)$ from \eqref{
 
 
 
-The potential for the exponential distribution, $\Ve(\vbr)$, on the other hand, has much more bounded behaviour, but instead of a divergence to infinity it now fills up its interestingness quota with a pair of branch cuts that stretch from $z=\pm i x$ to imaginary infinity. These branch cuts are, in fact, rather natural, because the potential is a function of $r=\sqrt{x^2+y^2+z^2}$, which itself has a sign-change branch cut when its argument is~negative. 
-%%% In a sense, this branch cut is harder to deal with than the exponential divergence of $\Vg(\vbr)$, because integration contours cannot cross branch cuts
+The potential for the exponential distribution, $\Ve(\vbr)$, on the other hand, has much more bounded behaviour, but instead of a divergence to infinity it now fills up its interestingness quota with a pair of branch cuts that stretch from $z=\pm i x$ to imaginary infinity. These branch cuts are, in fact, rather natural, because the potential is a function of $r=\sqrt{x^2+y^2+z^2}$, which itself has a sign-change branch cut when its argument is~negative.
 
 
 It is worth asking at this stage why the gaussian potential $\Vg(\vbr)$ does not exhibit any branch cuts on its domain: after all, it is a function of $r$ just as much as $\Ve(\vbr)$. The reason for this is that the error function is a pure odd function, and it therefore has a Taylor expansion \citenisteq{7.6.1} of the form
 \begin{equation}
 \erf(z)
-%=\frac{2}{\sqrt{\pi}}\sum_{n=0}^{\infty} \frac{(-1)^{n}z^{2n+1}}{n!(2n+1)}
 =\frac{2}{\sqrt{\pi}}\left( z - \frac{z^3}{3} + \frac{z^5}{10} - \cdots \right)
 .
 \end{equation}
@@ -620,42 +616,44 @@ Given that $\Vg(\vbr)$ and $\Ve(\vbr)$ produce wildly different potentials for c
 
 
 
-\captionsetup[figure]{position=top}
 \begin{figure}[!htbp]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$\Re(\Vg(\vbr))$]{
+  (a) $\Re(\Vg(\vbr))$ & (b) $\Re(\Vg(\vbr))$ \\[-2mm]
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-a}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ea.pdf}
   }
   &
-  \subfloat[$\Im(\Vg(\vbr))$]{
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-b}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Eb.pdf}
   }
   \\
-  \subfloat[$\Re(\Ve(\vbr))$]{
+  (c) $\Re(\Ve(\vbr))$ & (d) $\Re(\Ve(\vbr))$ \\[-2mm]
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-c}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ec.pdf}
   }
   &
-  \subfloat[$\Im(\Ve(\vbr))$]{
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-d}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ed.pdf}
   }
   \\
-  \subfloat[$\Re(\Vgnum(\vbr))$]{
+  (e) $\Re(\Vgnum(\vbr))$ & (f) $\Re(\Vgnum(\vbr))$ \\[-2mm]
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-e}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ee.pdf}
   }
   &
-  \subfloat[$\Im(\Vgnum(\vbr))$]{
+  \subfigure{
     \label{f4-potentials-comparison-restricted-complex-coordinates-f}
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Ef.pdf}
   }
   \end{tabular}
   \caption[Electrostatic potentials $\Vg(\vbr)$, $\Ve(\vbr)$ and $\Vgnum(\vbr)$ over complex coordinates restricted to $\Re(\vbr^2)>0$]{
-  Exact electrostatic potentials $\Vg(\vbr)$ and $\Ve(\vbr)$ over complex coordinates (\subref*{f4-potentials-comparison-restricted-complex-coordinates-a}-\subref*{f4-potentials-comparison-restricted-complex-coordinates-d}), exactly as in \reffig{f4-exact-gaussian-vs-exponential-complex-coordinates}, but restricted to the region $\Re(\vbr^2)>0$. Despite their disagreements in coordinates that are `too imaginary' (in the sense that $\Re(\vbr^2)=\Re(\vbr)^2-\Im(\vbr)^2<0$), both potentials agree quite well here. (We show their close quantitative agreement in \reffig{f4-quantitative-agreements-between-potentials}.) In addition, they also agree relatively well (particularly when away from the boundary) with the numerically-integrated $\Vgnum(\vbr)$ of Section~\ref{sec:quantum-chemical-potentials-complex}, shown in~\subref{f4-potentials-comparison-restricted-complex-coordinates-e} and~\subref{f4-potentials-comparison-restricted-complex-coordinates-f}; this means that $\Vgnum(\vbr)$ is also a relatively reasonable model in that~region, though its much higher computational cost and worse analyticity properties render it a bad choice.}
+  Exact electrostatic potentials $\Vg(\vbr)$ and $\Ve(\vbr)$ over complex coordinates (\hyperref[f4-potentials-comparison-restricted-complex-coordinates-a]{a}-\hyperref[f4-potentials-comparison-restricted-complex-coordinates-d]{d}), exactly as in \reffig{f4-exact-gaussian-vs-exponential-complex-coordinates}, but restricted to the region $\Re(\vbr^2)>0$. Despite their disagreements in coordinates that are `too imaginary' (in the sense that $\Re(\vbr^2)=\Re(\vbr)^2-\Im(\vbr)^2<0$), both potentials agree quite well here. (We show their close quantitative agreement in \reffig{f4-quantitative-agreements-between-potentials}.) In addition, they also agree relatively well (particularly when away from the boundary) with the numerically-integrated $\Vgnum(\vbr)$ of Section~\ref{sec:quantum-chemical-potentials-complex}, shown in~\subref{f4-potentials-comparison-restricted-complex-coordinates-e} and~\subref{f4-potentials-comparison-restricted-complex-coordinates-f}; this means that $\Vgnum(\vbr)$ is also a relatively reasonable model in that~region, though its much higher computational cost and worse analyticity properties render it a bad choice.}
   \label{f4-potentials-comparison-restricted-complex-coordinates}
 \end{figure}
 
@@ -673,15 +671,16 @@ In the meantime, we can begin by looking at the potentials we have so far when r
 
 
 
-\captionsetup[figure]{position=top}
 \begin{figure}[!htbp]
   \centering
   \begin{tabular}{cc}
-  \subfloat[$|\Ve(\vbr)-\Vg(\vbr)|/|\Vg(\vbr)|$]{
+  (a) $|\Ve(\vbr)-\Vg(\vbr)|/|\Vg(\vbr)|$ & 
+  (b) $|\Vgnum(\vbr)-\Vg(\vbr)|/|\Vg(\vbr)$ \\[-2mm]
+  \subfigure{
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Fa.png}
   }
   &
-  \subfloat[$|\Vgnum(\vbr)-\Vg(\vbr)|/|\Vg(\vbr)$]{
+  \subfigure{
     \includegraphics[scale=1]{4-Potentials/Figures/figure4Fb.png}
   }
   \end{tabular}
@@ -719,7 +718,6 @@ The reason for this is that the electrostatic potential $V(\vbr)$ is a solution 
 \footnote{%
 This does entail a nontrivial step in showing that an analytical solution of the Schrödinger equation give an analytical charge density, since expressions of the form $\phi_m(\vbr)^* \phi_n(\vbr)$ include a complex conjugation that can destroy the analyticity if not done correctly. Fortunately, this can be done easily by extending functions of the form $\phi_m(\vbr)^*$ to the complex plane as $\phi_m(\vbr^*)^*$, which is analytic by the Schwarz reflection principle~\cite[p.~119-120]{noguchi_complex_analysis}.
 }
-% (admittedly through a procedure that can involve an analyticity-denying conjugation in $\phi_m(\vbr)^* \phi_n(\vbr)$, which can nevertheless be factored away as the eigenfunctions can always be chosen to be real), 
 and again the Schrödinger multi-electron Hamiltonian is generally regular enough that its eigenfunctions are analytic.
 
 

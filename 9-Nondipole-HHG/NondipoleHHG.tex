@@ -1,7 +1,6 @@
 
 
 \chapter[Nondipole effects in HHG using noncollinear bicircular beams]{Nondipole effects in high-order harmonic generation using noncollinear bicircular beams}
-%\chaptermark{Nondipole effects in HHG using noncollinear bicircular beams}
 \label{chap:nondipole-HHG}
 In this chapter we turn to the extension of HHG in another frontier -- the extension of the plateau to higher harmonic cutoffs, in the search for shorter wavelengths and the possibility of shorter pulses and experiments at higher temporal resolutions. 
 
@@ -27,7 +26,7 @@ Moreover, the extensions to the Lewenstein-model SFA calculations are implemente
 
 \begin{enumerate}
 \item[{\hypersetup{citecolor=black}\citealp{RB-SFA}}.]
-\textsc{E.~Pisanty}. RB-SFA: High Harmonic Generation in the Strong Field Approximation via Mathematica. \url{https://github.com/episanty/RB-SFA} (2016).
+\textsc{E.~Pisanty}. RB-SFA: High Harmonic Generation in the Strong Field Approximation via Mathematica. \url{https://github.com/episanty/RB-SFA}, \href{http://dx.doi.org/10.5281/zenodo.164626}{v2.1.2} (2016).
 \end{enumerate}
 
 
@@ -74,15 +73,15 @@ Most of these represent significant challenges in target engineering, and the on
   \caption[
   Damping of HHG emission by the Lorentz force at $\SI{8}{\micro\meter}$ and $\SI{e15}{W/cm^2}$, by several orders of magnitude with respect to the dipole-approximation ideal, as calculated by A.S. Emelina~et~al.
   ]{
-  Damping by the Lorentz force of the harmonic emission of helium under a six-cycle pulse at $\SI{8}{\micro\meter}$ and $\SI{e15}{W/cm^2}$, as compared to the same conditions under the dipole approximation, shown in gray.
+  Quenching by the Lorentz force of the harmonic emission of helium under a six-cycle pulse at $\SI{8}{\micro\meter}$ and $\SI{e15}{W/cm^2}$, as compared to the same conditions under the dipole approximation, shown in gray.
   Figure excerpted from \citer{emelina_possibility_2014}.
   }
 \label{f6-emelina-original-spectrum}
 \end{figure}
-\copyrightfootnote{
-\reffig{f6-emelina-original-spectrum} © IOP Publishing. Reproduced with permission. All rights reserved.
-}
-%% Copyright note is temporary pending IOP reply.
+%\copyrightfootnote{
+%\reffig{f6-emelina-original-spectrum}
+%}
+%%% No copyright notice required by Turpion T&Cs
 
 
 
@@ -119,8 +118,8 @@ We address the motion in the propagation dimension using a forwards-elliptical f
 
 \begin{figure}[htb]
   \centering
-  \subfloat{\label{f8-field-configuration-beams}}
-  \subfloat{\label{f8-field-configuration-ellipses}}
+  \subfigure{\label{f8-field-configuration-beams}}
+  \subfigure{\label{f8-field-configuration-ellipses}}
   \includegraphics[width=0.7\textwidth]{9-Nondipole-HHG/Figures/figure9B.png} 
   \caption[
   Proposed beam configuration for probing the Lorentz-force action: two non-collinear, counter-rotating circularly polarized beams of the same frequency, with the resulting field configuration showing forwards ellipticity
@@ -146,10 +145,10 @@ More importantly, however, this break in the symmetry between half-cycles also l
 
 \begin{figure}[t!]
   \centering
-  \subfloat{\label{f8-schematic-trajectories-a}}
-  \subfloat{\label{f8-schematic-trajectories-b}}
-  \subfloat{\label{f8-schematic-trajectories-c}}
-  \subfloat{\label{f8-schematic-trajectories-d}}
+  \subfigure{\label{f8-schematic-trajectories-a}}
+  \subfigure{\label{f8-schematic-trajectories-b}}
+  \subfigure{\label{f8-schematic-trajectories-c}}
+  \subfigure{\label{f8-schematic-trajectories-d}}
   \includegraphics[width=0.55\textwidth]{9-Nondipole-HHG/Figures/figure9C.png} 
   \caption[
   Schematic electron trajectories in a forwards-elliptical field, with the effect of the ellipticity, the Lorentz force, and their combination
@@ -371,7 +370,6 @@ with the electric field $\vbf$ substituted as the time derivative of the vector 
 
 The time evolution equation \eqref{e9-vbpi-evolution-equation} for $\vbpi(\vbp,t)$ is, formally speaking, an inhomogeneous time-dependent Schrödinger equation in three dimensions,  so it has a formal solution, via a time-ordered exponential of $\int \gradA(t)\:\d t$, but this is far too complex for our purposes. Since we're only looking for the first perturbation with respect to the nondipole terms, we can simply look for solutions around the dipole trajectory, $\vbpi( \vbp,t) =\vbp+\vba(t)$, and ask for the effect of the nondipole perturbation $-\gradA(t)\cdot \vbpi(\vbp,t)$.
 
-%This means that we can simply perform a perturbative expansion for $\vbpi(\vbp,t)$,
 
 To get this, we write $\vbpi(\vbp,t) = \vbp + \vba(t) +\vbpi^{(1)}(\vbp,t)$, in terms of the perturbation $\vbpi^{(1)}(\vbp,t)$, which obeys the equation
 \begin{equation}
@@ -440,17 +438,23 @@ This effect, in fact, is real and physical, going beyond our specific mathematic
 \begin{figure}[htb]
   \centering
   
-  \subfloat{\label{f9-trajectory-xz}}
-  \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Da.pdf}
+  \subfigure{
+    \label{f9-trajectory-xz}
+    \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Da.pdf}
+  }
   \hspace{9mm}$\,$
   
   \vspace{5mm}
   
-  \subfloat{\label{f9-trajectory-yz}}
-  \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Db.pdf} 
+  \subfigure{
+    \label{f9-trajectory-yz}
+    \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Db.pdf} 
+  }
   \hspace{5mm}
-  \subfloat{\label{f9-trajectory-3d}}
-  \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Dc.pdf} 
+  \subfigure{
+    \label{f9-trajectory-3d}
+    \includegraphics[scale=1]{9-Nondipole-HHG/Figures/figure9Dc.pdf}
+  }
   
   \captionsetup{width=\textwidth}
   \caption[
@@ -491,7 +495,6 @@ and to the harmonic dipole
 &
 \vbd(\vbpi(\vbp,t,t'))
 e^{iS(\vbp,t,t')}
-%\nonumber \\ & \quad
 \times\vbf(t')\cdot\vbd(\vbpi(\vbp,t',t'))
 +\cc
 \label{e9-modified-harmonic-dipole}
@@ -519,7 +522,20 @@ There are two main avenues of interest in our results: the recovery of harmonic 
 
 
 
-\begin{figure}[p]
+
+
+To showcase the former, we present in \reffig{f8-harmonic-recovery-spectra} the harmonic emission of a highly charged neon ion in a very intense $\SI{800}{nm}$ field.%
+%
+\footnote{%
+Ideally, this should be done for a field of more moderate intensity by taking a longer wavelength, as in the calculation of \citer{emelina_possibility_2014} shown in \reffig{f8-harmonic-recovery-spectra}. The choice to use the high-intensity, moderate-wavelength regime in \reffig{f8-harmonic-recovery-spectra} is to reduce the computational load on this initial application: at equal harmonic cutoff, a smaller photon energy requires the calculation of more harmonics. However, since both directions are in the deep $\gamma\ll1$ regime, the nondipole SFA dynamics are essentially equivalent.
+}
+%
+(These conditions are essentially equivalent to Fig.~2b of \cite{ chirila_nondipole_2002}, though in \reffig{f8-harmonic-recovery-spectra} we keep only the first pair of quantum orbits for~clarity.)
+It is easy to see that the `ideal' harmonic yield, given by the standard Lewenstein SFA in the dipole approximation, drops down significantly once nondipole terms are introduced (and, indeed, it continues to drop if the intensity is increased). However, introducing even a small forwards ellipticity, with only a $\theta=\SI{2}{\degree}$ half-angle between the non-collinear bicircular beams, can do much to restore the harmonic~emission.
+
+
+
+\begin{figure}[hb]
   \centering
   \includegraphics[width=0.65\textwidth]{9-Nondipole-HHG/Figures/figure9F.pdf} 
   \caption[
@@ -531,11 +547,26 @@ There are two main avenues of interest in our results: the recovery of harmonic 
 \end{figure}
 
 
+Here it is also important to note that these results have only been very partially optimized, and that the harmonic recovery can certainly work better than displayed here. Moreover, the curves as shown are slightly misleading: the blue curve, showing the recovered nondipole harmonics, contains both even and odd harmonics in essentially equal measure (as can be seen e.g. in the under-resolved quantum-path-interference feature near harmonic order 8000), so its spectral energy density should be considered to be twice the~shown yield. 
+
+Similarly, the `ideal' curve to compare to is not exactly the full dipole-approximation yield, since that contains two recollisions per half cycle, but as we discussed in \reffig{f8-schematic-trajectories} we can only hope to recover one of the two recollisions. Thus, we should consider the target intensity to be half of the shown dipole-approximation yield, which means that the gap as displayed, between the recovered nondipole emission in blue and the target dipole-approximation emission in gray, is exaggerated by a factor of four. Once this is taken into account, the shown spectrum recovers essentially all of the signal at cutoff, and it is only down by a factor of two from the target over most of the spectrum.
+
+
+On the other hand, it is a curious observation that the cutoff has been extended slightly in the recovered emission. This is almost definitely an artefact of the method, chiefly of the non-relativistic approximation, since the cutoff in fully relativistic SFA calculations has been shown to decrease noticeably~\cite{milosevic_relativistic_2002-1}. Planned calculations using a fully relativistic theory should remove this artefact, but they are extremely unlikely to change the overall enhancement, since the basic physics is preserved.
+
+
+
+On another track, we present in \reffig{f9-even-harmonics-spectra} results for the generation of even harmonics in more moderate fields, modelling helium in the non-dipole regime at intensities of $3.2\times 10^{14}$ and $\SI{e15}{W/cm^2}$ and for driver wavelengths of $\SI{800}{nm}$ and $\SI{1.6}{\micro\metre}$. It should be noted that the non-dipole even harmonics approach detectable intensities, between 0.1\% and 1\% of the energy of the odd harmonics, even using $\SI{800}{nm}$ drivers (not normally thought of as having a wavelength long enough for nondipole effects) at the relatively reasonable intensity of $\SI{e15}{W/cm^2}$, which is easily accessible to modern titanium-sapphire laser systems.
+
+
+Similarly, when the wavelength is increased to $\SI{1.6}{\micro\metre}$, at a maximum intensity of $\SI{e15}{W/cm^2}$ that is within the range of current optical parametric chirped-pulse amplifiers, the contrast ratio between the even and odd harmonics increases even further, reaching into the 10\% of energy in the even harmonics, which is certainly measurable using current detectors.
+
+
 \newlength{\figureNineEheight}
 \setlength{\figureNineEheight}{4.2cm}
 {
 \setlength\tabcolsep{0mm}
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \scriptsize
   \begin{tabular}{ccc}
@@ -571,32 +602,11 @@ There are two main avenues of interest in our results: the recovery of harmonic 
 }
 
 
-To showcase the former, we present in \reffig{f8-harmonic-recovery-spectra} the harmonic emission of a highly charged neon ion in a very intense $\SI{800}{nm}$ field.%
-%
-\footnote{%
-Ideally, this should be done for a field of more moderate intensity by taking a longer wavelength, as in the calculation of \citer{emelina_possibility_2014} shown in \reffig{f8-harmonic-recovery-spectra}. The choice to use the high-intensity, moderate-wavelength regime in \reffig{f8-harmonic-recovery-spectra} is to reduce the computational load on this initial application: at equal harmonic cutoff, a smaller photon energy requires the calculation of more harmonics. However, since both directions are in the deep $\gamma\ll1$ regime, the nondipole SFA dynamics are essentially equivalent.
-}
-%
-(These conditions are essentially equivalent to Fig.~2b of \cite{ chirila_nondipole_2002}, though in \reffig{f8-harmonic-recovery-spectra} we keep only the first pair of quantum orbits for~clarity.)
-It is easy to see that the `ideal' harmonic yield, given by the standard Lewenstein SFA in the dipole approximation, drops down significantly once nondipole terms are introduced (and, indeed, it continues to drop if the intensity is increased). However, introducing even a small forwards ellipticity, with only a $\theta=\SI{2}{\degree}$ half-angle between the non-collinear bicircular beams, can do much to restore the harmonic~emission.
-
-Here it is also important to note that these results have only been very partially optimized, and that the harmonic recovery can certainly work better than displayed here. Moreover, the curves as shown are slightly misleading: the blue curve, showing the recovered nondipole harmonics, contains both even and odd harmonics in essentially equal measure (as can be seen e.g. in the under-resolved quantum-path-interference feature near harmonic order 8000), so its spectral energy density should be considered to be twice the~shown yield. 
-
-Similarly, the `ideal' curve to compare to is not exactly the full dipole-approximation yield, since that contains two recollisions per half cycle, but as we discussed in \reffig{f8-schematic-trajectories} we can only hope to recover one of the two recollisions. Thus, we should consider the target intensity to be half of the shown dipole-approximation yield, which means that the gap as displayed, between the recovered nondipole emission in blue and the target dipole-approximation emission in gray, is exaggerated by a factor of four. Once this is taken into account, the shown spectrum recovers essentially all of the signal at cutoff, and it is only down by a factor of two from the target over most of the spectrum.
-
-
-On the other hand, it is a curious observation that the cutoff has been extended slightly in the recovered emission. This is almost definitely an artefact of the method, chiefly of the non-relativistic approximation, since the cutoff in fully relativistic SFA calculations has been shown to decrease noticeably~\cite{milosevic_relativistic_2002-1}. Planned calculations using a fully relativistic theory should remove this artefact, but they are extremely unlikely to change the overall enhancement, since the basic physics is preserved.
 
 
 
-In addition to this, there are also important results on the generation of even harmonics by more moderate fields, which we present in \reffig{f9-even-harmonics-spectra} for helium in the non-dipole regime at intensities of $3.2\times 10^{14}$ and $\SI{e15}{W/cm^2}$ and for driver wavelengths of $\SI{800}{nm}$ and $\SI{1.6}{\micro\metre}$. It should be noted that the non-dipole even harmonics approach detectable intensities, between 0.1\% and 1\% of the energy of the odd harmonics, even for $\SI{800}{nm}$ drivers at the relatively reasonable intensity of $\SI{e15}{W/cm^2}$, which is easily accessible to modern titanium-sapphire laser systems.
 
-
-Similarly, when the wavelength is increased to $\SI{1.6}{\micro\metre}$, at a maximum intensity of $\SI{e15}{W/cm^2}$ that is within the range of current optical parametric chirped-pulse amplifiers, the contrast ratio between the even and odd harmonics increases even further, reaching into the 10\% of energy in the even harmonics, which is certainly measurable using current detectors.
-
-
-
-In addition to this, the even harmonics should also be angularly separated from the dipole-allowed odd harmonics. This angular separation results from the conservation of momentum, and it was clearly demonstrated for the dipole harmonics by Hickstein \mbox{et al.}~\cite{hickstein_non-collinear_2015}: these must absorb an odd number of photons, but the conservation of spin angular momentum~\cite{fleischer_spin_2014, Pisanty_spin_conservation_2014} requires the harmonic to form from $n$ photons of one beam and $n+1$ photons from the other, resulting in a net transverse momentum of $\pm\hbar k_x = \pm\hbar k\sin(\theta)$ for the odd harmonics. The even harmonics represent the parametric conversion of an even number of photons, via the tensor operator $\hat{\vbr}\otimes\hat{\vbp} \mathbin{:} \nabla \hspace{-0.15em} \vba$, and they can therefore absorb either zero transversal momentum -- resulting in linear polarization along the $y$ axis -- or $\pm2\hbar k_x$, with opposite circular polarizations. These even harmonics, then, should appear at distinctly resolvable spots in the far field, which greatly simplifies their detection.
+Furthermore, the even harmonics should also be angularly separated from the dipole-allowed odd harmonics. This angular separation results from the conservation of momentum, and it was clearly demonstrated for the dipole harmonics by Hickstein \mbox{et al.}~\cite{hickstein_non-collinear_2015}: these must absorb an odd number of photons, but the conservation of spin angular momentum~\cite{fleischer_spin_2014, Pisanty_spin_conservation_2014} requires the harmonic to form from $n$ photons of one beam and $n+1$ photons from the other, resulting in a net transverse momentum of $\pm\hbar k_x = \pm\hbar k\sin(\theta)$ for the odd harmonics. The even harmonics represent the parametric conversion of an even number of photons, via the tensor operator $\hat{\vbr}\otimes\hat{\vbp} \mathbin{:} \nabla \hspace{-0.15em} \vba$, and they can therefore absorb either zero transversal momentum -- resulting in linear polarization along the $y$ axis -- or $\pm2\hbar k_x$, with opposite circular polarizations. These even harmonics, then, should appear at distinctly resolvable spots in the far field, which greatly simplifies their detection.
 
 As a final note, it is important to remark that it is the interferometric quality of our scheme that enables the detection of nondipole effects, by unbalancing (both in phase and in amplitude) the interferometer which would otherwise suppress the even harmonics, and this changes the scaling of this behaviour. In general, the wavepacket displacement scales as
 $d \propto {F^2}/{2c\omega^3}$,

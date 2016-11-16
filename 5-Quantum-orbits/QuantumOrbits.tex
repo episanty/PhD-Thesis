@@ -7,7 +7,7 @@
 
 This chapter examines in closer detail the structure of the complex-valued electron trajectories used by the Analytical $R$-Matrix theory of photoionization: where it comes from, what the complex-valuedness means, how it interacts with the correlation interaction and the mean-field Coulomb potentials, under what circumstances the imaginary part becomes problematic, and how it should be handled in those conditions. 
 
-We have built, in chapter~\ref{chap:R-matrix}, the framework for a semiclassical, trajectory-based theory of photoionization including the Coulomb and correlation interaction potential, building from the Schrödinger equation to obtainthe laser-driven trajectory
+We have built, in chapter~\ref{chap:R-matrix}, the framework for a semiclassical, trajectory-based theory of photoionization including the Coulomb and correlation interaction potential, building from the Schrödinger equation to obtain the laser-driven trajectory
 \begin{equation}
 \rl(t) = \int_{\ts}^{t} \left[\vbp+\vba(\tau) \right] \: \d\tau
 \label{e5-laser-driven-trajectory}
@@ -35,7 +35,7 @@ This chapter also describes work that is implemented in the software packages
 \textsc{E.~Pisanty}.
 \newblock {ARMSupport}: {A} support suite for {A}nalytical {$R$}-{M}atrix
   calculations.
-\newblock \url{https://github.com/episanty/ARMSupport} (2016).
+\newblock \url{https://github.com/episanty/ARMSupport}, \href{https://doi.org/10.5281/zenodo.164629}{v1.0.15} (2016).
 
 %\item[{\hypersetup{citecolor=black}\citealp{EPToolbox}}.]
 %\textsc{E.~Pisanty}.
@@ -45,8 +45,11 @@ This chapter also describes work that is implemented in the software packages
 \item[{\hypersetup{citecolor=black}\citealp{QuODD}}.]
 \textsc{E.~Pisanty}.
 \newblock {QuODD}: Quantum Orbits Dynamic Dashboard.
-\newblock \url{https://github.com/episanty/QuODD} (2015).
+\newblock \url{https://github.com/episanty/QuODD}, \href{https://doi.org/10.5281/zenodo.164633}{v1.0} (2015).
 \end{enumerate}
+
+
+
 
 
 \vfill
@@ -83,7 +86,7 @@ The problem with that is the word `free': the Strong-Field Approximation neglect
 As we saw in the Introduction, a class of methods known generally as the Coulomb-corrected Strong Field Approximation (CCSFA)~\cite{CCSFA_initial_short, CCSFA_initial_full} accomplishes this by keeping the form of the result -- $a(\vbp)\sim e^{-iS}$ -- and replacing the action by the full Coulomb action (kinetic terms as well as the Coulomb potential energy) evaluated at a full trajectory that obeys a Newtonian equation of motion driven by the laser field and the Coulomb potential. Unfortunately, however, getting the trajectory from the equation of motion is problematic, because the trajectory formulation derived from \eqref{e5-volkov-phase-for-trajectories} says nothing about the initial condition to be used, and this needs to be supplied by~hand.
 
 
-The ARM theory, on the other hand, gets its results directly from the boundary matching procedure of chapter~\ref{chap:R-matrix}, and this means that it gets its trajectory~\eqref{e5-laser-driven-trajectory}, initial conditions and all, in a traceable line from the Schrödinger equation. This has the direct advantage that the trajectory no longer includes any arbitrary components, but for this we must pay the price that the theory only uses the laser-driven trajectory instead of the full Newtonian equation of motion. 
+The ARM theory, on the other hand, gets its results directly from the boundary matching procedure of chapter~\ref{chap:R-matrix}, and this means that it gets its trajectory~\eqref{e5-laser-driven-trajectory}, initial conditions and all, in a traceable line from the Schrödinger equation. This has the direct advantage that the trajectory no longer includes any arbitrary elements, but for this we must pay the price that the theory only uses the laser-driven trajectory instead of the full (laser plus Coulomb) Newtonian equation of motion.
 
 In fact, as we shall see later, our study of the structure of~\eqref{e5-laser-driven-trajectory} shows that the ideal theory, one that builds from first principles through to the full trajectory, will likely face a number of difficulties that disappear when one has control over the initial condition, but which come naturally to the first-principles tunnelling theory. At the moment, though, the situation is roughly the one sketched in \reffig{f5-holy-grail-table}: the ideal theory, as yet unavailable and possibly outside the realm of the reasonably obtainable, should incorporate the first-principles aspects of ARM theory and the full trajectory used by CCSFA methods, but at the moment all we have are those two dual approaches to help us understand what features the ideal theory should have, what problems it will probably meet, and what tools are available to resolve those.
 
@@ -100,7 +103,7 @@ $\,$&
 \hspace{-7.5mm}
 $\displaystyle\stackrel{\text{full action}}{\xrightarrow{\hspace*{7.5cm}}}$
 \vspace{0mm}
-\\  %\hline
+\\ 
 \Large
 \rotatebox{90}%
 {
@@ -119,7 +122,6 @@ ARM &
 \vspace{4mm}  \includegraphics[height=4cm]{5-Quantum-orbits/Figures/figure5A.png}  \hspace{-1mm}\vspace{3mm}
 \\ \hline
 \end{tabular}
-%\\ \hline
 \end{tabular}
 \vspace{4mm}
 
@@ -181,14 +183,7 @@ The trajectory formulation for the ionizing state's WKB expression~\eqref{e5-gro
 
 
 
-%
-%\subsection{Overview}
-%Finally, and before we begin the technical analysis in earnest, it is worthwhile to comment on the lay of the land ahead. 
-%
-%
-%
-%
-%
+
 
 
 
@@ -342,18 +337,16 @@ However, unlike our previous encounter with this branch cut in \eqref{e4-square-
 
 
 
-\captionsetup[figure]{position=auto}
 
+\input{5-Quantum-orbits/Figures/Figure5DParameters.tex}
 \begin{figure}[t!]
   \centering
-  \captionsetup[figure]{position=b}
-  \captionsetup[subfigure]{position=b}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Da.pdf}
     \label{f5-complex-position-contour-plot}
   }
-  \\[-3mm]
-  \subfloat{
+  \\[-1.5mm]
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Db.pdf}
     \label{f5-branch-cut-sketch}
   }
@@ -366,6 +359,7 @@ However, unlike our previous encounter with this branch cut in \eqref{e4-square-
   The momentum displayed, $\vbp=(\figurefiveDpo,0,\figurefiveDpp)$, is such that the standard contour (integrating down to the real part $\tn$ of the saddle point $\ts$ and then along the real axis, shown dotted in \protect\subref{f5-branch-cut-sketch}) crosses a branch cut. Instead, one should choose a contour which passes through a time between the branch cuts, which we label $\tca$ and explore in detail in Sec.~\ref{sec:times-of-closest-approach}.
   }
   \label{f5-complex-position-branch-cuts}
+  \vspace{-1.5mm}
 \end{figure}
 
 
@@ -430,7 +424,7 @@ The intertwining of these variables makes the analysis of these situations relat
 
 
 
-The presence of these Coulomb branch cuts in the complex plane has appeared in the literature occasionally~\cite{popruzhenko_branch-cuts_2014}, but only rarely has it been necessary to shift the integration path away from the sandard contour~\cite{ popruzhenko_branch-cuts_2014, Milosevic_scattering_large}. However, as we have shown, once the electron trajectory is obtained from the ground state through the ARM boundary matching, instead of having an initial condition imposed externally, they become inevitable.
+The presence of these Coulomb branch cuts in the complex plane has appeared in the literature occasionally~\cite{popruzhenko_branch-cuts_2014}, but only rarely has it been necessary to shift the integration path away from the standard contour~\cite{ popruzhenko_branch-cuts_2014, Milosevic_scattering_large}. However, as we have shown, once the electron trajectory is obtained from the ground state through the ARM boundary matching, instead of having an initial condition imposed externally, they become inevitable.
 
 In the rest of this chapter we will show how to handle these branch cuts, by providing an algorithm to programmatically choose a correct integration path, and we will explore the rich geometry unearthed by its key constituents, the times of closest approach to the ion. Later on, in chapter~\ref{chap:LES-NZES}, we will use this method to relate our calculations to experimental features photoelectron spectra. 
 
@@ -453,7 +447,7 @@ We see, then, that it is possible for branch cuts of the Coulomb potential to cr
 
 This can easily be done by hand, by shifting the contour appropriately, if only a single or a few momenta need to be handled, but it is certainly infeasible if one needs to compute a photoelectron spectrum, sampling a large number of different momenta. What is needed, then, is a computational approach: we require a programmatic way to automatically choose the correct integration contour for any given momentum.
 
-The key to obtaining this approach is to examine in detail the space between the two branch cuts, as shown in \reffig{f5-tCA-zoom}. Each branch cut is a contour of constant $\Re(\sqrt{\rl(t)^2})$, which measn that the neighbouring contours must closely follow its direction, and circle around it when it terminates at the branch point. 
+The key to obtaining this approach is to examine in detail the space between the two branch cuts, as shown in \reffig{f5-tCA-zoom}. Each branch cut is a contour of constant $\Re(\sqrt{\rl(t)^2})$, which means that the neighbouring contours must closely follow its direction, and circle around it when it terminates at the branch point. 
 
 \begin{figure}[htb]
   \centering
@@ -461,7 +455,7 @@ The key to obtaining this approach is to examine in detail the space between the
   \caption[
   Closer view of the `slalom gate' between two paired Coulomb branch cuts
   ]{
-  Closer view of the region between the branch cuts in \reffig{f5-complex-position-contour-plot}. The space between any two branch cuts always contains a saddle point $\tca$, as this is the only way to join the curvatures of the contours next to each branch cut. For contours that pass through it, the saddle point marks the minimum of $\Re\left(\sqrt{\rl(t)^2}\right)$. For valid contours that do not pass through $\tca$, this minimum will be smaller.
+  Closer view of the region between the branch cuts in \reffig{f5-complex-position-contour-plot}. The space between any two branch cuts always contains a saddle point $\tca$, as this is the only way to join the curvatures of the contours next to each branch cut. Any contour that goes from left to right of the image must have a minimum of $\Re\left(\sqrt{\rl(t)^2}\right)$; passing through the saddle point maximizes this minimum.
   }
   \label{f5-tCA-zoom}
 \end{figure}
@@ -504,7 +498,7 @@ and only considering real times. This simplified model is widely used as the cla
 .
 \label{e5-explicit-classical-trajectory}
 \end{equation}
-Indeed, this real-valued trajectory is the starting point for classical-trajectory based theories like CCFSA or Classical Trajectory Monte Carlo methods, which keep the initial term $\Re(\rl(\tn))$, and then modify the subsequent continuum dynamics.
+Indeed, this real-valued trajectory is the starting point for classical-trajectory based theories like CCSFA or Classical Trajectory Monte Carlo methods, which keep the initial term $\Re(\rl(\tn))$, and then modify the subsequent continuum dynamics.
 
 Within this model, then, the closest-approach points obey the real part of our initial equation \eqref{e5-tca-equation}, 
 \begin{equation}
@@ -528,21 +522,15 @@ with solutions that separate cleanly into turning points, for which $v_z(\tcacl)
 
 \begin{figure}[t!h]
 \centering
-%\begin{tabular}{c}
-%\raisebox{25mm}{\subfloat[]{\makebox[5mm][0mm]{} }}\hspace{-11mm} &
-%\addtocounter{subfigure}{-1}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Ga.pdf}
     \label{f5-classical-tca-on-axis}
   }
   \\
-%\raisebox{40mm}{\subfloat[]{\makebox[5mm][0mm]{} }}\hspace{-4mm} &
-%\addtocounter{subfigure}{-1}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Gb.pdf}
     \label{f5-classical-tca-surface}
   }
-%\end{tabular}
   \caption[
   Classical closest-approach times, both on-axis at $p_\perp=0$ and as a cusped surface in $\{(\vbp,t)\}$ space
   ]{
@@ -562,10 +550,10 @@ The roots of \eqref{e5-tca-classical-equation-on-axis} can also merge at the ext
 
 \begin{figure}[t]
 \begin{center}
-  \subfloat{\label{f5-sample-trajectories-a}}%
-  \subfloat{\label{f5-sample-trajectories-b}}%
-  \subfloat{\label{f5-sample-trajectories-c}}
-  \subfloat{\label{f5-sample-trajectories-d}}%
+  \subfigure{\label{f5-sample-trajectories-a}}
+  \subfigure{\label{f5-sample-trajectories-b}}
+  \subfigure{\label{f5-sample-trajectories-c}}
+  \subfigure{\label{f5-sample-trajectories-d}}
   \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5H.pdf}
 \end{center}   
   \caption[
@@ -622,18 +610,18 @@ The first few closest-approach solutions are relatively easy to handle, and depe
 \begin{figure}[t!]
   \centering
   \begin{tabular}{c}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Ja.pdf}
     \label{f5-tca-grid-patterns}
   }
   \\[-3mm]
   \begin{tabular}{cc}
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Jb.pdf}
     \label{f5-momentum-semicircle}
   }
   &
-  \subfloat{
+  \subfigure{
     \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Jc.pdf}
     \label{f5-tca-mixing-paths}
   }
@@ -652,9 +640,7 @@ The first few closest-approach solutions are relatively easy to handle, and depe
 \end{figure}
 
 
-%\begin{figure}
-%\caption{hello, this is a \href{http://google.com\#hello}{test}}
-%\end{figure}
+
 
 
 
@@ -671,9 +657,7 @@ This process has profound implications for the ionization amplitude, because the
 
 We now turn to the momentum dependence of the closest-approach times near the soft recollision, which again presents interesting topological features. The main problem is illustrated in Figs.~\ref{f5-momentum-semicircle} and \subref{f5-tca-mixing-paths}: the different solutions of \eqref{e5-tca-equation} mix, and there is no longer any way to distinguish them from each other, as there was in the classical case. More concretely, traversing a closed loop in momentum space, like the semicircle shown in \reffig{f5-momentum-semicircle}, will move the roots around in such a way that when one returns to the initial point the overall configuration is the same, but the saddle points have been permuted cyclically.
 
-Topologically, this means that the surface defined by \eqref{e5-tca-equation} (a two-dimensional surface in a four-dimensional space) does not separate into distinct components; instead, the surface has a single connected component after $\omega t=3\pi/2$. On the other hand, the surface itself remains singly connected. 
-%
-%Both of these behaviours are explored in Figs.~S3 and S4 in the Supplementary Information~\cite{SupplementaryInformation}.
+Topologically, this means that the surface defined by \eqref{e5-tca-equation} (a two-dimensional surface in a four-dimensional space) does not separate into distinct components; instead, the surface has a single connected component after $\omega t=3\pi/2$. On the other hand, the surface itself remains singly connected. Both of these behaviours are explored in more detail in Figs.~\href{https://electrondynamicsincomplextimeandspace.github.io/\#figure-s3}{S3} and~\href{https://electrondynamicsincomplextimeandspace.github.io/\#figure-s4}{S4} in the Supplementary Information~\cite{SupplementaryInformation}.
 
 
 This mixing behaviour is unusual in the quantum orbit formalism, where the norm is for rather elaborate indexing schemes to be possible \cite{Becker_rescattering, milosevic_ISFA-standard_2007}, partly because there is usually a single free parameter that governs the motion of the saddle points. Here the control space is two-dimensional, which allows for nontrivial closed loops inside it, and this defeats the possibility of attaching any type of label to individual roots of~\eqref{e5-tca-equation}. 
@@ -683,8 +667,7 @@ To be more explicit, it would be convenient to have an alphabet $\mathcal A$ (i.
 \begin{equation}
 \mathcal S = \left\{ (\vbp,\tca)\in\mathbb{R}^3\times\mathbb{C}  
 \mathrel{}\middle|\mathrel{}
-(\vbp+\vba(\tca))\cdot\int_{\ts}^{\tca} (\vbp+\vba(t))\d t=0 
-%\text{ for some } \vbp\in\mathbb{R}^3 
+(\vbp+\vba(\tca))\cdot\int_{\ts}^{\tca} (\vbp+\vba(t))\d t=0
 \right\}
 \end{equation}
 of all closest-approach times and assigns each momentum and $\tca$ a label $A(\vbp,\tca) \in \mathcal A$ in a continuous way, and such that for each label $a\in\mathcal A$ the preimage $A^{-1}(a)\subset \mathcal S$ contains a unique root for each momentum $\vbp$. Unfortunately, the existence of nontrivial loops like the one in 
@@ -711,58 +694,62 @@ On the other hand, a formal proof of the simultaneity of the topological change 
 
 
 
+\pagebreak
 
-
-
+\pagestyle{figure5Kstyle}
 \newgeometry{left=18mm,right=18mm,bottom=10mm}
 
+\input{5-Quantum-orbits/Figures/Figure5KParameters.tex}
 
-\captionsetup[figure]{position=top}
 
 \newcommand{\figurefiveKscale}{1}
 \begin{figure}[p]
 \centering
   \begin{tabular}{cc}
-  $\qquad p_z=\figurefiveKppl{}F/\omega$   &    $p_z=\figurefiveKpph{}F/\omega$  
+  $\qquad p_z=\figurefiveKppl{}F/\omega$   &    $p_z=\figurefiveKpph{}F/\omega$  \hspace{15mm} 
   \\  \hline  \vspace{-2mm} \\
-  \subfloat[$\sqrt{\rl(t)^2}$\hspace{-6pt}$\,$]{
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Ka.pdf}
     \label{f5-branch-cut-topology-open}
-  }
+    }
   & \hspace{-6mm}
-  \subfloat[$\sqrt{\rl(t)^2}$ \hspace{10mm}$\,$]{
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kb.pdf}
     \label{f5-branch-cut-topology-closed}
-  }
-  \\
-  \subfloat[$\vbv(t)^2$]{
+    }
+  \\[-4mm]
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kc.pdf}
     \label{f5-branch-cut-velocity-open}
-  }
+    }
   & \hspace{-6mm}
-  \subfloat[$\vbv(t)^2$\hspace{10mm}$\,$]{
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kd.pdf}
     \label{f5-branch-cut-velocity-closed}
-  }
-  \\
-  \subfloat[Branch cut sketch]{
+    }
+  \\[-4mm]
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Ke.pdf}
     \label{f5-branch-cut-sketch-open}
   }
   & \hspace{-6mm}
-  \subfloat[Branch cut sketch\hspace{15mm}$\,$]{
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kf.pdf}
     \label{f5-branch-cut-sketch-closed}
   }
   \end{tabular}
 
+  \vspace{-1mm}
+  \hspace{-2mm}
+
   \begin{tabular}{cc}
-  \subfloat[Trajectory]{
+    \subfigure{
+    \hspace{-6mm}
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kg.pdf}
     \label{f5-branch-cut-trajectory-open}
   }
   & \hspace{-6mm}
-  \subfloat[Trajectory]{
+    \subfigure{
     \includegraphics[scale=\figurefiveKscale]{5-Quantum-orbits/Figures/figure5Kh.pdf}
     \label{f5-branch-cut-trajectory-closed}
   }
@@ -772,9 +759,7 @@ On the other hand, a formal proof of the simultaneity of the topological change 
   Topological transition, with a branch cut reconnection, at the soft recollision, coinciding with the emergence of the closest-approach times from the tunnelling barrier
   ]{
     During a soft recollision, the quantum times of closest approach will perform a three-way close approach, like that shown in Fig. \ref{f5-tca-mixing-paths} at the first soft recollision between the points 9 and 10. At this close approach, the branch cuts associated with these saddle points will reconnect and change topologies, as shown in \protect\subref{f5-branch-cut-topology-open} and \protect\subref{f5-branch-cut-topology-closed} (and sketched in \protect\subref{f5-branch-cut-sketch-open} and \protect\subref{f5-branch-cut-sketch-closed}, as in \reffig{f5-branch-cut-sketch}). 
-    At the point of the topological change, the outer saddlepoints $\tcasup{\,(1)}$ and $\tcasup{\,(3)}$ emerge from the classically forbidden region, and the real part of their kinetic energy $\Re(\tfrac12\vbv(t)^2)$ changes sign, as shown in \protect\subref{f5-branch-cut-velocity-open} and \protect\subref{f5-branch-cut-velocity-closed}. 
-%    After the change, the outer saddlepoints do not require tunnelling to get to, and should be crossed by the integration contour.
-%    We show in \protect\subref{f5-branch-cut-sketch-open} and \protect\subref{f5-branch-cut-sketch-closed} a sketch of the relevant branch cuts, analogous to \reffig{f5-branch-cut-sketch}, along with the appropriate integration contour for each topology.
+    At the point of the topological change, the outer saddlepoints $\tcasup{\,(1)}$ and $\tcasup{\,(3)}$ emerge from the classically forbidden region, and the real part of their kinetic energy $\Re(\tfrac12\vbv(t)^2)$ changes sign, as shown in \protect\subref{f5-branch-cut-velocity-open} and \protect\subref{f5-branch-cut-velocity-closed}.
     In \protect\subref{f5-branch-cut-trajectory-open} and \protect\subref{f5-branch-cut-trajectory-closed} we show the corresponding trajectories in the complex $z$ plane for those contours. The motion along $z$ is similar to \reffig{f5-sample-trajectories-a}, with a modest imaginary part as in \reffig{f5-imaginary-parts-of-position}, and if the core is not reached does not represent a problem. For the slightly higher momentum of~\protect\subref{f5-branch-cut-trajectory-closed}, however, the trajectory passes the origin and would cross the associated branch cut if taken along the dashed integration contour of \protect\subref{f5-branch-cut-sketch-closed}, so the contour must be deformed to avoid it, as shown by the solid line.
     Here~$p_x=\figurefiveKpo$.
 }
@@ -782,12 +767,13 @@ On the other hand, a formal proof of the simultaneity of the topological change 
 \end{figure}
 
 
-\captionsetup[figure]{position=auto}
+
 
 \restoregeometry
 \clearpage
 \onehalfspacing
 
+\pagestyle{standard}
 
 
 
@@ -820,38 +806,42 @@ and then traverse them in order of increasing $\Re(\tca)$. (Here $u$ is an adjus
 %%% Note hackish \au - period interaction above.
 
 
-\captionsetup[figure]{position=top}
 
 \newlength{\figurefiveLwidth}
 \setlength{\figurefiveLwidth}{0.60\columnwidth}
 \begin{figure}[t!]
   \centering
   \begin{tabular}{c}
-    \subfloat[$\vbp=(\figurefiveLapo,0,\figurefiveLapp)$]{
+    \subfigure{
       \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5La.pdf}  
       \label{f5-path-chooser-examples-a}
     }
-    \\
-    \subfloat[$\vbp=(\figurefiveLbpo,0,\figurefiveLbpp)$]{
+    \\[-3mm]
+    \subfigure{
       \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Lb.pdf}  
       \label{f5-path-chooser-examples-b}
     }
-    \\
-    \subfloat[$\vbp=(\figurefiveLcpo,0,\figurefiveLcpp)$]{
+    \\[-3mm]
+    \subfigure{
       \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Lc.pdf}  
       \label{f5-path-chooser-examples-c}
     }
-    \\
-    \subfloat[$\vbp=(\figurefiveLdpo,0,\figurefiveLdpp)$]{
+    \\[-3mm]
+    \subfigure{
       \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Ld.pdf}  
       \label{f5-path-chooser-examples-d}
+    }
+    \\[-3mm]
+    \subfigure{
+      \includegraphics[scale=1]{5-Quantum-orbits/Figures/figure5Le.pdf}  
+      \label{f5-path-chooser-examples-e}
     }
   \end{tabular}
   \captionsetup{width=\textwidth}
   \caption[
   Sample integration paths produced by the $\tca$ choosing algorithm 
   ]{
-  Sample integration paths produced by the $\tca$ choosing algorithm described in the text. Most momenta are straightforward \protect\subref{f5-path-chooser-examples-a}, but near-recollision momenta, like the one shown in \reffig{f5-complex-position-branch-cuts}, do require careful handling, as shown in \protect\subref{f5-path-chooser-examples-b}. The algorithm correctly handles soft recollisions, \protect\subref{f5-path-chooser-examples-c}, as well as higher momenta with harder recollisions~\protect\subref{f5-path-chooser-examples-d}.
+  Sample integration paths produced by the $\tca$ choosing algorithm described in the text. Most momenta are straightforward \protect\subref{f5-path-chooser-examples-a}, but near-recollision momenta, like the one shown in \reffig{f5-complex-position-branch-cuts}, do require careful handling, as shown in \protect\subref{f5-path-chooser-examples-b}. The algorithm correctly handles soft recollisions (\hyperref[f5-path-chooser-examples-c]{c},\,\hyperref[f5-path-chooser-examples-d]{d}), as well as higher momenta with harder recollisions~\protect\subref{f5-path-chooser-examples-e}.
   }
   \label{f5-path-chooser-examples}
 \end{figure}

@@ -43,14 +43,26 @@ Two main mechanisms are responsible for creating an ion in an excited state afte
 
 
 \newlength{\figurethreeblwidth}
-\setlength{\figurethreeblwidth}{0.3\textwidth}
+\setlength{\figurethreeblwidth}{0.28\textwidth}
 \begin{figure}[htbp]
   \centering
-  \subfloat[\label{f3-direct-vs-correlated-direct}]{\includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Ba.png}}
-  $\ $
-  \subfloat[\label{f3-direct-vs-correlated-midbarrier}]{\includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Bb.png}}
-  $\ $
-  \subfloat[\label{f3-direct-vs-correlated-postionization}]{\includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Bc.png}}
+  \begin{tabular}{ccc}
+  (a) & (b) & (c) \\[-2mm]
+  \subfigure{
+    \label{f3-direct-vs-correlated-direct}
+    \includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Ba.png}
+  }
+  &
+  \subfigure{
+    \label{f3-direct-vs-correlated-midbarrier}
+    \includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Bb.png}
+  }
+  &
+  \subfigure{
+    \label{f3-direct-vs-correlated-postionization}
+    \includegraphics[width=\figurethreeblwidth]{3-Multi-channel/Figures/figure3Bc.png}
+  }
+  \end{tabular}
   \caption[Three processes that leave the ion excited: direct ionization from a sub-HOMO orbital, or interaction-driven transitions before and after the tunnel exit]{Three possible ionization processes which leave the core excited: the ionized electron may depart from a sub-HOMO orbital \protect\subref{f3-direct-vs-correlated-direct}, or it may depart from HOMO and subsequently interact with the core, either inside the tunnelling barrier~\protect\subref{f3-direct-vs-correlated-midbarrier} or after the ionization step~\protect\subref{f3-direct-vs-correlated-postionization}.
   }
 \label{f3-direct-vs-correlated}
@@ -78,13 +90,13 @@ Specifically, we will consider the tunnel ionization of CO$_2$, with the laser p
 
 \begin{figure}[htbp]
   \centering
-  \subfloat{\label{f3-CO2-X-to-B-coupling-a}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-b}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-c}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-d}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-e}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-f}}
-  \subfloat{\label{f3-CO2-X-to-B-coupling-g}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-a}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-b}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-c}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-d}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-e}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-f}}
+  \subfigure{\label{f3-CO2-X-to-B-coupling-g}}
   \includegraphics[width=0.75\textwidth]{3-Multi-channel/Figures/figure3C.png}
   \caption[Scheme for the correlation-assisted tunnelling of aligned CO$_2$, with the direct $\B$ channel competing with cross-channel contributions that start in the $\X$ channel.]{
   Correlation-assisted ionization of CO$_2$. An electron can ionize from HOMO~\protect\subref{f3-CO2-X-to-B-coupling-a} and change to an excited channel~\protect\subref{f3-CO2-X-to-B-coupling-b} in a mid-barrier transition~\protect\subref{f3-CO2-X-to-B-coupling-c}. This subjects it~\protect\subref{f3-CO2-X-to-B-coupling-c} to the dipole potential of the transition charge~\protect\subref{f3-CO2-X-to-B-coupling-g}, which changes the relative phase of the two lobes~\protect\subref{f3-CO2-X-to-B-coupling-d}. This double-slit wavefunction then diffracts to multiple lobes~\protect\subref{f3-CO2-X-to-B-coupling-e}. This contrasts to direct ionization on the excited $\B$ channel, which has a single~lobe~\protect\subref{f3-CO2-X-to-B-coupling-f}.
@@ -147,10 +159,6 @@ R_m(\vbk)
 e^{i\left(\vbk-\vbp\right)\cdot\vb{r}} 
 e^{-\frac{i}{2} \int_{\ts}^{t''}\left(\vb{k}+\vba(\tau)\right)^2\d\tau} 
 e^{-iW_{nm}(\vbr,\vbk,t'')}
-%\nonumber \\ & \qquad \qquad \quad  \times
-%e^{+i\int_T^{t''} U_n(\rl(\tau;\vb{r},\vbp,t''))\d\tau}
-%e^{-i\int_T^{t''} U_m(\rl(\tau;\vb{r},\vb{k},t''))\d\tau}
-%e^{-i\int_\tk^{t''} U_n\left(\int_{ \ts}^\tau \vbk+\vba(\tau')\d\tau'\right) \d\tau}
 .
 \label{e3-correlation-driven-yield-recap}
 \end{align}
@@ -356,9 +364,6 @@ the laser-driven trajectory that starts at the origin at complex time $\ts$ and 
 
 
 
-%More specifically, though, the imprint of the interaction on the shape of the resulting orbital is relatively weak, with the direct-tunnelling shape factor $R_m(\vbp)$ retained unchanged and only a multiplicative change via $\Vnm{ \int_{\ts}^{t''} \vbp+\vba(\tau) \, \d\tau}$ superimposed. While this 
-
-
 
 
 
@@ -459,13 +464,13 @@ I_x
 \frac{d_{mn}}{2\pi}
 e^{-\frac{i}{2} (t''-\ts)p_x^2}
 \int 
+\d x \,
 x \,
 e^{\frac{i/2}{t''-\ts}\left(x-x^{(s)}\right)^2}
 \int 
+\d k_x \,
 k_x\,
 e^{-\frac{i}{2} (t''-\ts)\left(k_x-k_x^{(s)}\right)^2} 
-\d k_x \,
-\d x
 \nonumber \\ & =
 \frac{d_{mn}}{2\pi}
 \left(
@@ -581,18 +586,6 @@ where the quadratic term in $x^{(s)}\propto p_x$ is the usual saddle-point contr
 \begin{align}
 I_x
 & =
-%\frac{d_{mn}}{2\pi}
-%\left(
-% \frac{2\pi}{i(t''-\ts)}
-% \right)^{1/2}
-%\frac{
-% e^{-\frac{i}{2} (t''-\ts)p_x^2}
-% }{t''-\ts}
-%\int 
-%x^2 \,
-%e^{\frac{i/2}{t''-\ts}\left(x-x^{(s)}\right)^2}
-%\d x
-%\\ & =
 i d_{mn}
 e^{-\frac{i}{2} (t''-\ts)p_x^2}
 \left(  1 - i(t''-\ts)p_x^2  \right)
@@ -637,7 +630,7 @@ R_m(\vbk)=C(k_z)e^{im_1\phi_k}k_\perp^{|m_1|}
 \end{equation}
 and still only obtains a result in series form. For a realistic molecule, this is an unsatisfactory model because in the neighbourhood of the molecule the presence of ionic electrons makes the correlation interaction potential $\Vnm{\vbr}$ a solution of the Poisson (rather than the Laplace) equation. Moreover, obtaining a good model for a given molecule in terms of multipolar potentials is not particularly easy. Other analytically integrable models are also possible, but they also present significant challenges.
 
-In general, the electronic structure of the remaining ion -- the ionic states $\{\ket{n}\}$ and the properties that emanate from them -- is a problem for quantum chemistry, and indeed the discipline has much to say on the subject of our correlation interaction potential $\Vnm{\vbr}$. While the numerical, quantum chemical evaluation of $\Vnm{\vbr}$ is still the cleanest and simplest way ot the quantity, unfortunately there are some rather fundamental difficulties and limitations to computing this quantity when it is queried at the complex trajectories that interest us, which we will explore in chapter \ref{chap:complex-space-potentials}.
+In general, the electronic structure of the remaining ion -- the ionic states $\{\ket{n}\}$ and the properties that emanate from them -- is a problem for quantum chemistry, and indeed the discipline has much to say on the subject of our correlation interaction potential $\Vnm{\vbr}$. While the numerical, quantum chemical evaluation of $\Vnm{\vbr}$ is still the cleanest and simplest way to the quantity, unfortunately there are some rather fundamental difficulties and limitations to computing this quantity when it is queried at the complex trajectories that interest us, which we will explore in chapter \ref{chap:complex-space-potentials}.
 
 In this paradigm, of course, exact analytical integration of the geometrical integrals is ruled out, since $\Vnm{\vbr}$ can only be queried numerically. This is a reasonable solution in the saddle-point approximation in which \eqref{e3-correlation-driven-yield-with-completed-squares-2} is reduced to \eqref{e3-correlation-driven-yield-after-geometric-SPA} giving
 \begin{align}
