@@ -1,0 +1,518 @@
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Initialization", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Package dependencies", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", 
+  RowBox[{"\"\<RBSFA`\>\"", ",", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<Packages/RB-SFA.m\>\""}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "$RBSFAversion", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "$RBSFAcommit", "]"}]}], "Input",
+ InitializationCell->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"RB-SFA v2.1.1, Tue 11 Oct 2016 20:14:10\"\>"], "Print"],
+
+Cell[BoxData["\<\"\"\>"], "Print"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$OutputDirectory", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<../7-HHG-intro/Figures/\>\""}]}], ";"}]], "Input",
+ InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Automatically save a copy with no output", "Subsection"],
+
+Cell["To turn it on:", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetOptions", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"EvaluationNotebook", "[", "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"NotebookEventActions", "\[Rule]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<MenuCommand\>\"", ",", "\"\<Save\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"(", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"NotebookSave", "[", "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Block", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"nb", ",", "tempfile", ",", "cleanfile"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"tempfile", "=", 
+             RowBox[{"FileNameJoin", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+                "\"\<temp.nb\>\""}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"cleanfile", "=", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"FileNameJoin", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"DirectoryName", "[", "#", "]"}], ",", 
+                  "\"\<Clean\>\"", ",", 
+                  RowBox[{"StringReplace", "[", 
+                   RowBox[{
+                    RowBox[{"FileNameTake", "[", "#", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<.nb\>\"", "\[Rule]", "\"\< - clean.nb\>\""}],
+                     "}"}]}], "]"}]}], "}"}], "]"}], "&"}], "[", 
+              RowBox[{"NotebookFileName", "[", "]"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"CopyFile", "[", 
+             RowBox[{
+              RowBox[{"NotebookFileName", "[", "]"}], ",", "tempfile"}], 
+             "]"}], ";", "\[IndentingNewLine]", 
+            RowBox[{"nb", "=", 
+             RowBox[{"NotebookOpen", "[", 
+              RowBox[{"tempfile", ",", 
+               RowBox[{"Visible", "\[Rule]", "False"}]}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"NotebookFind", "[", 
+             RowBox[{
+             "nb", ",", "\"\<Output\>\"", ",", "All", ",", "CellStyle"}], 
+             "]"}], ";", "\[IndentingNewLine]", 
+            RowBox[{"NotebookDelete", "[", "nb", "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"NotebookSave", "[", 
+             RowBox[{"nb", ",", "cleanfile"}], "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"NotebookClose", "[", "nb", "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Run", "[", 
+             RowBox[{"\"\<sed -i 's/Visible->True/Visible->True/g' \>\"", ",", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{"cleanfile", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\\\\ \>\""}], ",", 
+                  RowBox[{"\"\<\\\\\>\"", "\[Rule]", "\"\<\\\\\\\\\>\""}]}], 
+                 "}"}]}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+            RowBox[{"DeleteFile", "[", "tempfile", "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ")"}]}], 
+      "\[IndentingNewLine]", "}"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]], "Input"],
+
+Cell["To turn it off:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+   RowBox[{"NotebookEventActions", "\[Rule]", 
+    RowBox[{"{", "}"}]}]}], "]"}]], "Input"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Figures", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Figure 7B - HHG spectrum sample.", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"figure7Bconditions", ":=", 
+  RowBox[{"Sequence", "[", 
+   RowBox[{
+    RowBox[{"CarrierFrequency", "\[Rule]", "0.057"}], ",", 
+    RowBox[{"TotalCycles", "\[Rule]", "4"}], ",", 
+    RowBox[{"PointsPerCycle", "\[Rule]", "130"}]}], "]"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"figure7Bdata", "=", 
+    RowBox[{"makeDipoleList", "[", 
+     RowBox[{
+      RowBox[{"VectorPotential", "\[Rule]", 
+       RowBox[{"Function", "[", 
+        RowBox[{"t", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            FractionBox["F", "\[Omega]"], 
+            RowBox[{"Cos", "[", 
+             RowBox[{"\[Omega]", " ", "t"}], "]"}]}], ",", "0", ",", "0"}], 
+          "}"}]}], "]"}]}], ",", 
+      RowBox[{"FieldParameters", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"F", "\[Rule]", "0.053"}], ",", 
+         RowBox[{"\[Omega]", "\[Rule]", "0.057"}]}], "}"}]}], ",", 
+      "figure7Bconditions", ",", 
+      RowBox[{"Target", "\[Rule]", "\"\<Helium\>\""}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"30.933588`", ",", "Null"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"figure7B", "=", 
+  RowBox[{"Show", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"spectrumPlotter", "[", 
+     RowBox[{
+      RowBox[{"getSpectrum", "[", 
+       RowBox[{"figure7Bdata", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ";;", 
+         RowBox[{"-", "2"}]}], "\[RightDoubleBracket]"}], "]"}], ",", 
+      "figure7Bconditions", ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Darker", "[", 
+          RowBox[{"Blue", ",", "0.2"}], "]"}], "}"}], "}"}]}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "52"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "37"}], ",", 
+         RowBox[{"-", "2"}]}], "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"PlotRangePadding", "\[Rule]", "None"}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{",", 
+      RowBox[{"BaseStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"FontSize", "\[Rule]", "6"}], "}"}]}]}], "*)"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"FrameTicks", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"None", ",", "None"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"#", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"FontSize", "\[Rule]", "6"}]}], "]"}]}], "}"}], "&"}], 
+          "/@", 
+          RowBox[{"Range", "[", 
+           RowBox[{"1", ",", "51", ",", "2"}], "]"}]}], ",", "None"}], 
+        "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"GridLines", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{"1", ",", "51", ",", "2"}], "]"}], ",", "None"}], "}"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "300"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Harmonic order\>\"", ",", "\"\<Harmonic intensity\>\""}], 
+      "}"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileByteCount", "[", 
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"$OutputDirectory", "<>", "\"\<figure7B.pdf\>\""}], ",", 
+    "figure7B"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData["7661"], "Output"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Figure 7C - RBSFA sample", "Subsection"],
+
+Cell[BoxData["Quit"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"plottingNiceties", ":=", 
+  RowBox[{"Sequence", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"Darker", "[", 
+        RowBox[{"Blue", ",", "0.2"}], "]"}], "}"}], "}"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "52"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "37"}], ",", 
+         RowBox[{"-", "2"}]}], "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"PlotRangePadding", "\[Rule]", "None"}], "\[IndentingNewLine]", 
+    ",", 
+    RowBox[{"FrameTicks", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"None", ",", "None"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"1", ",", "51", ",", "2"}], "]"}], ",", "None"}], "}"}]}], 
+      "}"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"GridLines", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{"1", ",", "51", ",", "2"}], "]"}], ",", "None"}], "}"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"ImageSize", "\[Rule]", "500"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Harmonic order\>\"", ",", "\"\<Harmonic intensity\>\""}], 
+      "}"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"BaseStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"{", "Black", "}"}], "}"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$OutputDirectory", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<../7-HHG-intro/Figures/\>\""}]}], ";"}]], "Input"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<RBSFA`\>\"", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ FontSize->14],
+
+Cell[BoxData[
+ RowBox[{"conditions", ":=", 
+  RowBox[{"Sequence", "[", 
+   RowBox[{
+    RowBox[{"CarrierFrequency", "\[Rule]", "0.057"}], ",", 
+    RowBox[{"TotalCycles", "\[Rule]", "4"}], ",", 
+    RowBox[{"PointsPerCycle", "\[Rule]", "130"}]}], "]"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ FontSize->14],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"harmonicDipole", "=", 
+   RowBox[{"makeDipoleList", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"VectorPotential", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{"t", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           FractionBox["F", "\[Omega]"], 
+           RowBox[{"Cos", "[", 
+            RowBox[{"\[Omega]", " ", "t"}], "]"}]}], ",", "0", ",", "0"}], 
+         "}"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FieldParameters", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"F", "\[Rule]", "0.053"}], ",", 
+        RowBox[{"\[Omega]", "\[Rule]", "0.057"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Target", "\[Rule]", "\"\<Helium\>\""}], ",", 
+     "\[IndentingNewLine]", "conditions"}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ FontSize->14],
+
+Cell[BoxData[
+ RowBox[{"spectrumPlotter", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"getSpectrum", "[", 
+    RowBox[{"Most", "[", "harmonicDipole", "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "conditions", ",", "\[IndentingNewLine]", 
+   "plottingNiceties"}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ FontSize->14]
+}, Open  ]],
+
+Cell["\<\
+To export, select the above cells and save as 7-HHG-intro/figure7C.eps, then \
+run
+
+      ps2pdf -dEPSCrop figure7C.eps figure7C.pdf
+
+there.\
+\>", "Text"]
+}, Open  ]]
+}, Open  ]]
+},
+NotebookAutoSave->False,
+ClosingAutoSave->False,
+ClosingSaveDialog->True,
+CloseOnClickOutside->False,
+IncludeFileExtension->True,
+FileChangeProtection->Automatic,
+TransitionEffect->Automatic,
+TransitionDirection->Horizontal,
+TransitionDuration->Short,
+RasterExploreViewRange->17,
+MarkerLineThickness->1.,
+MarkerAspectRatio->0.,
+AutoGeneratedPackage->None,
+Editable->True,
+Saveable->True,
+StyleEnvironment->Automatic,
+ScreenStyleEnvironment->"Working",
+PrintingStyleEnvironment->"Printout",
+ShowPageBreaks->False,
+WindowToolbars->{},
+RulerUnits->"Inches",
+BlinkingCellInsertionPoint->True,
+CellInsertionPointColor->GrayLevel[0.7500114442664225],
+CellInsertionPointCell->FEPrivate`FrontEndResource[
+ "FEExpressions", "CellInsertionMenu"],
+EvaluationCompletionAction->{},
+PrintAction->"PrintToNotebook",
+OutputAutoOverwrite->True,
+InitializationCellEvaluation->Automatic,
+InitializationCellWarning->True,
+NotebookEventActions->{{"MenuCommand", "Save"} :> (NotebookSave[]; 
+   Block[{$CellContext`nb, $CellContext`tempfile, $CellContext`cleanfile}, \
+$CellContext`tempfile = FileNameJoin[{
+         NotebookDirectory[], "temp.nb"}]; $CellContext`cleanfile = (
+       FileNameJoin[{
+         DirectoryName[#], "Clean", 
+         StringReplace[
+          FileNameTake[#], {".nb" -> " - clean.nb"}]}]& )[
+        NotebookFileName[]]; CopyFile[
+       NotebookFileName[], $CellContext`tempfile]; $CellContext`nb = 
+      NotebookOpen[$CellContext`tempfile, Visible -> False]; 
+     NotebookFind[$CellContext`nb, "Output", All, CellStyle]; 
+     NotebookDelete[$CellContext`nb]; 
+     NotebookSave[$CellContext`nb, $CellContext`cleanfile]; 
+     NotebookClose[$CellContext`nb]; 
+     Run["sed -i 's/Visible->True/Visible->True/g' ", 
+       StringReplace[$CellContext`cleanfile, {" " -> "\\ ", "\\" -> "\\\\"}]]; 
+     DeleteFile[$CellContext`tempfile]; Null])},
+NotebookDynamicExpression:>Null,
+Selectable->True,
+Clickable->True,
+Deletable->True,
+CellGrouping->Automatic,
+PageWidth->WindowWidth,
+WindowSize->{1861, 1176},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowFrame->"Normal",
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "HorizontalScrollBar", 
+  "VerticalScrollBar", "MenuBar"},
+WindowFrameElements->{
+ "CloseBox", "ZoomBox", "MinimizeBox", "ToolbarBox", "DocumentIcon", 
+  "ResizeArea"},
+WindowFloating->Automatic,
+WindowClickSelect->True,
+WindowMovable->True,
+WindowPersistentStyles->{
+ WindowFrame, WindowMargins, WindowSize, DockedCells, Magnification},
+BackgroundAppearance->None,
+BackgroundAppearanceOptions->"Fill",
+WindowTitle->Automatic,
+WindowStatusArea->Automatic,
+WindowOpacity->1.,
+Visible->True,
+DockedCells->{},
+PrintingCopies->1,
+PrintingStartingPageNumber->1,
+PrintingPageRange->{Automatic, Automatic},
+PageHeaders->{{
+   Cell[
+    TextData[{
+      Cell[
+       TextData[{
+         CounterBox["Page"]}], "PageNumber"], "   ", 
+      Cell[
+      " ", "Header", CellFrame -> {{0.5, 0}, {0, 0}}, CellFrameMargins -> 4], 
+      
+      Cell[
+       TextData[{
+         ValueBox["FileName"]}], "Header"]}], 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, None}, {
+  None, None, 
+   Cell[
+    TextData[{
+      Cell[
+       TextData[{
+         ValueBox["FileName"]}], "Header"], 
+      Cell[
+      " ", "Header", CellFrame -> {{0, 0.5}, {0, 0}}, CellFrameMargins -> 4], 
+      "   ", 
+      Cell[
+       TextData[{
+         CounterBox["Page"]}], "PageNumber"]}], 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}},
+PageFooters->{{None, None, None}, {None, None, None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrivateNotebookOptions->{"DockedCellAnimation"->False,
+"DockedCellTransition"->False,
+"DocumentType"->Automatic,
+"DoubleBuffer"->True,
+"ExcludeFromShutdown"->False,
+"FileContents"->{
+ "FileLeader", "StandardFileLeader", "NotebookData", "StandardFileTrailer", 
+  "FileTrailer"},
+"FileLeader"->"",
+"FileOutlineCache"->False,
+"FileTrailer"->"",
+"FinalWindowPrompt"->False,
+"JournalStyle"->"Automatic",
+"NoteStyle"->"Automatic",
+"PluginToolbarEnabled"->True,
+"PluginUpdateNotificationsEnabled"->True,
+"SafeFileOpen"->"None",
+"SafeFileSave"->"Prescan",
+"VersionedStylesheet"->{}},
+TrackCellChangeTimes->False,
+Magnification->1.,
+Background->None,
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb",
+GhostCellInEmptyNotebook -> False
+]
+
