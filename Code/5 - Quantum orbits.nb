@@ -399,7 +399,6 @@ Cell[BoxData[{
        "\[IndentingNewLine]", ",", 
        RowBox[{"AxesStyle", "\[Rule]", 
         RowBox[{"GrayLevel", "[", "0.8", "]"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"FrameLabel", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -668,7 +667,6 @@ Cell[BoxData[{
         RowBox[{"Axes", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"True", ",", "True"}], "}"}]}], "\[IndentingNewLine]", ",", 
-        
         RowBox[{"PlotRange", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{
@@ -1742,7 +1740,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0065", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "6"}], ",", "2", ",", "0.5"}], "]"}]}]}], "]"}],
@@ -1764,7 +1761,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0065", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "6"}], ",", "2", ",", "0.5"}], "]"}]}]}], 
@@ -1792,7 +1788,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0065", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "20"}], ",", "10", ",", "1"}], "]"}]}]}], "]"}],
@@ -1814,7 +1809,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0065", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "20"}], ",", "10", ",", "1"}], "]"}]}]}], 
@@ -1964,7 +1958,6 @@ Cell[BoxData[{
               RowBox[{"{", 
                RowBox[{"F", ",", "\[Omega]", ",", "\[Kappa]"}], "}"}]}], 
              "]"}], "]"}], "]"}]}], "}"}], "]"}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"Graphics", "[", 
         RowBox[{"Inset", "[", 
          RowBox[{
@@ -2431,7 +2424,6 @@ Cell[BoxData[{
                     "]"}]}], "\[IndentingNewLine]", ",", 
                     RowBox[{"PlotRangeClipping", "\[Rule]", "True"}]}], 
                     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
-                    
                     RowBox[{"{", 
                     RowBox[{"selector", ",", 
                     RowBox[{"{", 
@@ -2577,14 +2569,12 @@ Cell[BoxData[{
                     RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "2"}], ",", "2", ",", "0.5"}], "]"}]}], ",", 
-                    
                     RowBox[{
                     RowBox[{
                     RowBox[{"{", 
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                    
                     RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -2604,7 +2594,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                    
                     RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -2649,7 +2638,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                    
                     RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{
@@ -2667,7 +2655,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.010", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                    
                     RowBox[{"Range", "[", 
                     RowBox[{"0", ",", "8", ",", 
                     RowBox[{"1", "/", "4"}]}], "]"}]}], ")"}], ",", 
@@ -2678,7 +2665,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                    
                     RowBox[{"Range", "[", 
                     RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -3095,7 +3081,6 @@ Cell[BoxData[
             RowBox[{"range", "\[LeftDoubleBracket]", 
              RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], "]"}], 
            "]"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
-        
         RowBox[{"Axes", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"True", ",", "False"}], "}"}]}], "\[IndentingNewLine]", ",", 
@@ -3162,7 +3147,6 @@ Cell[BoxData[
                     FractionBox["1", "\[Omega]"], "#"}], ",", "\"\<\>\"", ",", 
                    RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                
                 RowBox[{"Range", "[", 
                  RowBox[{
                   RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -3187,7 +3171,6 @@ Cell[BoxData[
                     FractionBox["1", "\[Omega]"], "#"}], ",", "\"\<\>\"", ",", 
                    RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                
                 RowBox[{"Range", "[", 
                  RowBox[{
                   RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -3234,7 +3217,6 @@ Cell[BoxData[
                     FractionBox["1", "\[Omega]"], "#"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0", ",", 
                    RowBox[{"4", "\[Pi]"}], ",", 
@@ -3252,7 +3234,6 @@ Cell[BoxData[
                     "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.010", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0", ",", "8", ",", 
                    RowBox[{"1", "/", "4"}]}], "]"}]}], ")"}], ",", 
@@ -3265,7 +3246,6 @@ Cell[BoxData[
                     FractionBox["1", "\[Omega]"], "#"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0", ",", 
                    RowBox[{"4", "\[Pi]"}], ",", 
@@ -3533,7 +3513,6 @@ Cell[BoxData[{
         ",", 
        RowBox[{"{", 
         RowBox[{"s", ",", "0", ",", "1"}], "}"}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"Evaluate", "[", 
         RowBox[{"FilterRules", "[", 
          RowBox[{
@@ -3604,7 +3583,6 @@ Cell[BoxData[{
             "\"\<Contour start\>\""}], "]"}]}], "}"}], "]"}], ",", 
        RowBox[{
         RowBox[{"##", "&"}], "[", "]"}]}], "]"}], "\[IndentingNewLine]", ",", 
-     
      RowBox[{"Graphics", "[", 
       RowBox[{"{", 
        RowBox[{
@@ -3648,7 +3626,6 @@ Cell[BoxData[{
                  {GrayLevel[0], RectangleBox[{0, 0}]}, 
                  {GrayLevel[0], RectangleBox[{1, -1}]}, 
                  {RGBColor[0.16, 0.24, 0.35], RectangleBox[{0, -1}, {2, 1}]}},
-                
                 AspectRatio->1,
                 Frame->True,
                 
@@ -3695,7 +3672,6 @@ Cell[BoxData[{
                  {GrayLevel[0], RectangleBox[{0, 0}]}, 
                  {GrayLevel[0], RectangleBox[{1, -1}]}, 
                  {RGBColor[0.16, 0.33, 0.55], RectangleBox[{0, -1}, {2, 1}]}},
-                
                 AspectRatio->1,
                 Frame->True,
                 
@@ -3743,7 +3719,6 @@ Cell[BoxData[{
                  {GrayLevel[0], RectangleBox[{0, 0}]}, 
                  {GrayLevel[0], RectangleBox[{1, -1}]}, 
                  {RGBColor[0.29, 0.41, 0.65], RectangleBox[{0, -1}, {2, 1}]}},
-                
                 AspectRatio->1,
                 Frame->True,
                 
@@ -3959,7 +3934,6 @@ Cell[BoxData[
              RowBox[{"3", ",", "3"}], "}"}]}], "}"}]}], "\[IndentingNewLine]",
           ",", 
          RowBox[{"AspectRatio", "\[Rule]", "9"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImageSize", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -4039,7 +4013,6 @@ Cell[BoxData[
              RowBox[{"2", ",", "2"}], "}"}]}], "}"}]}], "\[IndentingNewLine]",
           ",", 
          RowBox[{"AspectRatio", "\[Rule]", "9"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImageSize", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -4646,7 +4619,6 @@ W1YjfwQwjjXf
             "]]}}]}, {
         EdgeForm[], 
         RGBColor[0.9635416666666666, 0.8296874999999999, 0.5732291666666667], 
-        
         FilledCurveBox[{{
            Line[CompressedData["
 1:eJwN0blOVAEYhuEfAswwsokwLDMsg5BYyI4giMiOhRWVtRcAN0O4DwprUPZF
@@ -4690,7 +4662,6 @@ mzM94//2hGt0
             "]]}}]}, {
         EdgeForm[], 
         RGBColor[0.9947916666666666, 0.9328124999999999, 0.7076041666666666], 
-        
         FilledCurveBox[{{
            Line[CompressedData["
 1:eJwNzzdKBVEARuFrZUCtbUVERERERAQzmFqXIAZsFHPOcQfmtAv3YXzZ8PQZ
@@ -4754,8 +4725,7 @@ FF9xz23c3o/vpiLiWiszEWkxYlSI+NOl6knEby7iJh+x7B+yC1X5Dx/zJX7O
 zpTxCb/iTX7KTlTh33zIG3zAjlXmX3zA6/yIHSrln7zHa/yA9TXHP3iXV3mP
 7WuWv/M1vsj32K5K/I23eMZ32LaK/JU3+QLvso7y/IVnvMK32KYS/sxTPs83
 2Lpy/ImXeJmvsram+SNP+IP9D1ywHlg=
-           "]]}, "100"], 
-        Annotation[#, 100, "Tooltip"]& ], 
+           "]]}, "100"], Annotation[#, 100, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -4805,8 +4775,7 @@ SSXEs3hz3nP608MDQ6mIGLS+rojL7ohcZ0TiL2CRj/RGXGGeP+qLeM1H9Rtc
 4iV9GW/5mH6HK/xZX8V7Pq4nuMbL+jo+8Am9hBv8Rd/EJ57Ry7jFq3oBK3xS
 r+I2f9N38JVP6TXc5TV9D+t8Wm/gPn/XD/CDZ/UWHvKGfoRffEZv4zH/1E/w
 h8/qv3jKW/oZ/vE5PdUTcc6/9Qtsah3aPP4D1E1GcA==
-           "]]}, "80"], 
-        Annotation[#, 80, "Tooltip"]& ], 
+           "]]}, "80"], Annotation[#, 80, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -4846,8 +4815,7 @@ FA==
 W7yuM5bakz7jm3xCV1hij/qUt3hNl9moPegTvs7H9Qgbtnt9zNf4mB5ig3an
 j/gqr+oBVrKuPuRLvNDB/rKIW33AF3muf9mP3eg2n+eZ7rNvu9b7fI6n+ot9
 Wkfv8Sav6A/2bld6lzd4ot/Yq13qHT7DN3z5ByU8LVo=
-           "]]}, "65"], 
-        Annotation[#, 65, "Tooltip"]& ], 
+           "]]}, "65"], Annotation[#, 65, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -4873,8 +4841,7 @@ mt+3eHPec1bPP7eytrSaiYhlL9sR0d0ZsZuNePZPsIevd0X04h5/0avYxzf0
 fqzxll7HPK/oA7jPX/UDLPBNfRAP+Zt+hEN8Sx/GY/6un+AI39ZH8ZS39TMs
 8h19DM/5h36B4+nd+gRe8k/9Cid5ok/hNf/SGzid7tFLeMO/9Vuc4VV9Fu/4
 j36Pc+lOvYwP/Fdv4jyv6wv4yP/0J1xM9+v/HvMrFw==
-           "]]}, "55"], 
-        Annotation[#, 55, "Tooltip"]& ], 
+           "]]}, "55"], Annotation[#, 55, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -4953,7 +4920,6 @@ ellV3rPvt97KrvQf1seu5QP7oVtiNf2X9bO6fGQ/dsvsRv9jA+xWLtiLLsca
 emQiBllTLtnLrf+zOz3Bhti9XLFX3Sp70NvYMHuUa/a6W2NPejsbYc9yw950
 efaid7DR1h+86R+cDzub
            "]]}, "25"], Annotation[#, 25, "Tooltip"]& ], 
-       
        TagBox[
         TooltipBox[{
           Directive[
@@ -4966,8 +4932,7 @@ efaid7DR1h+86R+cDzub
 eUuv4CU/1K9wh7f1Kl7zVL/BXd7Ra3jL+/od1nlXb+A9z/QHbPJEb+EjP9Kf
 cI+nehufea6/4D7P9A6+8mP9DQ94rnfxnRf6R/kfL/QEP/lA/yr/4EM9xW8+
 1H/Ke/lIz3DKT/Tf8i5+quc412baCP8B9SkuuA==
-           "]]}, "20"], 
-        Annotation[#, 20, "Tooltip"]& ], 
+           "]]}, "20"], Annotation[#, 20, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5414,8 +5379,7 @@ WHZnuihiyp6dc1bl/73e2QTPJiKWSiMq+S27sXG+yxd5Bb9mVzbGd/gsL+eX
 7MJG+Taf4WX8nJ1Zim/xSV7KT9mJjfAMT/ESfsyObJineZIX80N2YEN8k/fy
 Ir7P9myQb/AeXsizbNcG+Drv5gm+w7Ytydd4Fy/gWyxj/XyVd/J8/sAerdX3
 r7ds129t0x/t+L+rGUtbi/OXVuuz1uqT1mhOm/UPx5k9uw==
-           "]]}, "60"], 
-        Annotation[#, 60, "Tooltip"]& ], 
+           "]]}, "60"], Annotation[#, 60, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5428,8 +5392,7 @@ ye+cnFabL+WKZRFRIFse8VoV8cYLH7xTUxHxpM/c88gDva7/1T9+OK6MOOCI
 Q3qc39N9dilRpNu+rTtssMUmXfZ1LbDKGnk67cu6wgJLLNJhn9N5ppllhnZ7
 TqcYZ5IJ2uyjOsYQIwyTsQ/oIFn66aPV3p2+Iz0rvV96F1rsmXQ/mtN1aUvH
 9gZtpI56Pv2Xb75ocv5Kr7nklhuq/d9zveCEM0654x/scTMw
-           "]]}, "55"], 
-        Annotation[#, 55, "Tooltip"]& ], 
+           "]]}, "55"], Annotation[#, 55, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5442,8 +5405,7 @@ TqcYZ5IJ2uyjOsYQIwyTsQ/oIFn66aPV3p2+Iz0rvV96F1rsmXQ/mtN1aUvH
 11l/gx/0od/nTZ3zk/yoj/wn3tJ5f5sH+th/5pQu+Ds81Cf+C6d10c/wq276
 I87qkp/jsW75b5zXZb/A7/rU/+Cirvgl/tRn/heXddWv8ES3/W+u6ppf4x99
 7v9yXdf9Bv/pjj/lXd3w/wEz0iB8
-           "]]}, "50"], 
-        Annotation[#, 50, "Tooltip"]& ], 
+           "]]}, "50"], Annotation[#, 50, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5458,7 +5420,6 @@ EttgOfeX/VvGWF4vs01WcP/Yf2WcFfUK22Ild3RHJGSClfUq22YVd5u9XSZZ
 Va+xHVZzd9iTMsXqep3tsoY7Ze+UadbUG2yPXbvT9ozMsJbeZPvsxt1j75VZ
 dqu32MH/P+8feSg7fw==
            "]]}, "45"], Annotation[#, 45, "Tooltip"]& ], 
-       
        TagBox[
         TooltipBox[{
           Directive[
@@ -5471,8 +5432,7 @@ dqu32MH/P+8feSg7fw==
 Dr/ocf+VN3XV3+I3PeH3eFvP+jv8rif9D97Vc/4e9/WU/8n7et4/4C9d8L/5
 UC/4R/yji/4vd/Wif8x/etofzEWc6Jp/ygld8pN8ppf8c07pGT/NF3rZv+SM
 LvtZvtIr/jXndMUf4Rtd92/5wRv1qvwPEKkpTA==
-           "]]}, "40"], 
-        Annotation[#, 40, "Tooltip"]& ], 
+           "]]}, "40"], Annotation[#, 40, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5499,8 +5459,7 @@ fhen0znzvZP68UhENDGejzjNIhYSkUYs8pmeLEecc02P+kt8oXP+Jdf1mL/M
 V3rKv+YVPeE3+EYn/i03dc5f5Tud9+95TSf+Oj/o1H/klk79Nj/pgv/MGzrz
 N/lFZ/4rd3TJ73JfF/0Bb+mKv81vuuS/c09X/R3+0GX/k3f1jL/HX7rif/O+
 nvUP+EdP+798qOf8I/73/rwqDwHVWSfE
-           "]]}, "30"], 
-        Annotation[#, 30, "Tooltip"]& ], 
+           "]]}, "30"], Annotation[#, 30, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5513,8 +5472,7 @@ EpE8xW/e+Z5/dc5MpbGZJhGxo/5sRLsQcTce8Wmbdno0YmMk4iMXkfHeYKmm
 eIm/8z5+y+qa5Ov8jSf8hl1rgq/xVx68xq5U4Kv8hXftJbtQnq+4n/m/PWdV
 jfFld4t37BmrKMuL7if+Z0/ZiYb5kvuRt+0xK2uIL7of+K89Yoca4Avue/5j
 D9i+MnzenfJvu8d2lfA5d41/2W22pa5vnHVX+aB/2QP/2ijl
-           "]]}, "25"], 
-        Annotation[#, 25, "Tooltip"]& ], 
+           "]]}, "25"], Annotation[#, 25, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5541,8 +5499,7 @@ tP7BZrPXOXDgrLU7zaeFiHiQr8WIn5WIu3TEs77Vf0sRVd5ajpjpJruRX16x
 H/mnvmZXMudl+55P9SW7kG9eSu7xD33OGjLjRbvBJ/qMncqU79pH/F2fsGOZ
 8IJd4+PknB3KmOftEn/TdXYgI56zc3yk91lNhnzHzvJXvceq0ufbdoYPdYWV
 pce37A0+SN5hRXnhm/Y67+sCy0uXZ+1VnvKX/0SHMMA=
-           "]]}, "15"], 
-        Annotation[#, 15, "Tooltip"]& ], 
+           "]]}, "15"], Annotation[#, 15, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5569,8 +5526,7 @@ mrQGHz97DXfh6ubiOhMRl/rMRvzsRPwq1fl2xCIX0eV7WxEf9owNNOcd9y5/
 t312qpS33Xm+sj3W1ZQn7k3+ZjusrSfecmf40iaspQlvuv/yEa+2yRp65A33
 mi9sndX0wOvub/5iq6yiMa+5v/jclllJ97zqXvJnW2QnGvGKO+WpPWYFDXnZ
 PeEze8QOdcdL7jGf2gO2r1tedA/5hl/+AxbFMCY=
-           "]]}, "5"], 
-        Annotation[#, 5, "Tooltip"]& ], 
+           "]]}, "5"], Annotation[#, 5, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -5950,7 +5906,6 @@ Cell[BoxData[{
                    "Black", ",", 
                    RowBox[{"RGBColor", "[", 
                     RowBox[{"0.9", ",", "0", ",", "0"}], "]"}]}], "}"}], ",", 
-                 
                  RowBox[{
                   FractionBox["1", "2"], "+", 
                   FractionBox[
@@ -6085,7 +6040,6 @@ Cell[BoxData[{
                   RowBox[{"#", ",", "\"\<\>\"", ",", 
                    RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                
                 RowBox[{"Range", "[", 
                  RowBox[{"0", ",", 
                   RowBox[{"4", "\[Pi]"}], ",", 
@@ -6101,7 +6055,6 @@ Cell[BoxData[{
                    RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                    RowBox[{"{", 
                     RowBox[{"0.010", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                
                 RowBox[{"Range", "[", 
                  RowBox[{"0", ",", "8", ",", 
                   RowBox[{"1", "/", "4"}]}], "]"}]}], ")"}], ",", 
@@ -6112,7 +6065,6 @@ Cell[BoxData[{
                   RowBox[{"#", ",", "\"\<\>\"", ",", 
                    RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                
                 RowBox[{"Range", "[", 
                  RowBox[{"0", ",", 
                   RowBox[{"4", "\[Pi]"}], ",", 
@@ -6255,7 +6207,6 @@ Cell[BoxData[{
 mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.7"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -6275,7 +6226,6 @@ mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",",
 mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.7"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -6299,11 +6249,9 @@ mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",",
                  RowBox[{"1", ",", "1"}], "}"}], "]"}]}], "]"}], "]"}]}], 
            "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
          RowBox[{"ImageSize", "\[Rule]", "415"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRangeClipping", "\[Rule]", "False"}], 
          "\[IndentingNewLine]", ",", 
          RowBox[{"PlotRange", "\[Rule]", "All"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImagePadding", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -6511,7 +6459,6 @@ Cell[BoxData[
            RowBox[{"{", 
             RowBox[{
              RowBox[{"-", "1"}], ",", "1"}], "}"}]}]}], "/.", "rules"}], ",", 
-        
         RowBox[{"Scaled", "[", 
          RowBox[{"{", 
           RowBox[{"0.85", ",", "0.25"}], "}"}], "]"}]}], "]"}], "]"}], ",", 
@@ -6562,8 +6509,7 @@ Cell[BoxData[
            RowBox[{"Inset", "[", 
             RowBox[{
              RowBox[{"MaTeX", "[", 
-              RowBox[{
-              "\"\<t_{\\\\scriptscriptstyle\\\\mathrm{CA}}\>\"", ",", 
+              RowBox[{"\"\<t_{\\\\scriptscriptstyle\\\\mathrm{CA}}\>\"", ",", 
                RowBox[{"FontSize", "\[Rule]", "9"}]}], "]"}], ",", 
              RowBox[{
               RowBox[{
@@ -6970,7 +6916,6 @@ Cell[BoxData[
              RowBox[{"2.5", ",", "2"}], "}"}]}], "}"}]}], 
          "\[IndentingNewLine]", ",", 
          RowBox[{"AspectRatio", "\[Rule]", "9"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImageSize", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -7050,7 +6995,6 @@ Cell[BoxData[
              RowBox[{"2", ",", "2"}], "}"}]}], "}"}]}], "\[IndentingNewLine]",
           ",", 
          RowBox[{"AspectRatio", "\[Rule]", "9"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImageSize", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -7432,7 +7376,6 @@ euwVfF7KXFbv4w5zufT+8SWpcL16P3eE67M/xpfTs1y/PsAd5QbsK/gzqXKD
             "]]}}]}, {
         EdgeForm[], 
         RGBColor[0.5356944444444446, 0.4945833333333334, 0.5090277777777776], 
-        
         FilledCurveBox[{{
            Line[CompressedData["
 1:eJwV0UdWFGEYRuEPDoIc3IQ7cCFOxIAiohIk0+Scu8mhERNBzFlHbIukSDQA
@@ -7560,7 +7503,6 @@ rnTv990Vvxk9rz30tw/K7+Xep9VrKfwfuBp1KQ==
             "]]}}]}, {
         EdgeForm[], 
         RGBColor[0.9652777777777778, 0.8354166666666667, 0.5806944444444445], 
-        
         FilledCurveBox[{{
            Line[CompressedData["
 1:eJwV0EdSlVEYBNDrAERAUbICKlWswKW4BBeAVW5HQDEhigkBQdLLOecAGBfC
@@ -7575,7 +7517,6 @@ yJyd4Fm5aT/Ul73rJcNze3Q=
             "]]}}]}, {
         EdgeForm[], 
         RGBColor[0.9791666666666667, 0.8812500000000001, 0.6404166666666667], 
-        
         FilledCurveBox[{{
            Line[CompressedData["
 1:eJwV0tk6lXEcR/E/lXpQKaVTGg1JA11Il9B5dd4dNQ+URhoks21mmxIZGjSg
@@ -7612,8 +7553,7 @@ xofHEhExSrImItsQ0VsbkdE+zWmXprVH27Rb27Xa+0NaqosY1KiPKHr+45cq
 5wX94Ys831TaP/STV955o8L+rC888MQjCfud3nPNLTeE/VKvOOOCc0rJiBM9
 5ZBjjsrfZd/XA3bYY7f8rfYt3WadTTYo2ld1jSVWWC7/j31BF5llnjkK9mmd
 YYIp+t3LpA5o3nmL5txfs3Zoq6a1SbPaqBlNaaf+AwBZRXc=
-           "]]}, 
-         "3.4000000000000004`"], 
+           "]]}, "3.4000000000000004`"], 
         Annotation[#, 3.4000000000000004`, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -7627,8 +7567,7 @@ YYIp+t3LpA5o3nmL5txfs3Zoq6a1SbPaqBlNaaf+AwBZRXc=
 Aj7xut7CPT6j7+Mzb+htPOCz+iG+8KbewSM+px/jK2/pXTzh83oR33hb72GJ
 L+in2OcdfYBlntLP8J139SGe80X9Ake8p4+xwtP6JX7wgf6JV3xJr+IXH+rf
 eM2X9Rr+8LH++/8/vqL/AW+oPOY=
-           "]]}, "3.2`"], 
-        Annotation[#, 3.2, "Tooltip"]& ], 
+           "]]}, "3.2`"], Annotation[#, 3.2, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -7641,8 +7580,7 @@ eM2X9Rr+8LH++/8/vqL/AW+oPOY=
 p+zbZrrFb/mOnrAvm+omr/BtPWafNtENXuZbesQ+bKzr/Ibn9JC920jX+DXP
 6gF7s6F+5Vc8o/usZwNd5Zd8U3dZx/r6hV/wjeRbWMu6+pmX+HpyM2tYWz/x
 c55ObmM1a+pHfsbXkhtY1er6gRf5kn/5D3vEPHk=
-           "]]}, "3"], 
-        Annotation[#, 3, "Tooltip"]& ], 
+           "]]}, "3"], Annotation[#, 3, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -7697,8 +7635,7 @@ r1+6O6mj0/Pjs7mIOLFaMeKiEnFpdRuVI/7ZoBBxWIqo6k/2YX+6zw/4qh6y
 d5voHt/nK/kt69uv7vI9Xsl3WNfG+o3v8nI269iP7vAdXtKvrG3f2XybL+sX
 1rIv3eZbvKifWdNG+Q7f5AX9xBp5g27xDb6kH9lD3pDf8nW+qO/ZXd6gm3yN
 L+hbdpM35D95jc/ra3aVN+gGr/Kp5xl8vSoe
-           "]]}, "2.2`"], 
-        Annotation[#, 2.2, "Tooltip"]& ], 
+           "]]}, "2.2`"], Annotation[#, 2.2, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -7816,8 +7753,7 @@ TGayl1cnSSoiKnjvjqj3RyTIY7Uv4qInYt/v6o144xVvGed+WXf6r7zkLaLm
 7+kOv8l5bwFVv6RT/gvPe3Oo+Ls6/Gee9WZw5hf1Hz/xtDeFU72jf/mRJ70J
 HOtt/cMPPO7lcKQLus0NHvNGcai3dIvvOeuN4EBv6m++42FvCGW9ob/4lge9
 DEp6XX/yDae9ART1mv7ga/0PG6go+g==
-           "]]}, "0.4`"], 
-        Annotation[#, 0.4, "Tooltip"]& ], 
+           "]]}, "0.4`"], Annotation[#, 0.4, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -7831,8 +7767,7 @@ EiEMyxe2SzQwote4JDcqX9mu0URcr3MpLiHf2G7RQlJvcGkuJd/Z7tFGWm9y
 ERfJD7ZHdJDRW1yGy8pPtmd0kdPbXJbLyy+2V/RQ0DtcjivKb7Z39FHSu1ye
 G5M/bJ8YYFzvcQVuQv6yfWMXk3qfK3JT8o/tF3v/P9UHXImbkZdt8/qKu+BW
 3CpWUcM2drCFP2/YKDw=
-           "]]}, "0.2`"], 
-        Annotation[#, 0.2, "Tooltip"]& ]}}], {
+           "]]}, "0.2`"], Annotation[#, 0.2, "Tooltip"]& ]}}], {
     ImageSize -> {{300}, {250}}, DisplayFunction -> Identity, AspectRatio -> 
      9, BaseStyle -> {{FontFamily -> "Latin Modern Math"}}, DisplayFunction :> 
      Identity, Frame -> True, FrameTicks -> {{None, {{0, 
@@ -8328,8 +8263,7 @@ Vy8/cgv2edTprdw8Vys/cLP2GST0t9wcVyP/46btU3ijt3A/uWr5nhu3j6FK
 b+ZmuUr5jvtm/4oKvYmb4crlW27UPoIyvZH7wb2Wb7gv9mGU6g3cd65EvuaG
 7IMo1uu5ae6V/JcbsH/GS72Om+KK5Cvuk70fhXotN8kVyJfcR3sv8vUJ+zgO
 kOM/H7mHeMQDktIi/rgnWMUaurx37r5zV9xl/MYe9vEEFq9O5Q==
-           "]]}, "3"], 
-        Annotation[#, 3, "Tooltip"]& ], 
+           "]]}, "3"], Annotation[#, 3, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -8358,8 +8292,7 @@ fOpT7n1FRJ3tWB/n6+WsPYcHrkE/4Sa4Rrlgn8Uj16SfcpNcszxvX8AT16Kf
 Jd/gWuVF+xKeuTb9nMtw7fKyfQUvXEq/SP6d65BX7Wt45Tr1Sy7LpeUNexFv
 XJd+xeW4bnnTvoV3rke/5ma4XnnbvpO8Aden33B5rl/etx/gmxvQb7kCNygf
 2o/www3pd9wsN5y8mTf+Sr7vpjGKOS7v/gP1YDJM
-           "]]}, 
-         "2.6000000000000005`"], 
+           "]]}, "2.6000000000000005`"], 
         Annotation[#, 2.6000000000000005`, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -8373,8 +8306,7 @@ pRTGGOOF9rn49u377csVMklHRIyjvytioCdipTOi2h2xyoP6rTdiiNf0rb/O
 w/rdH+ENfeeXOKXr/iiX9b2/yWn94Wd4Sz/42zymP/0J3tGP/i5P6oY/xXv6
 yd/naf3lZ/lA1/xDntHffo6P9LN/zLO66c/xiX7xT3le//gLfKZf/XPO618/
 4Qtd9ytc0C2/yJe64V/xov7zl/haN/0bXtb/fhvLCjXS
-           "]]}, 
-         "2.4000000000000004`"], 
+           "]]}, "2.4000000000000004`"], 
         Annotation[#, 2.4000000000000004`, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -8389,8 +8321,7 @@ sb/KCfvSV9ko+/Z/2D/llFX0NTbGfvwV+6+csT99nY2zyEZUN0ck5JzV6Bts
 giX8SXtKLlitvsmKrM6ftmfkkqX0LTbJGvx5e6tcsSZ9m02xtL/DXpBrltV3
 2DTL+Xvt/XLD8voum2Et/gH7oNyyNn2PlVi7f8g+LHesU99ns6zgH7cX5Z51
 6weszHr8JXtZHliffsTm2KH7D9lXMPo=
-           "]]}, "2.2`"], 
-        Annotation[#, 2.2, "Tooltip"]& ], 
+           "]]}, "2.2`"], Annotation[#, 2.2, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -8403,8 +8334,7 @@ gqD3aFY5MCi6rcHHPnvtwUnXN1c3MhGxpvZExN+0RzHizWxNRTznIs7GI1YS
 u3uDpXrip3yZN3mNVfXIT/gSX+BlVlKPH/NF3uAzrKguP+JtnvICS3TPD3md
 z/NJltMdP+CzvM6zbEy3fJ8nvMZH2Yhu+B7P8iofYhld810+zOf4byHiR1e8
 w7/zERX+xT51yXf4gJf5Bxvogm/zV17iffauc77FX/iD//4B2bQqbQ==
-           "]]}, 
-         "2"], Annotation[#, 2, "Tooltip"]& ], 
+           "]]}, "2"], Annotation[#, 2, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -8432,8 +8362,7 @@ h4feFz+V99645L3zwHvli3JemVmvwn2vxKJuvDwzXoF7Xo63+miJ+AfQlToe
 4iP8i31qly/xJh/mPfahHV7ilzzP39mbtvkiv+A5/spetMUX+DnP8mf2pE0+
 z8/4EH9kXW3wOX7KM7zD2lrns/yEp/kDu9can+HHfJC32J1W+TQ/4il+y260
 wqf4IU/ya9ZUlU/yA57gDXalZV7ke7yei/gH/bk8AA==
-           "]]}, 
-         "1.6000000000000005`"], 
+           "]]}, "1.6000000000000005`"], 
         Annotation[#, 1.6000000000000005`, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -8462,8 +8391,7 @@ DtfhDtZ4Pvz69z7vwGwhO5+IiJwyXRGN/oif3ohf+223uyNmOiOOeiI6/L/Y
 pzb5ND/k7bzOPlTheX7A2/g7e9MGn+L7PM1f2YvKfJLv8RR/Zk8q8Szf5a38
 kT1ojU/wHd7C79mdVvg43+JJXmO3KvIxXuEJXmU3WuajfJ0Hv2ZXWuQjvMT/
 7CW70AIfdq/ypj1nZyrwIXeRN+wpO9EcH3Qv8eO+iH+/tDTO
-           "]]}, 
-         "1.2000000000000002`"], 
+           "]]}, "1.2000000000000002`"], 
         Annotation[#, 1.2000000000000002`, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -8477,8 +8405,7 @@ bkH5vHg6nfP01tYLax0RkdhfZ8RGV0QfFlIRaazzx+6ITeznRX0At/iTvo2D
 PNGHcIc/67s4zGf1DO7xlr6PI7ykj+IBf9EPcYyX9XE84m39GLN8QZ/AE/6q
 n+Ikr+o5PONv+jnmeU2fwgv+rl/iNF/Ui3jFP/RrTPiSPoMN/qnf4Bxf1kt4
 y7/0OyzzFX0e7/m33sQKX9Wr+NsT8aD9+P4BG7YvPg==
-           "]]}, "1"], 
-        Annotation[#, 1, "Tooltip"]& ], 
+           "]]}, "1"], Annotation[#, 1, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -8506,8 +8433,7 @@ a3E5nPNzE61uozMUEU03GI7YHo2YwMJIxCTu8MexiDJO8S19Gnf5k17Bmf8/
 PYH7/FmvYpKX9Fk85C96DVO8rM/hMX/V6zjP9/Q0nvI3vYELvKIv4jl/15u4
 xA/0ZbzgH/olrvCqvopX/FO/xjV+pK/jDf/SW7jBa3oGb/m3fodZfqJv4j3v
 6Q+Y43U9j23e1ztY4Gd6EX/HI7raj+0PNaIjsg==
-           "]]}, 
-         "0.6000000000000001`"], 
+           "]]}, "0.6000000000000001`"], 
         Annotation[#, 0.6000000000000001, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
@@ -8551,8 +8477,7 @@ G5Gsj5hzn9rPJMVK+gBrZPPuc/uFZNiCPshSbNF9ab+SHFvSh1iaLbuv7TeS
 Zyt6kTWxVfed/V46WFkfZhlWcT/YH6WTrekjrJmtu5/sz1JgG/ooy7JN94v9
 VbpYVR9jOVZzv9nfpZtt6eOshW27P+yf0sN29AnWynbdX/Zv6WV7+iTLs333
 j/1X+tiBPsXa2KH7z55I+2N2pM+wdjbt/Qc10S/6
-           "]]}, "0"], 
-        Annotation[#, 0, "Tooltip"]& ], 
+           "]]}, "0"], Annotation[#, 0, "Tooltip"]& ], 
        TagBox[
         TooltipBox[{
           Directive[
@@ -9009,7 +8934,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0.05", ",", "0.25", ",", "0.01"}], "]"}]}]}], 
                "]"}], ",", "\[IndentingNewLine]", 
@@ -9027,7 +8951,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0.05", ",", "0.25", ",", "0.01"}], "]"}]}]}], 
                "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
@@ -9075,7 +8998,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.010", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"1.1", ",", "1.16", ",", "0.02"}], "]"}]}], ")"}], 
                 ",", 
@@ -9256,7 +9178,6 @@ FontSize->6]]\)\>\"", "]"}], ",", "12", ",",
 sqrt{\\\\mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.9"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -9276,7 +9197,6 @@ sqrt{\\\\mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",",
 sqrt{\\\\mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.9"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -9286,7 +9206,6 @@ sqrt{\\\\mathbf r_\\\\mathrm{L}(t)^2}\\\\right)\\\\mathclose{}\>\"", ",",
                  RowBox[{"0.5", ",", "0.5"}], "}"}], "]"}]}], "]"}], "]"}]}], 
            "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
          RowBox[{"ImageSize", "\[Rule]", "250"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ImagePadding", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -9348,8 +9267,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"1.098169107334078`", ",", "1.161831084570836`"}], 
-  "}"}]], "Output"]
+  RowBox[{"1.098169107334078`", ",", "1.161831084570836`"}], "}"}]], "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]],
@@ -9600,7 +9518,6 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"\"\<(\>\"", "<>", 
              RowBox[{"ToString", "[", "pxr", "]"}], "<>", "\"\<, \>\"", "<>", 
-             
              RowBox[{"ToString", "[", "pzr", "]"}], "<>", "\"\<)\>\""}], ",", 
             "10"}], "]"}], ",", 
           RowBox[{"arr", "+", "txt"}]}], "]"}], "]"}]}], 
@@ -9876,7 +9793,6 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"sb", "=", "sa"}], ")"}], 
            RowBox[{"{", "s0", "}"}]}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -9928,7 +9844,6 @@ Cell[BoxData[{
             RowBox[{"Range", "[", 
              RowBox[{
               RowBox[{"-", "14"}], ",", "0", ",", "2"}], "]"}]}], "]"}], ",", 
-          
           RowBox[{"Transpose", "[", 
            RowBox[{
             RowBox[{
@@ -10056,7 +9971,6 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"sc", "=", "1"}], ")"}], 
            RowBox[{"{", "s0", "}"}]}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -10227,7 +10141,6 @@ Cell[BoxData[{
             RowBox[{"sd", "=", 
              RowBox[{"1", "-", "sa"}]}], ")"}], 
            RowBox[{"{", "s0", "}"}]}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -10277,7 +10190,6 @@ Cell[BoxData[{
             RowBox[{"Range", "[", 
              RowBox[{
               RowBox[{"-", "30"}], ",", "0", ",", "5"}], "]"}]}], "]"}], ",", 
-          
           RowBox[{"Transpose", "[", 
            RowBox[{
             RowBox[{
@@ -10381,7 +10293,6 @@ Cell[BoxData[{
                    RowBox[{"{", 
                     RowBox[{"sb", " ", "stot"}], "}"}]}], "}"}]}]}], "]"}]}], 
              "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
-           
            RowBox[{"Show", "[", 
             RowBox[{"figure5Hd", ",", 
              RowBox[{"ImageSize", "\[Rule]", 
@@ -10572,7 +10483,6 @@ Cell[BoxData[
        RowBox[{"Dynamic", "[", 
         RowBox[{"{", 
          RowBox[{"px", ",", "pz"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-       
        RowBox[{"Show", "[", 
         RowBox[{
          RowBox[{"plotter", "[", 
@@ -11207,7 +11117,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.3"}], ",", "0.3", ",", "0.02"}], 
@@ -11231,7 +11140,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.3"}], ",", "0.3", ",", "0.02"}], 
@@ -11266,7 +11174,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"1.9", ",", "2.1", ",", "0.01"}], "]"}]}]}], 
                  "]"}], ",", "\[IndentingNewLine]", 
@@ -11288,7 +11195,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"1.9", ",", "2.1", ",", "0.01"}], "]"}]}]}], 
                  "]"}]}], "\[IndentingNewLine]", "}"}]}], "}"}]}]}], 
@@ -11304,7 +11210,6 @@ Cell[BoxData[{
               RowBox[{
                RowBox[{"\"\<LeftPadding\>\"", "\[Rule]", "Automatic"}], ",", 
                RowBox[{"\"\<RightPadding\>\"", "\[Rule]", "Automatic"}], ",", 
-               
                RowBox[{"\"\<BottomPadding\>\"", "\[Rule]", "Automatic"}], ",", 
                RowBox[{
                "\"\<BottomLabel\>\"", "\[Rule]", "\"\<Re(\[Omega]t)\>\""}], 
@@ -11362,7 +11267,6 @@ Cell[BoxData[{
              "]"}], "\[IndentingNewLine]", ",", 
             RowBox[{"{", 
              RowBox[{"c", ",", "ImRange"}], "}"}]}], "]"}], "~", "Join", "~", 
-          
           RowBox[{"Table", "[", "\[IndentingNewLine]", 
            RowBox[{
             RowBox[{
@@ -11459,7 +11363,6 @@ Cell[BoxData[{
                  RowBox[{"po", ",", "py", ",", "pp"}], "}"}], ",", 
                 RowBox[{"{", 
                  RowBox[{"F", ",", "\[Omega]", ",", "\[Kappa]"}], "}"}], ",", 
-                
                 RowBox[{"{", 
                  RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
                 RowBox[{"\"\<Range\>\"", "\[Rule]", 
@@ -11574,7 +11477,7 @@ Cell[BoxData[{
              "\[IndentingNewLine]", 
              RowBox[{"Graphics", "[", 
               RowBox[{"Inset", "[", 
-               RowBox[{"figure5KRerLabel", ",", 
+               RowBox[{"figure5KImrLabel", ",", 
                 RowBox[{"Scaled", "[", 
                  RowBox[{"{", 
                   RowBox[{"1.08", ",", "0"}], "}"}], "]"}], ",", 
@@ -11584,7 +11487,7 @@ Cell[BoxData[{
              "\[IndentingNewLine]", 
              RowBox[{"Graphics", "[", 
               RowBox[{"Inset", "[", 
-               RowBox[{"figure5KImrLabel", ",", 
+               RowBox[{"figure5KRerLabel", ",", 
                 RowBox[{"Scaled", "[", 
                  RowBox[{"{", 
                   RowBox[{"1.08", ",", "1"}], "}"}], "]"}], ",", 
@@ -11647,7 +11550,6 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"gray", "=", 
           RowBox[{"GrayLevel", "[", "0", "]"}]}], ";", "\[IndentingNewLine]", 
-         
          RowBox[{"figure5Kc", "=", 
           RowBox[{"Show", "[", 
            RowBox[{"{", "\[IndentingNewLine]", 
@@ -11721,7 +11623,7 @@ Cell[BoxData[{
             "\[IndentingNewLine]", 
             RowBox[{"Graphics", "[", 
              RowBox[{"Inset", "[", 
-              RowBox[{"figure5KRev2Label", ",", 
+              RowBox[{"figure5KImv2Label", ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
                  RowBox[{"1.08", ",", "0"}], "}"}], "]"}], ",", 
@@ -11731,7 +11633,7 @@ Cell[BoxData[{
             "\[IndentingNewLine]", 
             RowBox[{"Graphics", "[", 
              RowBox[{"Inset", "[", 
-              RowBox[{"figure5KImv2Label", ",", 
+              RowBox[{"figure5KRev2Label", ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
                  RowBox[{"1.08", ",", "1"}], "}"}], "]"}], ",", 
@@ -11748,7 +11650,6 @@ Cell[BoxData[{
                   RowBox[{"\"\<\\\\mathrm{Re}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.9"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -11766,7 +11667,6 @@ Cell[BoxData[{
                   RowBox[{"\"\<\\\\mathrm{Im}\>\"", ",", 
                    RowBox[{"FontSize", "\[Rule]", "9"}], ",", 
                    RowBox[{"Magnification", "\[Rule]", "0.9"}]}], "]"}], ",", 
-                 
                  RowBox[{"90", "\[Degree]"}]}], "]"}], ",", 
                RowBox[{"Scaled", "[", 
                 RowBox[{"{", 
@@ -11812,7 +11712,7 @@ Cell[BoxData[{
 
 Cell[BoxData[
  TagBox[GridBox[{
-    {"36.407482`"},
+    {"229.2671367115471`"},
     {""}
    },
    DefaultBaseStyle->"Column",
@@ -11883,10 +11783,10 @@ Cell[BoxData[{
 
 Cell[BoxData[
  TagBox[GridBox[{
-    {"\<\"figure5Ka.pdf\"\>", "102073"},
-    {"\<\"figure5Kb.pdf\"\>", "99785"},
-    {"\<\"figure5Kc.pdf\"\>", "59653"},
-    {"\<\"figure5Kd.pdf\"\>", "60669"}
+    {"\<\"figure5Ka.pdf\"\>", "102942"},
+    {"\<\"figure5Kb.pdf\"\>", "109377"},
+    {"\<\"figure5Kc.pdf\"\>", "60197"},
+    {"\<\"figure5Kd.pdf\"\>", "69728"}
    },
    GridBoxAlignment->{
     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
@@ -11977,7 +11877,6 @@ Cell[BoxData[{
             RowBox[{"\"\<TopPadding\>\"", "\[Rule]", "2.5"}], ",", 
             RowBox[{
             "\"\<BottomLabel\>\"", "\[Rule]", "\"\<Re(\[Omega]t)\>\""}], ",", 
-            
             RowBox[{"\"\<LeftTicks\>\"", "\[Rule]", "Automatic"}], ",", 
             RowBox[{"\"\<paths\>\"", "\[Rule]", "None"}], ",", 
             RowBox[{"\"\<pathstyles\>\"", "\[Rule]", 
@@ -12369,7 +12268,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.3"}], ",", "0.3", ",", "0.02"}], 
@@ -12393,7 +12291,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.3"}], ",", "0.3", ",", "0.02"}], 
@@ -12428,7 +12325,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"1.9", ",", "2.1", ",", "0.01"}], "]"}]}]}], 
                  "]"}], ",", "\[IndentingNewLine]", 
@@ -12450,7 +12346,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"1.9", ",", "2.1", ",", "0.01"}], "]"}]}]}], 
                  "]"}]}], "\[IndentingNewLine]", "}"}]}], "}"}]}]}], 
@@ -12741,7 +12636,6 @@ Cell[BoxData[{
              RowBox[{"1", ",", 
               RowBox[{
                FractionBox["1", "\[Omega]"], "tend"}]}], "}"}]}], "}"}], ",", 
-          
           RowBox[{"InterpolationOrder", "\[Rule]", "1"}]}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{
@@ -13055,7 +12949,6 @@ Cell[BoxData[{
                     "\"\<\>\""}], "]"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Chop", "[", 
                     RowBox[{"Range", "[", 
                     RowBox[{
@@ -13067,7 +12960,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.007", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.4"}], ",", "0.3", ",", "0.05"}], 
@@ -13080,7 +12972,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Chop", "[", 
                     RowBox[{"Range", "[", 
                     RowBox[{
@@ -13092,7 +12983,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.007", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "0.4"}], ",", "0.3", ",", "0.05"}], 
@@ -13115,18 +13005,15 @@ Cell[BoxData[{
                     RowBox[{"FontSize", "\[Rule]", "7"}]}], "]"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "1"}], ",", "1", ",", "0.2"}], "]"}]}], ",", 
-                  
                   RowBox[{
                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.007", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "1"}], ",", "1", ",", "0.05"}], "]"}]}]}], 
@@ -13139,18 +13026,15 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "1"}], ",", "1", ",", "0.2"}], "]"}]}], ",", 
-                  
                   RowBox[{
                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.007", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{
                     RowBox[{"-", "1"}], ",", "1", ",", "0.05"}], "]"}]}]}], 
@@ -13423,7 +13307,6 @@ Cell[BoxData[
         SuperscriptBox[
          RowBox[{"complexTrajectory", "[", 
           RowBox[{"tCA", ",", "p", ",", "pars"}], "]"}], "2"], "]"}]]], "/.", 
-     
      RowBox[{"allQuantumClosestApproachTimes", "[", 
       RowBox[{"p", ",", 
        RowBox[{"{", 
@@ -13571,7 +13454,6 @@ Cell[BoxData[{
           RowBox[{"rDotV", "[", 
            RowBox[{
             RowBox[{"\[Omega]t", "/", "\[Omega]"}], ",", "0", ",", "pz", ",", 
-            
             RowBox[{"{", 
              RowBox[{"F", ",", "\[Omega]", ",", "\[Kappa]"}], "}"}]}], "]"}], 
           "\[Equal]", "0"}], ",", 
@@ -14415,7 +14297,6 @@ Cell[BoxData[{
          RowBox[{"{", 
           RowBox[{"pzr", ",", 
            RowBox[{"-", "1"}], ",", "2"}], "}"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -14429,7 +14310,6 @@ Cell[BoxData[{
               RowBox[{"-", "1"}], ",", "2"}], "}"}]}], "}"}]}], 
          "\[IndentingNewLine]", ",", 
          RowBox[{"PlotPoints", "\[Rule]", "20"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRangePadding", "\[Rule]", "None"}], ",", 
          RowBox[{"BoxRatios", "\[Rule]", 
           RowBox[{"{", 
@@ -14506,7 +14386,6 @@ Cell[BoxData[{
              RowBox[{"Thickness", "[", "0.0025", "]"}]}], "}"}], "}"}]}], 
          "\[IndentingNewLine]", ",", 
          RowBox[{"ImageSize", "\[Rule]", "700"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"ViewPoint", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{"0", ",", 
@@ -14571,7 +14450,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0075", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "2"}], ",", "2", ",", "0.2"}], "]"}]}], ")"}]}],
@@ -14815,7 +14693,6 @@ Cell[BoxData[{
             "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
            RowBox[{"{", 
             RowBox[{"\[Omega]t", ",", "0", ",", "max\[Omega]t"}], "}"}], ",", 
-           
            RowBox[{"{", 
             RowBox[{"pxr", ",", 
              RowBox[{"-", "pxmax"}], ",", "pxmax"}], "}"}], 
@@ -14869,7 +14746,6 @@ Cell[BoxData[
     RowBox[{
     "F", ",", "\[Omega]", ",", "\[Kappa]", ",", "recollizionpzr", ",", 
      "transitions", ",", "max\[Omega]t"}], "}"}], ",", "\[IndentingNewLine]", 
-   
    RowBox[{
     RowBox[{
      RowBox[{"{", 
@@ -15135,7 +15011,6 @@ Cell[BoxData[
                    RowBox[{"{", 
                     RowBox[{"F", ",", "\[Omega]", ",", "\[Kappa]"}], "}"}]}], 
                   "]"}]}], "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-            
             RowBox[{"Graphics3D", "[", 
              RowBox[{"{", 
               RowBox[{
@@ -15154,7 +15029,6 @@ Cell[BoxData[
                    RowBox[{"{", 
                     RowBox[{"F", ",", "\[Omega]", ",", "\[Kappa]"}], "}"}]}], 
                   "]"}]}], "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-            
             RowBox[{"Graphics3D", "[", 
              RowBox[{"{", 
               RowBox[{
@@ -15600,7 +15474,6 @@ Cell[BoxData[{
              "}"}], "&"}], "@@@", "quantum2DScan"}], "\[IndentingNewLine]", 
           "]"}], "\[IndentingNewLine]", ",", 
          RowBox[{"ImageSize", "\[Rule]", "350"}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -15702,7 +15575,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0025", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "2"}], ",", "2", ",", "0.2"}], "]"}]}], ")"}]}],
@@ -15718,7 +15590,6 @@ Cell[BoxData[{
                  RowBox[{"#", ",", "\"\<\>\"", ",", 
                   RowBox[{"{", 
                    RowBox[{"0.0025", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-               
                RowBox[{"Range", "[", 
                 RowBox[{
                  RowBox[{"-", "2"}], ",", "2", ",", "0.2"}], "]"}]}], 
@@ -15739,8 +15610,7 @@ Cell[BoxData[{
      "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
  RowBox[{"Style", "[", 
   RowBox[{"figure5I", ",", 
-   RowBox[{"Magnification", "\[Rule]", "3"}]}], 
-  "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Magnification", "\[Rule]", "3"}]}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"DateString", "[", "]"}]}], "Input"],
 
 Cell[BoxData["\<\"Mon 24 Oct 2016 22:01:26\"\>"], "Output"],
@@ -16088,7 +15958,7 @@ Cell[BoxData[{
 
 Cell[BoxData[
  TagBox[GridBox[{
-    {"1.840536`"},
+    {"11.19129803250832`"},
     {
      GraphicsBox[{
        {GrayLevel[1], RectangleBox[{0, -1.5}, {1, 1.5}]}, 
@@ -23282,7 +23152,6 @@ Q4+sWvPYE+s2PPXMpi3PvfDSK6+98da2d3479s1nH733x4kDX3xy5tShr/76
                StyleBox[{
                  FilledCurveBox[CompressedData["
 1:eJxTTMoPymNmYGBgBGJZIIaxWZDYzKNsqrEBLWICow==
-                  
                   "], CompressedData["
 1:eJxdVG1IU1EYvpuoiHNb27wf29xupNUPDUwlrfC+YuFHwiQjlkqBoSOkTBzR
 h0KUKWFpHxAqUUE/TLJYmNqHLYIyKC3wR4IJSkYxsCgVW/ZhO+f1nmEvHC7P
@@ -23339,7 +23208,6 @@ NUeXM1TIOThPaBZKe6Xs8GXfx63p1+Qh/t+lAucbgcyZrArnw8JPBORPFTkH
                    "]}], 
                  FilledCurveBox[CompressedData["
 1:eJxTTMoPymNmYGBgBGJ5IIaxWZDYzCSwGaB8BjL0jmQ2AGkmAq0=
-                  
                   "], CompressedData["
 1:eJxdlGtIFFEUxzWl2G1fNbOj4ZYbac7O7I5WklYSp6AyibZEYikrK03tZeAm
 aPkhbRW0srdriFlES6ipmGlRWomYaFZY0guyF5o90JIw2qy9c2fvkBfuhx/3
@@ -23418,7 +23286,6 @@ OP/4/s9nVqLza2fGfXiXzR/5f/MXF7Dm1A==
               StyleBox[{
                 FilledCurveBox[CompressedData["
 1:eJxTTMoPymNmYGBgBGJZIIaxWZDYzKNsqrEBLWICow==
-                 
                  "], CompressedData["
 1:eJxdVG1IU1EYvpuoiHNb27wf29xupNUPDUwlrfC+YuFHwiQjlkqBoSOkTBzR
 h0KUKWFpHxAqUUE/TLJYmNqHLYIyKC3wR4IJSkYxsCgVW/ZhO+f1nmEvHC7P
@@ -23474,7 +23341,6 @@ NUeXM1TIOThPaBZKe6Xs8GXfx63p1+Qh/t+lAucbgcyZrArnw8JPBORPFTkH
                   "]}], 
                 FilledCurveBox[CompressedData["
 1:eJxTTMoPymNmYGBgBGJZIIaxWZDYzKNsqrEBLWICow==
-                 
                  "], CompressedData["
 1:eJxdlHtIFFEUxtdHyZarqzuzK6hpoLjz0ihTC6XTgzI1FV1kS3tomRq9IJGU
 ovCRkNqLSisxyz9EVDRILDElo9Syh2UP0jLLqMRCQ8Iwsr1z79whD1yGHzNz
@@ -23499,7 +23365,6 @@ wNz79h96UDX0
                 
                 FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
                  1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}}}, CompressedData["
-
 1:eJxTTMoPSmVmYGBgBGJRIGYC4hgFx4/JMiYOHvtrZS3aVR1g/F9vXx+wPKzq
 4HWC3XY2q4nDGRB4o+qwQS9vMeMbYzjfoenR8RmnEXyJqVc4Mw4ZO8xZpLzz
 z3FVh4I13bczDhg7nDrstDZzn6rD32+lD+ZMNHAwBoFiJofF9/fxzWk2cOiP
@@ -23572,7 +23437,6 @@ Cell[BoxData[{
       "pxrmax", ",", "pprmax", ",", "\[CapitalDelta]p", ",", "\[Delta]p", ",",
         "rangeOfInterest", ",", "fineGridpo", ",", "fineGridpp", ",", "F", 
        ",", "\[Omega]", ",", "\[Kappa]"}], "}"}], ",", "\[IndentingNewLine]", 
-     
      RowBox[{
       RowBox[{
        RowBox[{"{", 
@@ -23646,8 +23510,7 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"Join", "[", 
           RowBox[{"fineGridpo", ",", "fineGridpp"}], "]"}], ",", "1"}], 
-        "]"}]}]}]}], "\[IndentingNewLine]", 
-    "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
  RowBox[{"DateString", "[", "]"}]}], "Input"],
 
 Cell[BoxData["\<\"Thu 3 Nov 2016 17:39:53\"\>"], "Output"],
@@ -23672,7 +23535,6 @@ Cell[BoxData[{
       "pxrmax", ",", "pprmax", ",", "\[CapitalDelta]p", ",", "\[Delta]p", ",",
         "rangeOfInterest", ",", "fineGridpo", ",", "fineGridpp", ",", "F", 
        ",", "\[Omega]", ",", "\[Kappa]"}], "}"}], ",", "\[IndentingNewLine]", 
-     
      RowBox[{
       RowBox[{
        RowBox[{"{", 
@@ -23746,8 +23608,7 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"Join", "[", 
           RowBox[{"fineGridpo", ",", "fineGridpp"}], "]"}], ",", "1"}], 
-        "]"}]}]}]}], "\[IndentingNewLine]", 
-    "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
  RowBox[{"DateString", "[", "]"}]}], "Input"],
 
 Cell[BoxData["\<\"Thu 3 Nov 2016 17:40:11\"\>"], "Output"],
@@ -23914,7 +23775,6 @@ Cell[BoxData[{
                  RowBox[{"3", "\[Pi]"}], "-", 
                  RowBox[{"1.5", 
                   RowBox[{"\[Pi]", "/", "16"}]}], "+", "0.4"}]}], "}"}], ",", 
-              
               RowBox[{"{", 
                RowBox[{
                 RowBox[{"-", "2.4"}], ",", "2.4"}], "}"}]}], "}"}]}]}], 
@@ -23924,7 +23784,6 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"{", "341", "}"}], ",", 
             RowBox[{"{", "500", "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -23997,7 +23856,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -24017,7 +23875,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -24062,7 +23919,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -24259,7 +24115,6 @@ Cell[BoxData[{
          "\[IndentingNewLine]", ",", 
          RowBox[{"PlotRangePadding", "\[Rule]", 
           RowBox[{"Scaled", "[", ".003", "]"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"AspectRatio", "\[Rule]", "Automatic"}]}], 
         "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
        RowBox[{"ImageResolution", "\[Rule]", "400"}]}], "]"}]}], ";", 
@@ -24347,7 +24202,6 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"{", "340", "}"}], ",", 
             RowBox[{"{", "500", "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRange", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
@@ -24362,7 +24216,6 @@ Cell[BoxData[{
          "\[IndentingNewLine]", ",", 
          RowBox[{"PlotRangePadding", "\[Rule]", 
           RowBox[{"Scaled", "[", ".003", "]"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], 
          "\[IndentingNewLine]", ",", 
          RowBox[{"Frame", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
@@ -24411,7 +24264,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -24431,7 +24283,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -24476,7 +24327,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.005", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -24939,7 +24789,6 @@ t8fGucnIusrJvMzLg5OSwdHQvs7Nv8/OwtLR8Ofmx9fWydnYxdXUxtbVwNDP
 yNjXytrZ6+QOzNzbzd3czt7dz9/eHeQe0ODf8u7jy9va7uriEOIR6ODRpZWW
 5OUe+fHhvc3M8eno7ObU6Ong8+/r9u4B4uoC9PDs9fHt5ufE0ujR4+7i9+8P
 7vIB7PDm7fHo7/MPxebE8PTT7vbq6+/k+PDT8fXh7/fl8fnpl2heKQ==
-       
        "]]]}, {}, {}, {}, {}},
    VertexColors->CompressedData["
 1:eJxTTMoPSmViYGD4CcTMDDDwwZ4BK/hgP0nFE4gO2WMXv4QhfntbLgjBxe+A
@@ -24968,19 +24817,19 @@ dQ8AJ4Q6AQ==
 Cell[BoxData[
  GraphicsBox[
   TagBox[RasterBox[CompressedData["
-1:eJzt09lTklEYgHG0zXbbQ83C1DTNNiutabHdCkUWFUWUXUU/9BMBFcENtwAR
-kf7R7u39Lprpopm693lm3jNzzrx3vzkGd8jsL9XpdDNlcphd0Q5Vdc1ZyuVi
-U2bGAorP26mEfQGf2ubW1lplfpbodH46bB34jcau7m6TqcdstlisVltvb19f
-v90+MOhwDA05ncMjIy6X2+Pxen0+fyAwOjo2Ph4MTkxOKkooNDU9rarh8Oxs
-JBqNxebm5hcW4vHFRCKZXFpaXllZXV1LpdbXNzY3t7a2t9PpTCaTzWZ3tHK5
-3K6Uz+f3pEKhsC8Vi8Uf/6z4Z399/N/2C3v53dxONpP+vr21ubGeWltdWV5K
-JhOL8YX5WDQSmQ3PqNNTIWVyIjg+Nhrw+7wet2tk2DnkcAwO2Pv7em1Wi7nH
-1N1l/Pb1S+fnTx8/vH/3tqPjzetXL188b29ve/b0SevjRw8f3G9pudfc3NR0
-t7GxoeFOfX1dXW3t7Zoag+HWzerqG1VVlZUVFXq9/rp0TboqXdG6LF2SLmpd
-kMql89I5rbPSGem0dErrpFQmnZCOax2TjmodkUqlEkl+OeaYY4455phjjjnm
-mGOOOeaYY4455phjjjnmmGOOOeaYY4455phjjjnmmGOOOeaYY4455phjjjnm
-mGOOOeaYY4455phjjjnmmGOOOeaYY4455phjjjnmmGOOOeaYY4455phjjjnm
-mGOOOeaYY4455phjjjnmv83psHVAh69fdfAnfg==
+1:eJzt3NlTklEYgHE0C8sW23NJw9I0zTYrbTPbrdxAQRAQkI/F5UPZSQTcFVER
+gf7R7u18N11W02U8z8w5M++cc/ebc3s0Dp/WVa5SqQKVYtPaI31+vz2mqxbD
+mBzwumXJ2S8HJbfk73Yo17rE+lGmUrmo1DpyDQwMDg0ND49otTrd6OiYXm8w
+jBuNJtOE2WyxWK2TNpvd7phyOiXJ5XZ7PN7p6ZmZ2bk5Wfb55hcW/IFgMBQK
+RyLRaCz2bXExHl9KJJLJVGp5ZWV1dW19fWNjc2trezud3slkdkV7+6JsNnug
+lMvlDkX5fL5QKBSL3/+m4q/+fFD8XYX8Ye4gu7+3m9lJb29tbqyvra4sp5LJ
+xFJ8MRaNhMOhYMC/MO+T52Znpr0et0tyTjnstkmrxWyeMBnHDfoxnU47Mjw0
+OPD1y+f+Tx8/vH/39k3f695XL188f9bT0/30yeOuRw8f3L/X2Xm3o6O9/U5b
+W2vr7ZaW5uZbN5uaNJobjY0NDdfr6+vqamtramquia6KrihdFl0SXRRdUDov
+qhadE51VOiM6rVRVVXVK6aSoUkmtVp9QOi6qEB1TKheVicQrxxxzzP8/8wrM
+Mcccc8wxxxxzzDHHHHPMMcccc8wxxxxzzDHHHHPMMcccc8wxxxxzzDHHHHPM
+Mcccc8wxxxxzzDHHHHPMMcccc8wxxxxzzDHHHHPMMcccc8wxxxxzzDHHHHPM
+Mcccc8wxxxxzzDHHHHPMMcecf50x/0dzKrWOqPT6CUcHJ6s=
     "], {{0, 52}, {500, 0}}, {0, 255},
     ColorFunction->GrayLevel],
    BoxForm`ImageTag["Byte", ColorSpace -> "Grayscale", Interleaving -> None],
@@ -25054,7 +24903,6 @@ Cell[BoxData[{
       "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"nl", "=", 
      RowBox[{"Length", "[", "indexlist", "]"}]}], ";", "\[IndentingNewLine]", 
-    
     RowBox[{"figure5Jb", "=", 
      RowBox[{"Show", "[", 
       RowBox[{
@@ -25138,7 +24986,6 @@ Cell[BoxData[{
        RowBox[{"Axes", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
        RowBox[{"AxesStyle", "\[Rule]", 
         RowBox[{"GrayLevel", "[", "0.8", "]"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -25398,7 +25245,6 @@ Cell[BoxData[{
       "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"nl", "=", 
      RowBox[{"Length", "[", "indexlist", "]"}]}], ";", "\[IndentingNewLine]", 
-    
     RowBox[{"plotrange", "=", 
      RowBox[{
       FractionBox["\[Omega]", "F"], 
@@ -25534,7 +25380,6 @@ Cell[BoxData[{
        RowBox[{"Axes", "\[Rule]", "True"}], "\[IndentingNewLine]", ",", 
        RowBox[{"AxesStyle", "\[Rule]", 
         RowBox[{"GrayLevel", "[", "0.8", "]"}]}], "\[IndentingNewLine]", ",", 
-       
        RowBox[{"PlotRange", "\[Rule]", "plotrange"}], "\[IndentingNewLine]", 
        ",", 
        RowBox[{"ImageSize", "\[Rule]", 
@@ -25787,8 +25632,7 @@ Cell[BoxData[{
         GridBoxSpacings->{"Columns" -> {
             Offset[0.27999999999999997`], {
              Offset[0.7]}, 
-            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
-          "Rows" -> {
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
             Offset[0.2], {
              Offset[0.4]}, 
             Offset[0.2]}, "RowsIndexed" -> {}, "Items" -> {}, 
@@ -25889,7 +25733,6 @@ Cell[BoxData[{
                     RowBox[{"\[Omega]", " ", "#"}], "]"}], ",", " ", 
                     RowBox[{"Im", "[", 
                     RowBox[{"\[Omega]", " ", "#"}], "]"}]}], "}"}], ",", " ", 
-                   
                    RowBox[{"{", 
                     RowBox[{"0", ",", "0"}], "}"}]}], "]"}], " ", "&"}], " ", 
                 "/@", " ", 
@@ -25989,7 +25832,6 @@ Cell[BoxData[{
                     RowBox[{"FontSize", "\[Rule]", "9"}]}], "]"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{
                     RowBox[{"-", "1.5"}], ",", "1.5", ",", "0.5"}], "]"}]}], 
@@ -26000,7 +25842,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{
                     RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -26013,7 +25854,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{
                     RowBox[{"-", "1.5"}], ",", "1.5", ",", "0.5"}], "]"}]}], 
@@ -26024,7 +25864,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{
                     RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -26069,7 +25908,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -26085,7 +25923,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"0", ",", "4", ",", 
                     RowBox[{"1", "/", "4"}]}], "]"}]}], ")"}], ",", 
@@ -26096,7 +25933,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                   
                    RowBox[{"Range", "[", 
                     RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -26211,8 +26047,7 @@ Cell[BoxData[{
         GridBoxSpacings->{"Columns" -> {
             Offset[0.27999999999999997`], {
              Offset[0.7]}, 
-            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
-          "Rows" -> {
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
             Offset[0.2], {
              Offset[0.4]}, 
             Offset[0.2]}, "RowsIndexed" -> {}, "Items" -> {}, 
@@ -26249,7 +26084,6 @@ Cell[BoxData[{
       "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"nl", "=", 
      RowBox[{"Length", "[", "indexlist", "]"}]}], ";", "\[IndentingNewLine]", 
-    
     RowBox[{"plotrange", "=", 
      RowBox[{"{", 
       RowBox[{
@@ -26333,7 +26167,6 @@ Cell[BoxData[{
                    RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
                   RowBox[{"plotrange", "\[LeftDoubleBracket]", 
                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
-                 
                  RowBox[{
                   RowBox[{"plotrange", "\[LeftDoubleBracket]", 
                    RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
@@ -26407,12 +26240,10 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"{", "700", "}"}], ",", 
             RowBox[{"{", "200", "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"PlotRange", "\[Rule]", "plotrange"}], "\[IndentingNewLine]",
           ",", 
          RowBox[{"PlotRangePadding", "\[Rule]", 
           RowBox[{"Scaled", "[", "0.02", "]"}]}], "\[IndentingNewLine]", ",", 
-         
          RowBox[{"Method", "\[Rule]", 
           RowBox[{"{", 
            RowBox[{"\"\<AxesInFront\>\"", "\[Rule]", "False"}], "}"}]}], 
@@ -26452,7 +26283,6 @@ Cell[BoxData[{
                     RowBox[{"FontSize", "\[Rule]", "9"}]}], "]"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "1.5"}], ",", "1.5", ",", "0.5"}], "]"}]}], 
@@ -26463,7 +26293,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -26476,7 +26305,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "1.5"}], ",", "1.5", ",", "0.5"}], "]"}]}], 
@@ -26487,7 +26315,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{
                    RowBox[{"-", "2"}], ",", "2", ",", "0.1"}], "]"}]}]}], 
@@ -26532,7 +26359,6 @@ Cell[BoxData[{
                    RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                 
                  RowBox[{"Range", "[", 
                   RowBox[{"0", ",", 
                    RowBox[{"4", "\[Pi]"}], ",", 
@@ -26548,7 +26374,6 @@ Cell[BoxData[{
                     RowBox[{"#", " ", "\[Pi]"}], ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.015", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", "4", ",", 
                     RowBox[{"1", "/", "4"}]}], "]"}]}], ")"}], ",", 
@@ -26559,7 +26384,6 @@ Cell[BoxData[{
                     RowBox[{"#", ",", "\"\<\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"0.008", ",", "0"}], "}"}]}], "}"}], "&"}], "/@", 
-                  
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", 
                     RowBox[{"4", "\[Pi]"}], ",", 
@@ -26717,8 +26541,7 @@ Cell[BoxData[{
         GridBoxSpacings->{"Columns" -> {
             Offset[0.27999999999999997`], {
              Offset[0.7]}, 
-            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
-          "Rows" -> {
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
             Offset[0.2], {
              Offset[0.4]}, 
             Offset[0.2]}, "RowsIndexed" -> {}, "Items" -> {}, 
@@ -26755,7 +26578,6 @@ Cell[BoxData[{
       "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"nl", "=", 
      RowBox[{"Length", "[", "indexlist", "]"}]}], ";", "\[IndentingNewLine]", 
-    
     RowBox[{"plotrange", "=", 
      RowBox[{"{", 
       RowBox[{
@@ -26977,8 +26799,8 @@ Clickable->True,
 Deletable->True,
 CellGrouping->Automatic,
 PageWidth->WindowWidth,
-WindowSize->{1861, 1176},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 WindowFrame->"Normal",
 WindowElements->{
  "StatusArea", "MemoryMonitor", "MagnificationPopUp", "HorizontalScrollBar", 
@@ -27009,7 +26831,6 @@ PageHeaders->{{
          CounterBox["Page"]}], "PageNumber"], "   ", 
       Cell[
       " ", "Header", CellFrame -> {{0.5, 0}, {0, 0}}, CellFrameMargins -> 4], 
-      
       Cell[
        TextData[{
          ValueBox["FileName"]}], "Header"]}], 
@@ -27052,7 +26873,7 @@ PrivateNotebookOptions->{"DockedCellAnimation"->False,
 TrackCellChangeTimes->False,
 Magnification->1.,
 Background->None,
-FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb",
 GhostCellInEmptyNotebook -> False
 ]
