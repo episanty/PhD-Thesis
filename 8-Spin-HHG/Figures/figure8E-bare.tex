@@ -7,14 +7,14 @@
    level/.style={thick},
    photon/.style={thick,->,shorten >=0.5pt,shorten <=0.5pt,>=stealth},
  ]    
- \nnewlength{\smap} \setlength{\smap}{2.3cm} % small photon
- \nnewlength{\bigp} \setlength{\bigp}{3.6cm} % big photon
- \nnewlength{\offset} \setlength{\offset}{6.3cm} % center of the right and left diagrams
- \nnewlength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
- \nnewlength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
- \nnewlength{\cancelm} \setlength{\cancelm}{0.82cm} % horizontal offset of the center of the cancelling cross
- \nnewlength{\canceld} \setlength{\canceld}{0.75cm} % (1/2) horizontal width of the cancelling cross
- \nnewlength{\cancelv} \setlength{\cancelv}{1.7cm} % (1/2) height of the cancelling cross
+ \providelength{\smap} \setlength{\smap}{2.3cm} % small photon
+ \providelength{\bigp} \setlength{\bigp}{3.6cm} % big photon
+ \providelength{\offset} \setlength{\offset}{6.3cm} % center of the right and left diagrams
+ \providelength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
+ \providelength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
+ \providelength{\cancelm} \setlength{\cancelm}{0.82cm} % horizontal offset of the center of the cancelling cross
+ \providelength{\canceld} \setlength{\canceld}{0.75cm} % (1/2) horizontal width of the cancelling cross
+ \providelength{\cancelv} \setlength{\cancelv}{1.7cm} % (1/2) height of the cancelling cross
 %
  \draw[level] (-\offset-\lvlwidth,  0cm) -- (-\offset+\lvlwidth,  0cm);
  \draw[level] (-\offset-\lvlwidth,\smap+2\bigp) -- (-\offset+\lvlwidth,\smap+2\bigp);

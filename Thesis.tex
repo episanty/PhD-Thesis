@@ -117,25 +117,33 @@ a4paper]{report}
 \usepackage{rotating}
 \usepackage{relsize}
 %
-%%%% For reusing lengths as per http://tex.stackexchange.com/a/184992/13423
+%%%% For reusing lengths as per https://tex.stackexchange.com/a/184997/13423
 \makeatletter
-\def\nnewlength#1{%
-  \edef\reserved@a{\expandafter\@gobble\string#1} %
-  \@ifundefined\reserved@a{%
-    \edef\reserved@b{\expandafter\@carcube\reserved@a xxx\@nil} %
-    \ifx\reserved@b\@qend %
-      \typeout{  -- Not definable (1, \reserved@a): #1} %\@notdefinable %
-    \else %
-      \ifx\reserved@a\@qrelax %
-        \typeout{  -- Not definable (2, \reserved@a): #1} %\@notdefinable %
-      \else %
-        \typeout{  -- Making newskip: #1}
-        \newskip#1%
-      \fi %
-    \fi %
-  }%
-  {\typeout{  -- Not definable (E, \reserved@a): #1}} %\@notdefinable%
+\newcommand{\providelength}[1]{%
+  \@ifundefined{\expandafter\@gobble\string#1}
+   {% if #1 is undefined, do \newlength
+    \typeout{\string\providelength: making new length \string#1}%
+    \newlength{#1}%
+   }
+   {% else check whether #1 is actually a length
+    \sdaau@checkforlength{#1}%
+   }%
 }
+%
+\newcommand{\sdaau@checkforlength}[1]{%
+  % get the first five characters from \meaning#1
+  \edef\sdaau@temp{\expandafter\sdaau@getfive\meaning#1TTTTT$}%
+  % compare with the string "\skip"
+  \ifx\sdaau@temp\sdaau@skipstring
+    \typeout{\string\providelength: \string#1 already a length}%
+  \else
+    \@latex@error
+      {\string#1 illegal in \string\providelength}
+      {\string#1 is defined, but not with \string\newlength}%
+  \fi
+}
+\def\sdaau@getfive#1#2#3#4#5#6${#1#2#3#4#5}
+\edef\sdaau@skipstring{\string\skip}
 \makeatother
 
 

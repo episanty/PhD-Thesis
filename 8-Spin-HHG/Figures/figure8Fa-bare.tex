@@ -7,10 +7,10 @@
    level/.style={thick},
    photon/.style={thick,->,shorten >=0.5pt,shorten <=0.5pt,>=stealth},
  ]    
- \nnewlength{\smap} \setlength{\smap}{2cm} % small photon
- \nnewlength{\bigp} \setlength{\bigp}{3cm} % big photon
- \nnewlength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
- \nnewlength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
+ \providelength{\smap} \setlength{\smap}{2cm} % small photon
+ \providelength{\bigp} \setlength{\bigp}{3cm} % big photon
+ \providelength{\sep} \setlength{\sep}{0.35cm} % (1/2) separation between the up and down arrows of each diagram
+ \providelength{\lvlwidth} \setlength{\lvlwidth}{0.75cm} % (1/2) width of the horizontal 'level' lines
 %
  \draw[level] (-\lvlwidth,  0cm) -- (\lvlwidth,  0cm);
  \draw[level] (-\lvlwidth,7\smap) -- (\lvlwidth,7\smap);
