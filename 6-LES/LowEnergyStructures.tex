@@ -578,6 +578,26 @@ In principle, then, the electric extraction field, weak as it is on the atomic s
 
 Nevertheless, the structure does appear in CTMC simulations with the extraction field, as shown in \reffig{f6-wolter-nzes-original-figure}, and it shows some agreement with experiment. Moreover, CTMC calculations agree with experiment on the width of the VLES V shape as the length of the laser pulse changes, with the scaling shown in \reffig{f6-wolter-scaling-original-figure}.
 
+
+In addition to this, the extraction-field mechanism requires that the characteristics of the NZES peak change as the strength of the extraction field changes. This is a hard prediction to explore experimentally, because the extraction field is also a crucial variable both in how many electrons are detected as well as in fixing the final resolution of the detector (i.e. the level of zoom into the photoelectron momentum distribution), so variations there have a strong effect on the rest of the experiment, but there are indeed some hints of variation in the width of the structure in experiment, as shown in \reffig{f6-diesen-scaling-original-figure}. 
+
+
+Moreover, there is also some agreement between the observed experimental variations and a simplified semiclassical theory which considers classical electrons, uniformly distributed in Rydberg states just below the ionization threshold, in a single rescaled Coulomb potential plus the extraction field~\cite{Rost_latest}.
+
+
+
+On the other hand, the extraction-field mechanism would also require the yield of the structure -- the number of electrons in the NZES -- to change with the extraction field, since if the pulse parameters don't vary then the Rydberg population will not change appreciably, and a stronger extraction field will lower the shallow barrier and thereby liberate a larger population of electrons. (Even further, the Rydberg population is expected to be roughly uniformly distributed over energy just below threshold, so the NZES yield should scale roughly linearly with the extraction field over its $\sim$tenfold variation in \citer{Rost_latest}.) However, this is rather difficult to test experimentally, since changing the extraction field has a strong effect on the entire detection, and there is at present no evidence for this dependence, which represents the clearest way forward in validating this mechanism as a contributor to the NZES.
+
+
+
+
+
+\section[Soft recollisions in Analytical R-Matrix theory]{Soft recollisions in Analytical $R$-Matrix theory}
+\label{sec:ARM-soft-recollisions}
+
+Having seen the current understanding of the LES in the literature, we now turn to what our ARM theory of photoionization can tell us about soft recollisions and their role in photoelectron spectra. 
+
+
 \begin{figure}[b!]
   \centering
   \includegraphics[width=\textwidth]{6-LES/Figures/figure6Q.png}
@@ -600,9 +620,10 @@ Nevertheless, the structure does appear in CTMC simulations with the extraction 
 %% As per APS T&Cs
 
 
+As we have seen, the ARM formalism works with a different set of trajectories to the ones mentioned above, since it does not use the full Coulomb-laser trajectory used by full classical CTMC theories and by the semiclassical CCSFA, nor does it use the real-valued simple-man's trajectories with only the laser driving as in \citer{ off_axis_LES}. In those real-time theories, the soft recollision shows up topologically as a topological change in the trajectory, as shown in \reffig{f5-classical-tca-on-axis}, and the number of extrema of $\rcl(t)^2$ along the path: from a single inwards turning point, to an outwards turning point flanked by two closest-approach times, as shown in \reffig{f5-sample-trajectories-a}.
 
+The ARM trajectories, on the other hand, are different, because the trajectory path through the complex time plane is no longer constrained to lie on the real axis, which means that the closest-approach solutions are not lost -- they simply go off into the complex plane, where they can still be reached by the integration path over the complex time plane if there is a strong enough reason (such as avoiding Coulomb branch cuts) to do so. The last time we considered the soft recollisions in this context, then, was as a complex interaction between pairs of branch cuts, depicted in \reffig{f5-branch-cut-topology-change}, at which two pairs meet and recombine, changing the branch cut topology that the integration path needs to navigate.
 
-In addition to this, the extraction-field mechanism requires that the characteristics of the NZES peak change as the strength of the extraction field changes. This is a hard prediction to explore experimentally, because the extraction field is also a crucial variable both in how many electrons are detected as well as in fixing the final resolution of the detector (i.e. the level of zoom into the photoelectron momentum distribution), so variations there have a strong effect on the rest of the experiment, but there are indeed some hints of variation in the width of the structure in experiment, as shown in \reffig{f6-diesen-scaling-original-figure}. 
 
 
 \begin{figure}[!t]
@@ -629,8 +650,6 @@ In addition to this, the extraction-field mechanism requires that the characteri
 
 
 
-Moreover, there is also some agreement between the observed experimental variations and a simplified semiclassical theory which considers classical electrons, uniformly distributed in Rydberg states just below the ionization threshold, in a single rescaled Coulomb potential plus the extraction field~\cite{Rost_latest}.
-
 
 \begin{figure}[b]
   \centering
@@ -652,21 +671,6 @@ Moreover, there is also some agreement between the observed experimental variati
 }
 }
 %% As per APS T&Cs
-
-On the other hand, the extraction-field mechanism would also require the yield of the structure -- the number of electrons in the NZES -- to change with the extraction field, since if the pulse parameters don't vary then the Rydberg population will not change appreciably, and a stronger extraction field will lower the shallow barrier and thereby liberate a larger population of electrons. (Even further, the Rydberg population is expected to be roughly uniformly distributed over energy just below threshold, so the NZES yield should scale roughly linearly with the extraction field over its $\sim$tenfold variation in \citer{Rost_latest}.) However, this is rather difficult to test experimentally, since changing the extraction field has a strong effect on the entire detection, and there is at present no evidence for this dependence, which represents the clearest way forward in validating this mechanism as a contributor to the NZES.
-
-
-
-
-
-\section[Soft recollisions in Analytical R-Matrix theory]{Soft recollisions in Analytical $R$-Matrix theory}
-\label{sec:ARM-soft-recollisions}
-
-Having seen the current understanding of the LES in the literature, we now turn to what our ARM theory of photoionization can tell us about soft recollisions and their role in photoelectron spectra. 
-
-As we have seen, the ARM formalism works with a different set of trajectories to the ones mentioned above, since it does not use the full Coulomb-laser trajectory used by full classical CTMC theories and by the semiclassical CCSFA, nor does it use the real-valued simple-man's trajectories with only the laser driving as in \citer{ off_axis_LES}. In those real-time theories, the soft recollision shows up topologically as a topological change in the trajectory, as shown in \reffig{f5-classical-tca-on-axis}, and the number of extrema of $\rcl(t)^2$ along the path: from a single inwards turning point, to an outwards turning point flanked by two closest-approach times, as shown in \reffig{f5-sample-trajectories-a}.
-
-The ARM trajectories, on the other hand, are different, because the trajectory path through the complex time plane is no longer constrained to lie on the real axis, which means that the closest-approach solutions are not lost -- they simply go off into the complex plane, where they can still be reached by the integration path over the complex time plane if there is a strong enough reason (such as avoiding Coulomb branch cuts) to do so. The last time we considered the soft recollisions in this context, then, was as a complex interaction between pairs of branch cuts, depicted in \reffig{f5-branch-cut-topology-change}, at which two pairs meet and recombine, changing the branch cut topology that the integration path needs to navigate.
 
 
 Moreover, although we showed in \reffig{f5-branch-cut-topology-change} a single example at a return time of $\omega t\approx 2\pi$, this behaviour reoccurs every half period thereafter, as is clear from the quantum $\tca$ surface we saw in \reffig{f5-quantum-tca-surface}. Here, for clarity, we revisit \reffig{f5-branch-cut-topology-change}, showing in \reffig{f6-branch-topology-revisited} the change in the branch cut topology of $\sqrt{\rl(t)^2}$ for the first soft recollision, at $\omega t\approx 2\pi$ and a very low momentum, and the second one at $\omega t\approx 3\pi$ and a slightly higher momentum.
