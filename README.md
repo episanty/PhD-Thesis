@@ -6,7 +6,7 @@ Electron Dynamics in Complex Time and Complex Space
 
 This repository contains the author's PhD thesis,
 
-> Electron dynamics in complex time and complex space. Emilio Pisanty. PhD Thesis, Imperial College London, 2016.
+> Electron dynamics in complex time and complex space. Emilio Pisanty. PhD Thesis, Imperial College London, 2016. [handle:10044/1/43538](http://hdl.handle.net/10044/1/43538).
 
 It contains the main pdf file of the thesis, the TeX and image files used to produce it, and the code and data used to produce the figures.
 
