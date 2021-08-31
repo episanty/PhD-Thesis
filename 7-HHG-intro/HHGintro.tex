@@ -284,7 +284,7 @@ Performing this saddle-point approximation over $\vbp$, then, leaves us with the
 \vbD(t)
 & = 
 +i\int_{-\infty}^{t} \!\!\! \d t'
-\left(\frac{2\pi}{\partial^2 S_V/\partial \vbp^2}\right)^{3/2}
+\left(\frac{(2\pi/i)^3}{\partial^2 S_V/\partial \vbp^2}\right)^{1/2}
 \vbd(\vbp_s+\vba(t))^*
 e^{-iS_V(t,t')}  \,
 \vbf(t')\cdot \vbd(\vbp_s+\vba(t'))
@@ -292,11 +292,12 @@ e^{-iS_V(t,t')}  \,
 ,
 \label{e7-harmonic-dipole-momentum-spa}
 \end{align}
-where $\partial^2 S_V/\partial \vbp^2$ denotes the determinant of the Hessian of $S_V$ with respect to $\vbp$ at the saddle point, which can easily be calculated to be the excursion time $\partial^2 S_V/\partial \vbp^2 = t-t'$. Here one must note that this can in fact vanish -- or at least become very small --, so it is necessary to regularize it in the form
+where $\partial^2 S_V/\partial \vbp^2$ denotes the determinant of the Hessian of $S_V$ with respect to $\vbp$ at the saddle point, which can easily be calculated to be the excursion time $\partial^2 S_V/\partial \vbp^2 = (t-t')^3$. Here one must note that this can in fact vanish -- or at least become very small --, so it is necessary to regularize it in the form
 \begin{equation}
-\left(\frac{2\pi}{\partial^2 S_V/\partial \vbp^2}\right)^{3/2}
+%\left(\frac{2\pi}{\partial^2 S_V/\partial \vbp^2}\right)^{3/2}
+\left(\frac{(2\pi/i)^3}{\partial^2 S_V/\partial \vbp^2}\right)^{1/2}
 =
-\left(\frac{2\pi}{t-t' + i\varepsilon}\right)^{3/2}
+\left(\frac{2\pi/i}{t-t' + i\varepsilon}\right)^{3/2}
 .
 \end{equation}
 The regularization here is also a mathematical necessity, since in the limit where $t-t'$ is small the saddle-point approximation does not actually hold (since the gaussian in \eqref{e7-harmonic-dipole-momentum-integral} is then much broader than the other factors). Adding the regularization factor $i\varepsilon$ actually corresponds to multiplying the spatial factors $\vbd(\vbp_s+\vba(t))^*\vbf(t')\cdot \vbd(\vbp_s+\vba(t'))$ by a broad gaussian, which is mostly acceptable as long as the gaussian is much broader than the characteristic scale $\kappa = \sqrt{2I_p}$ at which they vary. This then sets $\varepsilon \sim 0.1/I_p$ as the appropriate scale for this regularization factor.
@@ -306,7 +307,7 @@ That aside, the harmonic dipole in the saddle-point regime for $\vbp$ reads
 \vbD(t)
 & = 
 +i\int_{-\infty}^{t} \!\!\! \d t'
-\left(\frac{2\pi}{t-t' + i\varepsilon}\right)^{3/2}
+\left(\frac{2\pi/i}{t-t' + i\varepsilon}\right)^{3/2}
 \vbd(\vbp_s+\vba(t))^*
 e^{-iS_V(t,t')}  \,
 \vbf(t')\cdot \vbd(\vbp_s+\vba(t'))
@@ -314,7 +315,7 @@ e^{-iS_V(t,t')}  \,
 ,
 \label{e7-harmonic-dipole-final}
 \end{align}
-with the factor $\left(\frac{2\pi}{t-t' + i\varepsilon}\right)^{3/2}$ providing a clean representation of the spreading of the electron wavepacket while it is in the continuum. This form is particularly useful and flexible, and it permits the calculation of the harmonic dipole using only a single-dimensional numerical integral, which can be done quickly and cheaply, and it is the main form implemented in \citer{RB-SFA} and in the calculations in the following chapters.
+with the factor $\left(\frac{2\pi/i}{t-t' + i\varepsilon}\right)^{3/2}$ providing a clean representation of the spreading of the electron wavepacket while it is in the continuum. This form is particularly useful and flexible, and it permits the calculation of the harmonic dipole using only a single-dimensional numerical integral, which can be done quickly and cheaply, and it is the main form implemented in \citer{RB-SFA} and in the calculations in the following chapters.
 
 
 
@@ -325,7 +326,7 @@ In addition to this, however, it is still possible to take the saddle-point appr
 +i
 \int_{-\infty}^\infty \!\!\! \d t 
 \int_{-\infty}^{t} \!\!\! \d t'
-\left(\frac{2\pi}{\partial^2 S_V/\partial \vbp^2}\right)^{3/2} \!
+\left(\frac{(2\pi/i)^3}{\partial^2 S_V/\partial \vbp^2}\right)^{1/2} \!
 \vbd(\vbp_s+\vba(t))^*
 e^{i\Omega t-iS_V(t,t')}  \,
 \vbf(t')\cdot \vbd(\vbp_s+\vba(t'))
