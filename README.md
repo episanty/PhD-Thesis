@@ -28,11 +28,6 @@ The main thesis pdf file is [here][10].
 
  [10]: https://github.com/episanty/PhD-Thesis/blob/master/Emilio%20Pisanty%20PhD%20Thesis%20-%20Electron%20dynamics%20in%20complex%20time%20and%20complex%20space.pdf
 
-This is the final version, as uploaded to the Imperial College London thesis repository [Spiral][11]. It is currently being processed there; this page will be updated when it is publicly available there.
-
- [11]: https://spiral.imperial.ac.uk/
-
-
 
 © Emilio Pisanty, 2016.
 
