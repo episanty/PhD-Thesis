@@ -170,6 +170,9 @@ a4paper]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Hyperref setup
+%
+\usepackage{hyperxmp} %% for pdf/a support
+%
 \usepackage[%
   bookmarks=true,
   colorlinks,
@@ -180,7 +183,8 @@ a4paper]{report}
   pdfpagelabels,
   final,
   breaklinks=true,
-  backref=page
+  backref=page,
+  pdfa
 ]{hyperref}
 \hypersetup{
 pdftitle={Electron dynamics in complex time and complex space}, 
