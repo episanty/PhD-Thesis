@@ -9,6 +9,7 @@ build/*
 *.brf
 *.loa
 *.lof
+*.xmpi
 *.synctex.gz
 *.synctex.gz~
 0-Miscellaneous/Copyright/sign.jpg
