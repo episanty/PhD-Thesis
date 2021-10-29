@@ -150,7 +150,7 @@ a4paper]{report}
 
 
 %%% Bibliography
-\usepackage[numbers,sort&compress]{0-Miscellaneous/natbib}
+\usepackage[numbers,sort&compress]{natbib}
 %% reduce spacing inside [1, 2]:
 \makeatletter \def\NAT@def@citea{\def\@citea{\NAT@separator\,}} \makeatother
 
@@ -210,6 +210,10 @@ pdfkeywords={strong-field physics, ultrafast physics, high-harmonic generation, 
     \fi}
   \renewcommand{\backreftwosep}{,~}
   \renewcommand{\backreflastsep}{,~}
+%
+%%% Fix for missing backrefs as per tex.se/a/155287
+\usepackage{hypernat} 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Line-breaking on URLs:
